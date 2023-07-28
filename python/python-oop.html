@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Python OOP</title>
+  <base href="../">
+  <meta id="root-path" root-path="../">
+
+  <link rel="icon" sizes="96x96" href="https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/favicon-96x96.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+  <meta charset="UTF-8">
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+
+  <link rel="stylesheet" href="lib/styles/obsidian-styles.css">
+  <link rel="stylesheet" href="lib/styles/theme.css">
+  <link rel="stylesheet" href="lib/styles/plugin-styles.css">
+  <link rel="stylesheet" href="lib/styles/snippets.css">
+  <style>
+    body.css-settings-manager {
+      --blur-depth: 10px;
+      --font-family-vault: 'TimeGoing', 'Segoe UI Emoji';
+      --font-size-vault-name: 1.9em;
+    }
+
+    body.theme-light.css-settings-manager {}
+
+    body.theme-dark.css-settings-manager {
+      --text-color-code: #FFFFFF;
+    }
+  </style>
+
+
+  <!-- Graph View Data -->
+  <script>
+    let nodes = {
+      "nodeCount": 34,
+      "linkCount": 31,
+      "radii": [7, 6.1787109375, 5.5146484375, 4.6552734375, 4.15234375, 4.15234375, 4.15234375, 4.15234375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3, 3, 3],
+      "labels": ["Data Structures", "C++", "index", "Markdown", "Python", "MathJax", "markdown cheat sheet", "Git", "Python OOP", "git cheat sheet", "DS-session9", "DS-session8", "DS-session7", "DS-session6", "DS-session5", "DS-session4", "DS-session3", "DS-session2", "DS-session15", "DS-session14", "DS-session13", "DS-session12", "DS-session11", "DS-session10", "DS-session1", "Static keyword", "OOP", "Inline keyword", "Header Files", "Enum and Enum class", "Const keyword", "Traversing binary tree", "expression tree", "Convert to binary tree"],
+      "paths": ["data-structures/data-structures.html", "c++/c++.html", "index.html", "markdown/markdown.html", "python/python.html", "markdown/mathjax.html", "markdown/markdown-cheat-sheet.html", "git/git.html", "python/python-oop.html", "git/git-cheat-sheet.html", "data-structures/ds-session9.html", "data-structures/ds-session8.html", "data-structures/ds-session7.html", "data-structures/ds-session6.html", "data-structures/ds-session5.html", "data-structures/ds-session4.html", "data-structures/ds-session3.html", "data-structures/ds-session2.html", "data-structures/ds-session15.html", "data-structures/ds-session14.html", "data-structures/ds-session13.html", "data-structures/ds-session12.html", "data-structures/ds-session11.html", "data-structures/ds-session10.html", "data-structures/ds-session1.html", "c++/static-keyword.html", "c++/oop.html", "c++/inline-keyword.html", "c++/header-files.html", "c++/enum-and-enum-class.html", "c++/const-keyword.html", "photos/traversing-binary-tree.html", "photos/expression-tree.html", "photos/convert-to-binary-tree.html"],
+      "linkSources": [2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 3, 3, 4],
+      "linkTargets": [0, 1, 7, 3, 4, 26, 29, 28, 30, 25, 27, 24, 17, 16, 15, 14, 13, 12, 11, 10, 23, 22, 21, 20, 19, 18, 9, 5, 5, 6, 8]
+    };
+    let attractionForce = 1;
+    let linkLength = 10;
+    let repulsionForce = 150;
+    let centralForce = 3;
+    let edgePruning = 100;
+  </script>
+
+  <script type="module" src="lib/scripts/graph_view.js"></script>
+
+  <script src="lib/scripts/graph_wasm.js"></script>
+
+  <script src="lib/scripts/tinycolor.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js" integrity="sha512-Ch/O6kL8BqUwAfCF7Ie5SX1Hin+BJgYH4pNjRqXdTEqMsis1TUYg+j6nnI9uduPjGaj7DN4UKCZgpvoExt6dkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="lib/scripts/webpage.js"></script>
+
+</head>
+
+<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app show-inline-title show-view-header is-maximized css-settings-manager color-scheme-options-topaz-nord background-settings-workplace-background-image background-settings-workplace-theme-light-leaf background-settings-workplace-theme-dark-dark-sky background-image-settings-markdown-page-default background-image-settings-markdown-page-random-default notebook-liked-markdown-page-grid-notebook-1 panel-page-bg-theme-ligt-curve panel-page-bg-theme-dark-sea default-left-ribbon-style layout-style-options-default default-search-bar default-scrollbar bt-default-highlight h1-text-align-start h2-text-align-start h3-text-align-start h4-text-align-start h5-text-align-start h6-text-align-start default-hr bt-default-unordered-list default-ol-list-marker list-no-border file-shape-default file-name-non-wrapped folder-style-change-options-colorful-default folder-colorful-one blockquote-style-default default-table table-width-100 table-style-default default-loading-page loading-text-typing-style rainbow-tag setting-style-traditional default-titlebar default-outline-style stack-tab-text-ori-mixed default-tab default-canvas-background traditional-callout-style style-options-for-admonition-plugin style-options-for-calendar-plugin-default style-options-for-kanban-plugin-static-default style-options-for-kanban-plugin-dynamic-default style-options-for-buttons-plugin dataview-list-style-pacman default-dvtable dialogue-style-default memos-default-light memos-default-dark quiet-outline-optimize code-theme-bt-default whole-code-wrap codebox-default-style" style="--zoom-factor:1; --font-text-size:15px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em; --content-width:500em; --sidebar-width:25em; --collapse-arrow-size:0.4em; --tree-horizontal-spacing:1em; --tree-vertical-spacing:0.5em; --sidebar-margin:12px;">
+  <div class="webpage-container">
+    <div class="sidebar-left sidebar">
+      <div class="sidebar-content">
+        <div><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle">
+            <div class="toggle-background"></div>
+          </label></div>
+        <div class="tree-container file-tree mod-nav-indicator" data-depth="0">
+          <div class="tree-header"><span class="sidebar-section-header">Code Verse</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
+          <div class="tree-scroll-area">
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="c++"><span class="tree-item-title">C++</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/c++.html"><span class="tree-item-title">C++</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/const-keyword.html"><span class="tree-item-title">Const keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/enum-and-enum-class.html"><span class="tree-item-title">Enum and Enum class</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/header-files.html"><span class="tree-item-title">Header Files</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/inline-keyword.html"><span class="tree-item-title">Inline keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/oop.html"><span class="tree-item-title">OOP</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/static-keyword.html"><span class="tree-item-title">Static keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="data-structures"><span class="tree-item-title">Data Structures</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/data-structures.html"><span class="tree-item-title">Data Structures</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session1.html"><span class="tree-item-title">DS-session1</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session10.html"><span class="tree-item-title">DS-session10</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session11.html"><span class="tree-item-title">DS-session11</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session12.html"><span class="tree-item-title">DS-session12</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session13.html"><span class="tree-item-title">DS-session13</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session14.html"><span class="tree-item-title">DS-session14</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session15.html"><span class="tree-item-title">DS-session15</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session2.html"><span class="tree-item-title">DS-session2</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session3.html"><span class="tree-item-title">DS-session3</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session4.html"><span class="tree-item-title">DS-session4</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session5.html"><span class="tree-item-title">DS-session5</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session6.html"><span class="tree-item-title">DS-session6</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session7.html"><span class="tree-item-title">DS-session7</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session8.html"><span class="tree-item-title">DS-session8</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session9.html"><span class="tree-item-title">DS-session9</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="git"><span class="tree-item-title">Git</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="git/git.html"><span class="tree-item-title">Git</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="git/git-cheat-sheet.html"><span class="tree-item-title">git cheat sheet</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="markdown"><span class="tree-item-title">Markdown</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/markdown.html"><span class="tree-item-title">Markdown</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/markdown-cheat-sheet.html"><span class="tree-item-title">markdown cheat sheet</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/mathjax.html"><span class="tree-item-title">MathJax</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="photos"><span class="tree-item-title">photos</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/convert-to-binary-tree.html"><span class="tree-item-title">Convert to binary tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/expression-tree.html"><span class="tree-item-title">expression tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/traversing-binary-tree.html"><span class="tree-item-title">Traversing binary tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="python"><span class="tree-item-title">Python</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="python/python.html"><span class="tree-item-title">Python</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="python/python-oop.html"><span class="tree-item-title">Python OOP</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-file" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="index.html"><span class="tree-item-title">index</span></a></div>
+              <div class="tree-item-children"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="document-container">
+      <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
+        <style id="MJX-CHTML-styles"></style>
+        <div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: ; padding-top: var(--file-margins); padding-right: var(--file-margins); padding-left: var(--file-margins); width: 100%; position: absolute;">
+          <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
+          <div class="mod-header">
+            <div class="inline-title" contenteditable="true" spellcheck="true" autocapitalize="on" tabindex="-1" enterkeyhint="done">Python OOP</div>
+          </div>
+          <div>
+            <h1 data-heading="Python Object Oriented Programming" id="Python_Object_Oriented_Programming">Python Object Oriented Programming</h1>
+          </div>
+          <div>
+            <hr>
+          </div>
+          <div>
+            <h2 data-heading="Python Magic Methods:" id="Python_Magic_Methods:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Python Magic Methods:
+            </h2>
+          </div>
+          <div>
+            <p>Magic methods in Python are the special methods that start and end with the double underscores. They are also called dunder methods. Magic methods are not meant to be invoked directly by you, but the invocation happens internally from the class on a certain action.</p>
+          </div>
+          <div style="overflow-x: auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">Category</th>
+                  <th>Methods</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">Arithmetic operators</td>
+                  <td><code>__add__</code>, <code>__sub__</code>, <code>__mul__</code>, <code>__truediv__</code>, <code>__floordiv__</code>, <code>__mod__</code>, <code>__divmod__</code>, <code>__pow__</code>, <code>__radd__</code>, <code>__rsub__</code>, <code>__rmul__</code>, <code>__rtruediv__</code>, <code>__rfloordiv__</code>, <code>__rmod__</code>, <code>__rdivmod__</code>, <code>__rpow__</code>, <code>__iadd__</code>, <code>__isub__</code>, <code>__imul__</code>, <code>__itruediv__</code>, <code>__ifloordiv__</code>, <code>__imod__</code>, <code>__ipow__</code>, <code>__neg__</code>, <code>__pos__</code>, <code>__abs__</code>, <code>__round__</code>, <code>__floor__</code>, <code>__ceil__</code>.</td>
+                </tr>
+                <tr>
+                  <td align="center">Bitwise Operations</td>
+                  <td><code>__and__</code>, <code>__invert__</code>, <code>__or__</code>, <code>__xor__</code>, <code>__rxor__</code></td>
+                </tr>
+                <tr>
+                  <td align="center">Comparison Operations</td>
+                  <td><code>__and__</code>, <code>__or__</code>, <code>__xor__</code>, <code>__invert__</code>, <code>__lshift__</code>, <code>__rshift__</code></td>
+                </tr>
+                <tr>
+                  <td align="center">Type Conversion</td>
+                  <td><code>__bool__</code>, <code>__int__</code>, <code>__float__</code>, <code>__complex__</code>, <code>__index__</code>, <code>__bytes__</code>, <code>__str__</code>, <code>__repr__</code></td>
+                </tr>
+                <tr>
+                  <td align="center">Container methods</td>
+                  <td><code>__len__</code>, <code>__getitem__</code>, <code>__setitem__</code>, <code>__delitem__</code>, <code>__contains__</code>, <code>__iter__</code>, <code>__next__</code>, <code>__reversed__</code>, <code>__missing__</code>, <code>__call__</code></td>
+                </tr>
+                <tr>
+                  <td align="center">Attribute methods</td>
+                  <td><code>__getattr__</code>, <code>__getattribute__</code>, <code>__setattr__</code>, <code>__delattr__</code></td>
+                </tr>
+                <tr>
+                  <td align="center">Other special methods</td>
+                  <td><code>__enter__</code>, <code>__exit__</code>, <code>__hash__</code>, <code>__new__</code>, <code>__init__</code>, <code>__del__</code>, <code>__call__</code>, <code>__dir__</code>, <code>__format__</code>, <code>__getnewargs__</code>, <code>__subclasshook__</code>, <code>__instancecheck__</code>, <code>__subclasscheck__</code>, <code>__prepare__</code>, <code>__annotations__</code>, <code>__locals__</code>, <code>__globals__</code>, <code>__qualname__</code>, <code>__name__</code>, <code>__module__</code>, <code>__doc__</code>, <code>__class__</code>, <code>__init_subclass__</code>, <code>__sizeof__</code>, <code>__trunc__</code>, <code>__floor_division__</code>, <code>__bit_length__</code>, <code>__conjugate__</code>, <code>__real__</code>, <code>__imag__</code>, <code>__complex__</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3 data-heading="Descriptions :" id="Descriptions_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Descriptions :
+            </h3>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><code>__abs__(self)</code> - used to return the absolute value of an object.
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><code>__add__(self, other)</code> - used to define the behavior of the addition operator (+) for an object.
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><code>__and__(self, other)</code> - used to define the behavior of the bitwise AND operator (&amp;) for an object.
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div><code>__bool__(self)</code> - used to return the boolean value of an object.
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div><code>__ceil__(self)</code> - used to return the ceiling value of an object.
+              </li>
+              <li data-line="5">
+                <div class="list-bullet"></div><code>__class__(self)</code> - used to return the class of an object.
+              </li>
+              <li data-line="6">
+                <div class="list-bullet"></div><code>__delattr__(self, name)</code> - used to delete an attribute from an object.
+              </li>
+              <li data-line="7">
+                <div class="list-bullet"></div><code>__dir__(self)</code> - used to return a list of valid attributes for an object.
+              </li>
+              <li data-line="8">
+                <div class="list-bullet"></div><code>__divmod__(self, other)</code> - used to define the behavior of the divmod() function for an object.
+              </li>
+              <li data-line="9">
+                <div class="list-bullet"></div><code>__doc</code> - used to store the documentation string for a class or function.
+              </li>
+              <li data-line="10">
+                <div class="list-bullet"></div><code>__eq__(self, other)</code> - used to define the behavior of the equality operator (==) for an object.
+              </li>
+              <li data-line="11">
+                <div class="list-bullet"></div><code>__float__(self)</code> - used to convert an object to a floating-point number.
+              </li>
+              <li data-line="12">
+                <div class="list-bullet"></div><code>__floor__(self)</code> - used to return the floor value of an object.
+              </li>
+              <li data-line="13">
+                <div class="list-bullet"></div><code>__floordiv__(self, other)</code> - used to define the behavior of the floor division operator (//) for an object.
+              </li>
+              <li data-line="14">
+                <div class="list-bullet"></div><code>__format__(self, format_spec)</code> - used to define the behavior of the str.format() method for an object.
+              </li>
+              <li data-line="15">
+                <div class="list-bullet"></div><code>__ge__(self, other)</code> - used to define the behavior of the greater than or equal to operator (&gt;=) for an object.
+              </li>
+              <li data-line="16">
+                <div class="list-bullet"></div><code>__getattribute__(self, name)</code> - used to get the value of an attribute from an object.
+              </li>
+              <li data-line="17">
+                <div class="list-bullet"></div><code>__getnewargs__(self)</code> - used to return the arguments for the object constructor.
+              </li>
+              <li data-line="18">
+                <div class="list-bullet"></div><code>__gt__(self, other)</code> - used to define the behavior of the greater than operator (&gt;) for an object.
+              </li>
+              <li data-line="19">
+                <div class="list-bullet"></div><code>__hash__(self)</code> - used to return the hash value of an object.
+              </li>
+              <li data-line="20">
+                <div class="list-bullet"></div><code>__index__(self)</code> - used to return the integer value of an object.
+              </li>
+              <li data-line="21">
+                <div class="list-bullet"></div><code>__init__(self)</code> - used to initialize an object.
+              </li>
+              <li data-line="22">
+                <div class="list-bullet"></div><code>__init_subclass(cls)</code> - used to initialize a subclass.
+              </li>
+              <li data-line="23">
+                <div class="list-bullet"></div><code>__int__(self)</code> - used to convert an object to an integer.
+              </li>
+              <li data-line="24">
+                <div class="list-bullet"></div><code>__invert__(self)</code> - used to define the behavior of the bitwise NOT operator (~) for an object.
+              </li>
+              <li data-line="25">
+                <div class="list-bullet"></div><code>__le__(self, other)</code> - used to define the behavior of the less than or equal to operator (&lt;=) for an object.
+              </li>
+              <li data-line="26">
+                <div class="list-bullet"></div><code>__lshift__(self, other)</code> - used to define the behavior of the left shift operator (&lt;&lt;) for an object.
+              </li>
+              <li data-line="27">
+                <div class="list-bullet"></div><code>__lt__(self, other)</code> - used to define the behavior of the less than operator (&lt;) for an object.
+              </li>
+              <li data-line="28">
+                <div class="list-bullet"></div><code>__mod__(self, other)</code> - used to define the behavior of the modulo operator (%) for an object.
+              </li>
+              <li data-line="29">
+                <div class="list-bullet"></div><code>__mul__(self, other)</code> - used to define the behavior of the multiplication operator (*) for an object.
+              </li>
+              <li data-line="30">
+                <div class="list-bullet"></div><code>__ne__(self, other)</code> - used to define the behavior of the not equal operator (!=) for an object.
+              </li>
+              <li data-line="31">
+                <div class="list-bullet"></div><code>__neg__(self)</code> - used to define the behavior of the negation operator (-) for an object.
+              </li>
+              <li data-line="32">
+                <div class="list-bullet"></div><code>__new(cls, *args, kwargs)</code> - used to create a new instance of a class. This method is called before <strong>init</strong>() and is responsible for creating and returning the new object.
+              </li>
+              <li data-line="33">
+                <div class="list-bullet"></div><code>__or__(self, other)</code> - used to define the behavior of the bitwise OR operator (|) for an object.
+              </li>
+              <li data-line="34">
+                <div class="list-bullet"></div><code>__pos__(self)</code> - used to define the behavior of the unary plus operator (+) for an object.
+              </li>
+              <li data-line="35">
+                <div class="list-bullet"></div><code>__pow__(self, other[, modulo])</code> - used to define the behavior of the exponent
+              </li>
+              <li data-line="36">
+                <div class="list-bullet"></div><code>__rsub__(self, other)</code> - used to define the behavior of the subtraction operator (-) when the object is on the right-hand side.
+              </li>
+              <li data-line="37">
+                <div class="list-bullet"></div><code>__rtruediv__(self, other)</code> - used to define the behavior of the true division operator (/) when the object is on the right-hand side.
+              </li>
+              <li data-line="38">
+                <div class="list-bullet"></div><code>__rxor__(self, other)</code> - used to define the behavior of the bitwise XOR operator (^) when the object is on the right-hand side.
+              </li>
+              <li data-line="39">
+                <div class="list-bullet"></div><code>__setattr__(self, name, value)</code> - used to set the value of an attribute on an object.
+              </li>
+              <li data-line="40">
+                <div class="list-bullet"></div><code>__sizeof__(self)</code> - used to return the size of an object in bytes.
+              </li>
+              <li data-line="41">
+                <div class="list-bullet"></div><code>__str__(self)</code> - used to return a string representation of an object.
+              </li>
+              <li data-line="42">
+                <div class="list-bullet"></div><code>__sub__(self, other)</code> - used to define the behavior of the subtraction operator (-) for an object.
+              </li>
+              <li data-line="43">
+                <div class="list-bullet"></div><code>__subclasshook__(cls, subclass)</code> - used to customize the behavior of the <code>issubclass()</code> built-in function.
+              </li>
+              <li data-line="44">
+                <div class="list-bullet"></div><code>__truediv__(self, other)</code> - used to define the behavior of the true division operator (/) for an object.
+              </li>
+              <li data-line="45">
+                <div class="list-bullet"></div><code>__trunc__(self)</code> - used to return the truncated integer value of a float or decimal number.
+              </li>
+              <li data-line="46">
+                <div class="list-bullet"></div><code>__xor__(self, other)</code> - used to define the behavior of the bitwise XOR operator (^) for an object.
+              </li>
+              <li data-line="47">
+                <div class="list-bullet"></div><code>__bit_length__(self)</code> - used to return the number of bits required to represent an integer in binary.
+              </li>
+              <li data-line="48">
+                <div class="list-bullet"></div><code>__conjugate__(self)</code> - used to return the complex conjugate of a complex number.
+              </li>
+              <li data-line="49">
+                <div class="list-bullet"></div><code>__denominator__(self)</code> - used to return the denominator of a rational number.
+              </li>
+              <li data-line="50">
+                <div class="list-bullet"></div><code>__from_bytes(bytes, byteorder, *, signed=False)</code> - used to convert a sequence of bytes into an integer.
+              </li>
+              <li data-line="51">
+                <div class="list-bullet"></div><code>__imag__(self)</code> - used to return the imaginary part of a complex number.
+              </li>
+              <li data-line="52">
+                <div class="list-bullet"></div><code>__numerator__(self)</code> - used to return the numerator of a rational number.
+              </li>
+              <li data-line="53">
+                <div class="list-bullet"></div><code>__real__(self)</code> - used to return the real part of a complex number.
+              </li>
+              <li data-line="54">
+                <div class="list-bullet"></div><code>__to_bytes__(self, length, byteorder, *, signed=False)</code> - used to convert an integer into a sequence of bytes.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Diffrences between init  and new :" id="Diffrences_between_init__and_new_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Diffrences between init and new :
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="Similarities :" id="Similarities_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Similarities :
+            </h3>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Both of them are called/invoked during the creation of the instance.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-heading="Differences :" id="Differences_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Differences :
+            </h3>
+          </div>
+          <div style="overflow-x: auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><strong>new</strong></th>
+                  <th><strong>init</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Called before <strong>init</strong></td>
+                  <td>Called after <strong>new</strong></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Accepts a type as the first argument</td>
+                  <td>Accepts an instance as the first argument</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Is supposed to return an instance of the type received</td>
+                  <td>Is not supposed to return anything</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Used to control instance creation</td>
+                  <td>Used to initialize instance variables</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p>Talking about the first point. <code>__new__</code> is called when the instance is first created. This happens before the initialization of the class.</p>
+          </div>
+          <div>
+            <p>also its important to mention that the first argument to <code>__init__</code> is always <code>self</code> This self is the instance of the class. <code>self</code> is what <code>__new__</code> returns.</p>
+          </div>
+          <div>
+            <p>Coming to the third point, <code>__new__</code> is supposed to return an instance of the class. Note that if <code>__new__</code> does not returns anything, <code>__init__</code> is not called.</p>
+          </div>
+          <div>
+            <h3 data-heading="Which one of them is a constructor?" id="Which_one_of_them_is_a_constructor?" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Which one of them is a constructor?
+            </h3>
+          </div>
+          <div>
+            <p>If you are coming from another language, you might be surprised that there are two similar things doing the same kind of work. Most languages have something called a constructor.</p>
+          </div>
+          <div>
+            <p>In Python, that concept is broken down into <strong>constructor</strong> and <strong>initializer</strong>. And <code>__new__</code> is the constructor and <code>__init__</code> is the initializer.</p>
+          </div>
+          <div>
+            <p>Please note that <code>__new__</code> is implicit. Meaning that if you don’t actually need to modify the creation of an instance of the class, you don’t need to have a <code>new</code> method.</p>
+          </div>
+          <div>
+            <p>instance variables are local to an instance. So anything you are doing in init is local to that instance only. But anything you are doing in new will be affecting anything created for that type.</p>
+          </div>
+          <div>
+            <p>Consider this example:</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">class</span> <span class="token class-name">Demo</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__new__</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"__new__ called"</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token builtin">object</span><span class="token punctuation">.</span>__new__<span class="token punctuation">(</span>cls<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"__init__ called"</span><span class="token punctuation">)</span>
+
+d <span class="token operator">=</span> Demo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>This is the simplest example of both <code>__new__</code> and <code>__init__</code> in action. If you save the above code in a file and run it, you’d see something like this:</p>
+          </div>
+          <div>
+            <pre><code>$ python3 in_it.py 
+__new__ called
+__init__ called
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>As you can see, the new method is called first and then execution is passed to the init method.</p>
+          </div>
+          <div>
+            <h3 data-heading="Use Cases :" id="Use_Cases_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Use Cases :
+            </h3>
+          </div>
+          <div>
+            <p>Use case for <code>__new__</code> :</p>
+          </div>
+          <div>
+            <p>One of the best use cases we can take an example of is when creating a Singleton. As we know, Singleton ensures a class only has one instance and provides a global point of access to it.</p>
+          </div>
+          <div>
+            <p>Some of the places singleton are used is in game programming where there is only one instance of the player. Doesn’t matter how many instances you create, you’ll end up having only one.</p>
+          </div>
+          <div>
+            <p>Let’s see how to achieve similar behavior in Python:</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">class</span> <span class="token class-name">Singleton</span><span class="token punctuation">:</span>
+    __instance <span class="token operator">=</span> <span class="token boolean">None</span>
+    
+    <span class="token keyword">def</span> <span class="token function">__new__</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> cls<span class="token punctuation">.</span>__instance <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"creating..."</span><span class="token punctuation">)</span>
+            cls<span class="token punctuation">.</span>__instance <span class="token operator">=</span> <span class="token builtin">object</span><span class="token punctuation">.</span>__new__<span class="token punctuation">(</span>cls<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> cls<span class="token punctuation">.</span>__instance
+
+s1 <span class="token operator">=</span> Singleton<span class="token punctuation">(</span><span class="token punctuation">)</span>
+s2 <span class="token operator">=</span> Singleton<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span>
+
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Output:</p>
+          </div>
+          <div>
+            <pre><code>$ python3 singleton.py 
+creating...
+&lt;__main__.Singleton object at 0x7f943301d350&gt;
+&lt;__main__.Singleton object at 0x7f943301d350&gt;
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>As you can see, <code>creating…</code> is printed only once. they both point to the same memory location. In my case, it’s <code>0x7f943301d350</code>.</p>
+          </div>
+          <div>
+            <p>You might be guessing that can’t we do the same thing with <code>__init__</code>? No! That’s because <code>__init__</code> does not return anything. We’ll see in the next section what <code>__init__</code> is well suited for.</p>
+          </div>
+          <div>
+            <p>Use case for <code>__init__</code> :</p>
+          </div>
+          <div>
+            <p>As we have already seen previously. <code>init</code> is there to initialize an instance variable. These instance variables can later be used in different methods of the instance.</p>
+          </div>
+          <div>
+            <p>Here I’ll demonstrate one such example:</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">class</span> <span class="token class-name">Window</span><span class="token punctuation">(</span>QWidget<span class="token punctuation">)</span><span class="token punctuation">:</span>
+   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> parent <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token builtin">super</span><span class="token punctuation">(</span>Window<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>parent<span class="token punctuation">)</span>
+      self<span class="token punctuation">.</span>resize<span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+      self<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"My App"</span><span class="token punctuation">)</span>
+
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>When initializing UI objects, you can set how wide or long the window could be. You can also read preferences from a file and apply that during the initialization phase of an application. Setting the window title could be another example.</p>
+          </div>
+          <div>
+            <h3 data-heading="Conclusion :" id="Conclusion_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Conclusion :
+            </h3>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>In most cases, you don’t need
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><code>__new__</code> is called before <code>__init__</code>.
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><code>__new__</code> returns a instance of class.
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div><code>__init__</code> receives the instances of the class returned by <code>__new__</code>.
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div>Use <code>__init__</code> to initilize value.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>The same concept can be used to answer the question of abstraction vs encapsulation.</p>
+          </div>
+          <div>
+            <h2 data-heading="UML Diagrams :" id="UML_Diagrams_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>UML Diagrams :
+            </h2>
+          </div>
+          <div>
+            <p>The unified modeling language (UML) is a general-purpose modeling language that is intended to provide a standard way to visualize the design of a system.(It's worth mentioning that when using <code>Pycharm</code>, the IDE generates a UML diagram automatically!)<br>
+              Although, in software engineering, most practitioners do not use UML, but instead produce informal hand drawn diagrams; these diagrams, however, often include elements from UML. </p>
+          </div>
+          <div>
+            <h2 data-heading="OOP introduction :" id="OOP_introduction_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>OOP introduction :
+            </h2>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment">#class introduction</span>
+<span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># The __init__ method is used to initialize the attributes of the class.</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>make <span class="token operator">=</span> make
+        self<span class="token punctuation">.</span>model <span class="token operator">=</span> model
+        self<span class="token punctuation">.</span>year <span class="token operator">=</span> year
+        self<span class="token punctuation">.</span>color <span class="token operator">=</span> color
+
+    <span class="token comment"># This method is used to print a message indicating that the car is driving.</span>
+    <span class="token keyword">def</span> <span class="token function">drive</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"This "</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>model <span class="token operator">+</span> <span class="token string">" is driving"</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># This method is used to print a message indicating that the car is stopped.</span>
+    <span class="token keyword">def</span> <span class="token function">stop</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"This "</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>model <span class="token operator">+</span> <span class="token string">" is stopped"</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># This method is used to print the attributes of the Car object in a formatted string.</span>
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f"\nmake: </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>make<span class="token punctuation">}</span></span><span class="token string">\nmodel: </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>model<span class="token punctuation">}</span></span><span class="token string">\nyear: </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>year<span class="token punctuation">}</span></span><span class="token string">\ncolor: </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>color<span class="token punctuation">}</span></span><span class="token string">"</span></span>
+
+    <span class="token comment"># This method is used to compare if two Car objects are equal by checking their attributes.</span>
+    <span class="token keyword">def</span> <span class="token function">__eq__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> other<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>other<span class="token punctuation">,</span> Car<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>make <span class="token operator">==</span> other<span class="token punctuation">.</span>make<span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>model <span class="token operator">==</span> other<span class="token punctuation">.</span>model<span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>year <span class="token operator">==</span> other<span class="token punctuation">.</span>year<span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>color <span class="token operator">==</span> other<span class="token punctuation">.</span>color<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>The code defines a <code>Car</code> class that represents a car and has four attributes: <code>make</code>, <code>model</code>, <code>year</code>, and <code>color</code>. </p>
+          </div>
+          <div>
+            <p>The <code>__init__</code> method is used to initialize these attributes, and the class has three methods: <code>drive()</code>, <code>stop()</code>, and <code>__str__()</code>. </p>
+          </div>
+          <div>
+            <p>The <code>drive()</code> method prints a message indicating that the car is driving, and the <code>stop()</code> method prints a message indicating that the car is stopped. </p>
+          </div>
+          <div>
+            <p>The <code>__str__()</code> method returns a formatted string that displays the attributes of the car object. </p>
+          </div>
+          <div>
+            <p>The <code>__eq__()</code> method is used to compare if two <code>Car</code> objects are equal by checking their attributes. It returns <code>True</code> if all the attributes of two <code>Car</code> objects are equal and <code>False</code> otherwise.</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded">car_1 <span class="token operator">=</span> Car<span class="token punctuation">(</span><span class="token string">"Chevy"</span><span class="token punctuation">,</span><span class="token string">"Corvette"</span><span class="token punctuation">,</span><span class="token number">2021</span><span class="token punctuation">,</span><span class="token string">"blue"</span><span class="token punctuation">)</span>
+car_2 <span class="token operator">=</span> Car<span class="token punctuation">(</span><span class="token string">"Ford"</span><span class="token punctuation">,</span><span class="token string">"Mustang"</span><span class="token punctuation">,</span><span class="token number">2022</span><span class="token punctuation">,</span><span class="token string">"red"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>car_2<span class="token punctuation">)</span>
+car_2<span class="token punctuation">.</span>drive<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>car_2 <span class="token operator">==</span> car_1<span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h2 data-heading="Inheritance :" id="Inheritance_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Inheritance :
+            </h2>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment">#inheritance</span>
+<span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># The __init__ method is used to initialize the attributes of the class.</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>make <span class="token operator">=</span> make
+        self<span class="token punctuation">.</span>model <span class="token operator">=</span> model
+        self<span class="token punctuation">.</span>year <span class="token operator">=</span> year
+        self<span class="token punctuation">.</span>color <span class="token operator">=</span> color
+
+    <span class="token comment"># This method is used to print a message indicating that the car is driving.</span>
+    <span class="token keyword">def</span> <span class="token function">drive</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"This "</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>model <span class="token operator">+</span> <span class="token string">" is driving"</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># This method is used to print a message indicating that the car is stopped.</span>
+    <span class="token keyword">def</span> <span class="token function">stop</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"This "</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>model <span class="token operator">+</span> <span class="token string">" is stopped"</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># This method is used to print the attributes of the Car object in a formatted string.</span>
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f"\nmake: </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>make<span class="token punctuation">}</span></span><span class="token string">\nmodel: </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>model<span class="token punctuation">}</span></span><span class="token string">\nyear: </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>year<span class="token punctuation">}</span></span><span class="token string">\ncolor: </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>color<span class="token punctuation">}</span></span><span class="token string">"</span></span>
+
+<span class="token keyword">class</span> <span class="token class-name">PlaceHolder</span><span class="token punctuation">(</span>Car<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Truck</span><span class="token punctuation">(</span>Car<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+	<span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>make<span class="token punctuation">,</span>model<span class="token punctuation">,</span>year<span class="token punctuation">,</span>color<span class="token punctuation">,</span>weight<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	    <span class="token comment">#super().__init__(self,make,model,year,color)</span>
+	    Car<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>make<span class="token punctuation">,</span>model<span class="token punctuation">,</span>year<span class="token punctuation">,</span>color<span class="token punctuation">)</span>
+	    self<span class="token punctuation">.</span>weight <span class="token operator">=</span> weight
+
+truck_1 <span class="token operator">=</span> Truck<span class="token punctuation">(</span><span class="token string">"Tesla"</span><span class="token punctuation">,</span><span class="token string">"Cyber truck"</span><span class="token punctuation">,</span><span class="token number">2024</span><span class="token punctuation">,</span><span class="token string">"silver"</span><span class="token punctuation">,</span><span class="token number">5000</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>truck_1<span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>The code defines a <code>Car</code> class that represents a car and has four attributes: <code>make</code>, <code>model</code>, <code>year</code>, and <code>color</code>. The class has three methods: <code>drive()</code>, <code>stop()</code>, and <code>__str__()</code>.</p>
+          </div>
+          <div>
+            <p>The <code>drive()</code> method prints a message indicating that the car is driving, and the <code>stop()</code> method prints a message indicating that the car is stopped. The <code>__str__()</code> method returns a formatted string that displays the attributes of the car object.</p>
+          </div>
+          <div>
+            <p>There are two additional classes defined: <code>PlaceHolder</code> and <code>Truck</code>. The <code>PlaceHolder</code> class inherits from the <code>Car</code> class but does not define any additional attributes or methods.</p>
+          </div>
+          <div>
+            <p>The <code>Truck</code> class also inherits from the <code>Car</code> class and adds a new attribute called <code>weight</code> in the <code>__init__</code> method. The <code>Truck</code> class initializes the <code>make</code>, <code>model</code>, <code>year</code>, and <code>color</code> attributes of the <code>Car</code> class by calling the <code>__init__()</code> method of the <code>Car</code> class using either <code>super().__init__(self, make, model, year, color)</code> or <code>Car.__init__(self, make, model, year, color)</code>.</p>
+          </div>
+          <div>
+            <p>The <code>Truck</code> class instance <code>truck_1</code> is created using the <code>Truck</code> class constructor, which takes in <code>make</code>, <code>model</code>, <code>year</code>, <code>color</code>, and <code>weight</code> attributes.</p>
+          </div>
+          <div>
+            <p>Finally, the <code>print()</code> function is used to print the <code>truck_1</code> object, which calls the <code>__str__()</code> method of the <code>Car</code> class to display the attributes of the object.</p>
+          </div>
+          <div>
+            <h2 data-heading="Abstract Classes and Polymorphism :" id="Abstract_Classes_and_Polymorphism_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Abstract Classes and Polymorphism :
+            </h2>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">from</span> abc <span class="token keyword">import</span> ABC<span class="token punctuation">,</span> abstractmethod
+
+<span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span>ABC<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># define an abstract method that must be implemented by any concrete subclass</span>
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">start_engine</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+    
+    <span class="token comment"># define an initializer that sets the make and model of the car</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> make<span class="token punctuation">,</span> model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>make <span class="token operator">=</span> make
+        self<span class="token punctuation">.</span>model <span class="token operator">=</span> model
+
+<span class="token keyword">class</span> <span class="token class-name">SportsCar</span><span class="token punctuation">(</span>Car<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># provide a concrete implementation for the start_engine() method</span>
+    <span class="token keyword">def</span> <span class="token function">start_engine</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">"The {0} {1} engine is starting..."</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>make<span class="token punctuation">,</span> self<span class="token punctuation">.</span>model<span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SedanCar</span><span class="token punctuation">(</span>Car<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># provide a different concrete implementation for the start_engine() method</span>
+    <span class="token keyword">def</span> <span class="token function">start_engine</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">"The {0} {1} engine is starting..."</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>make<span class="token punctuation">,</span> self<span class="token punctuation">.</span>model<span class="token punctuation">)</span>
+
+<span class="token comment"># create a list of cars, including one sports car and one sedan car</span>
+cars <span class="token operator">=</span> <span class="token punctuation">[</span>SportsCar<span class="token punctuation">(</span><span class="token string">"Ferrari"</span><span class="token punctuation">,</span> <span class="token string">"F430"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> SedanCar<span class="token punctuation">(</span><span class="token string">"Toyota"</span><span class="token punctuation">,</span> <span class="token string">"Camry"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+<span class="token comment"># call the start_engine() method for each car, which executes the appropriate implementation based on the type of car</span>
+
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>The code defines an abstract base class <code>Car</code> that is inherited by two concrete subclasses: <code>SportsCar</code> and <code>SedanCar</code>. The <code>Car</code> class has one abstract method, <code>start_engine()</code>, which must be implemented by any concrete subclass that inherits from it.</p>
+          </div>
+          <div>
+            <p>The <code>SportsCar</code> and <code>SedanCar</code> classes both inherit from the <code>Car</code> class and provide a concrete implementation for the <code>start_engine()</code> method. The implementation uses string formatting to return a message indicating that the engine is starting for the given make and model of the car.</p>
+          </div>
+          <div>
+            <p>A list called <code>cars</code> is created that includes one instance of <code>SportsCar</code> and one instance of <code>SedanCar</code>. Finally, a loop iterates over the list of cars and calls the <code>start_engine()</code> method for each car, which executes the appropriate implementation based on the type of car. </p>
+          </div>
+          <div>
+            <p>This code demonstrates the concept of polymorphism, where objects of different types can be treated as if they are the same type, as long as they implement the same methods or have the same attributes. In this case, both <code>SportsCar</code> and <code>SedanCar</code> are treated as <code>Car</code> objects, so they can be added to the same list and looped over in the same way.</p>
+          </div>
+          <div>
+            <h2 data-heading="Encapsulation / Private variables :" id="Encapsulation_/_Private_variables_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Encapsulation / Private variables :
+            </h2>
+          </div>
+          <div>
+            <p>The <code>Car</code> class is an example of encapsulation in Python. It demonstrates how to use private instance variables and getter methods to restrict direct access to class attributes.</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Initialize private instance variables</span>
+        self<span class="token punctuation">.</span>__make <span class="token operator">=</span> make
+        self<span class="token punctuation">.</span>__model <span class="token operator">=</span> model
+        self<span class="token punctuation">.</span>__year <span class="token operator">=</span> year
+        self<span class="token punctuation">.</span>__speed <span class="token operator">=</span> <span class="token number">0</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_make</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Getter method for private variable __make</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>__make
+
+    <span class="token keyword">def</span> <span class="token function">get_model</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Getter method for private variable __model</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>__model
+
+    <span class="token keyword">def</span> <span class="token function">get_year</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Getter method for private variable __year</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>__year
+
+    <span class="token keyword">def</span> <span class="token function">get_speed</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Getter method for private variable __speed</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>__speed
+
+    <span class="token keyword">def</span> <span class="token function">accelerate</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Increase the speed of the car by 10 km/h</span>
+        self<span class="token punctuation">.</span>__speed <span class="token operator">+=</span> <span class="token number">10</span>
+
+    <span class="token keyword">def</span> <span class="token function">brake</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Decrease the speed of the car by 10 km/h</span>
+        self<span class="token punctuation">.</span>__speed <span class="token operator">-=</span> <span class="token number">10</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>In this example, the <code>__make</code>, <code>__model</code>, <code>__year</code>, and <code>__speed</code> instance variables are marked as private by prefixing them with two underscores. Private variables can only be accessed within the class definition. To access these private variables, getter methods are defined that return the values of the private variables. This ensures that external code cannot directly modify the state of the object.</p>
+          </div>
+          <div>
+            <p>A <code>Car</code> object is created with the make "Honda", model "Accord", and year 2021. The car is accelerated twice and then braked once. The make, model, year, and speed of the car are printed using the getter methods.</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment"># Create a Car object with make "Honda", model "Accord", and year 2021</span>
+car <span class="token operator">=</span> Car<span class="token punctuation">(</span><span class="token string">"Honda"</span><span class="token punctuation">,</span> <span class="token string">"Accord"</span><span class="token punctuation">,</span> <span class="token number">2021</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Accelerate the car twice and then brake once</span>
+car<span class="token punctuation">.</span>accelerate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+car<span class="token punctuation">.</span>accelerate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+car<span class="token punctuation">.</span>brake<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Print the make, model, year, and speed of the car using the getter methods</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Make:"</span><span class="token punctuation">,</span> car<span class="token punctuation">.</span>get_make<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Model:"</span><span class="token punctuation">,</span> car<span class="token punctuation">.</span>get_model<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Year:"</span><span class="token punctuation">,</span> car<span class="token punctuation">.</span>get_year<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Speed:"</span><span class="token punctuation">,</span> car<span class="token punctuation">.</span>get_speed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"km/h"</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h2 data-heading="Encapsulation / Protected :" id="Encapsulation_/_Protected_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Encapsulation / Protected :
+            </h2>
+          </div>
+          <div>
+            <p>In Python, protected variables are denoted with a single underscore prefix (e.g., <code>_make</code>). This indicates that the variable should not be accessed from outside the class, but can be accessed from within the class hierarchy. </p>
+          </div>
+          <div>
+            <p>In the following example, we define a <code>Car</code> class with two protected instance variables: <code>_make</code> and <code>_model</code>. The <code>_start_engine</code> method is also protected, which means it can only be accessed from within the class hierarchy. </p>
+          </div>
+          <div>
+            <p>Then, we define a <code>SportCar</code> subclass that inherits from <code>Car</code>. The <code>race</code> method of <code>SportCar</code> calls the <code>_start_engine</code> method from the parent <code>Car</code> class and prints a message indicating that the car is racing.</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> make<span class="token punctuation">,</span> model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>_make <span class="token operator">=</span> make  <span class="token comment"># protected variable</span>
+        self<span class="token punctuation">.</span>_model <span class="token operator">=</span> model  <span class="token comment"># protected variable</span>
+
+    <span class="token keyword">def</span> <span class="token function">_start_engine</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"The </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>_make<span class="token punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>_model<span class="token punctuation">}</span></span><span class="token string"> engine is starting..."</span></span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SportCar</span><span class="token punctuation">(</span>Car<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">race</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>_start_engine<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I'm racing now!"</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>We can create a <code>SportCar</code> object with make "Ferrari" and model "F430" and call the <code>race</code> method:</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded">sport_car <span class="token operator">=</span> SportCar<span class="token punctuation">(</span><span class="token string">"Ferrari"</span><span class="token punctuation">,</span> <span class="token string">"F430"</span><span class="token punctuation">)</span>
+sport_car<span class="token punctuation">.</span>race<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Note that the protected variables <code>_make</code> and <code>_model</code> can be accessed from within the class hierarchy (i.e., from the <code>Car</code> and <code>SportCar</code> classes), but not from outside the class hierarchy. For example, the following line would raise an <code>AttributeError</code>:</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">print</span><span class="token punctuation">(</span>sport_car<span class="token punctuation">.</span>_make<span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div class="mod-footer">
+            <div class="embedded-backlinks" style="display: none;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-right sidebar">
+      <div class="sidebar-content"><span class="sidebar-section-header">Interactive Graph</span>
+        <div class="graph-view-placeholder">
+          <div class="graph-view-container">
+            <div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-arrow-up-right">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg></div>
+            <canvas id="graph-canvas" width="512px" height="512px"></canvas>
+          </div>
+        </div>
+        <div class="tree-container outline-tree" data-depth="0">
+          <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
+          <div class="tree-scroll-area">
+            <div class="tree-item mod-tree-heading" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="#Python_Object_Oriented_Programming"><span class="tree-item-title">Python Object Oriented Programming</span></a></div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#Python_Magic_Methods:"><span class="tree-item-title">Python Magic Methods:</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Descriptions_:"><span class="tree-item-title">Descriptions :</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#Diffrences_between_init__and_new_:"><span class="tree-item-title">Diffrences between init and new :</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Similarities_:"><span class="tree-item-title">Similarities :</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Differences_:"><span class="tree-item-title">Differences :</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Which_one_of_them_is_a_constructor?"><span class="tree-item-title">Which one of them is a constructor?</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Use_Cases_:"><span class="tree-item-title">Use Cases :</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Conclusion_:"><span class="tree-item-title">Conclusion :</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#UML_Diagrams_:"><span class="tree-item-title">UML Diagrams :</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#OOP_introduction_:"><span class="tree-item-title">OOP introduction :</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Inheritance_:"><span class="tree-item-title">Inheritance :</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Abstract_Classes_and_Polymorphism_:"><span class="tree-item-title">Abstract Classes and Polymorphism :</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Encapsulation_/_Private_variables_:"><span class="tree-item-title">Encapsulation / Private variables :</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Encapsulation_/_Protected_:"><span class="tree-item-title">Encapsulation / Protected :</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

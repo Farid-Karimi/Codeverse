@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>markdown cheat sheet</title>
+  <base href="../">
+  <meta id="root-path" root-path="../">
+
+  <link rel="icon" sizes="96x96" href="https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/favicon-96x96.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+  <meta charset="UTF-8">
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+
+  <link rel="stylesheet" href="lib/styles/obsidian-styles.css">
+  <link rel="stylesheet" href="lib/styles/theme.css">
+  <link rel="stylesheet" href="lib/styles/plugin-styles.css">
+  <link rel="stylesheet" href="lib/styles/snippets.css">
+  <style>
+    body.css-settings-manager {
+      --blur-depth: 10px;
+      --font-family-vault: 'TimeGoing', 'Segoe UI Emoji';
+      --font-size-vault-name: 1.9em;
+    }
+
+    body.theme-light.css-settings-manager {}
+
+    body.theme-dark.css-settings-manager {
+      --text-color-code: #FFFFFF;
+    }
+  </style>
+
+
+  <!-- Graph View Data -->
+  <script>
+    let nodes = {
+      "nodeCount": 34,
+      "linkCount": 31,
+      "radii": [7, 6.1787109375, 5.5146484375, 4.6552734375, 4.15234375, 4.15234375, 4.15234375, 4.15234375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3, 3, 3],
+      "labels": ["Data Structures", "C++", "index", "Markdown", "Python", "MathJax", "markdown cheat sheet", "Git", "Python OOP", "git cheat sheet", "DS-session9", "DS-session8", "DS-session7", "DS-session6", "DS-session5", "DS-session4", "DS-session3", "DS-session2", "DS-session15", "DS-session14", "DS-session13", "DS-session12", "DS-session11", "DS-session10", "DS-session1", "Static keyword", "OOP", "Inline keyword", "Header Files", "Enum and Enum class", "Const keyword", "Traversing binary tree", "expression tree", "Convert to binary tree"],
+      "paths": ["data-structures/data-structures.html", "c++/c++.html", "index.html", "markdown/markdown.html", "python/python.html", "markdown/mathjax.html", "markdown/markdown-cheat-sheet.html", "git/git.html", "python/python-oop.html", "git/git-cheat-sheet.html", "data-structures/ds-session9.html", "data-structures/ds-session8.html", "data-structures/ds-session7.html", "data-structures/ds-session6.html", "data-structures/ds-session5.html", "data-structures/ds-session4.html", "data-structures/ds-session3.html", "data-structures/ds-session2.html", "data-structures/ds-session15.html", "data-structures/ds-session14.html", "data-structures/ds-session13.html", "data-structures/ds-session12.html", "data-structures/ds-session11.html", "data-structures/ds-session10.html", "data-structures/ds-session1.html", "c++/static-keyword.html", "c++/oop.html", "c++/inline-keyword.html", "c++/header-files.html", "c++/enum-and-enum-class.html", "c++/const-keyword.html", "photos/traversing-binary-tree.html", "photos/expression-tree.html", "photos/convert-to-binary-tree.html"],
+      "linkSources": [2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 3, 3, 4],
+      "linkTargets": [0, 1, 7, 3, 4, 26, 29, 28, 30, 25, 27, 24, 17, 16, 15, 14, 13, 12, 11, 10, 23, 22, 21, 20, 19, 18, 9, 5, 5, 6, 8]
+    };
+    let attractionForce = 1;
+    let linkLength = 10;
+    let repulsionForce = 150;
+    let centralForce = 3;
+    let edgePruning = 100;
+  </script>
+
+  <script type="module" src="lib/scripts/graph_view.js"></script>
+
+  <script src="lib/scripts/graph_wasm.js"></script>
+
+  <script src="lib/scripts/tinycolor.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js" integrity="sha512-Ch/O6kL8BqUwAfCF7Ie5SX1Hin+BJgYH4pNjRqXdTEqMsis1TUYg+j6nnI9uduPjGaj7DN4UKCZgpvoExt6dkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="lib/scripts/webpage.js"></script>
+
+</head>
+
+<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app show-inline-title show-view-header is-maximized css-settings-manager color-scheme-options-topaz-nord background-settings-workplace-background-image background-settings-workplace-theme-light-leaf background-settings-workplace-theme-dark-dark-sky background-image-settings-markdown-page-default background-image-settings-markdown-page-random-default notebook-liked-markdown-page-grid-notebook-1 panel-page-bg-theme-ligt-curve panel-page-bg-theme-dark-sea default-left-ribbon-style layout-style-options-default default-search-bar default-scrollbar bt-default-highlight h1-text-align-start h2-text-align-start h3-text-align-start h4-text-align-start h5-text-align-start h6-text-align-start default-hr bt-default-unordered-list default-ol-list-marker list-no-border file-shape-default file-name-non-wrapped folder-style-change-options-colorful-default folder-colorful-one blockquote-style-default default-table table-width-100 table-style-default default-loading-page loading-text-typing-style rainbow-tag setting-style-traditional default-titlebar default-outline-style stack-tab-text-ori-mixed default-tab default-canvas-background traditional-callout-style style-options-for-admonition-plugin style-options-for-calendar-plugin-default style-options-for-kanban-plugin-static-default style-options-for-kanban-plugin-dynamic-default style-options-for-buttons-plugin dataview-list-style-pacman default-dvtable dialogue-style-default memos-default-light memos-default-dark quiet-outline-optimize code-theme-bt-default whole-code-wrap codebox-default-style" style="--zoom-factor:1; --font-text-size:15px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em; --content-width:500em; --sidebar-width:25em; --collapse-arrow-size:0.4em; --tree-horizontal-spacing:1em; --tree-vertical-spacing:0.5em; --sidebar-margin:12px;">
+  <div class="webpage-container">
+    <div class="sidebar-left sidebar">
+      <div class="sidebar-content">
+        <div><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle">
+            <div class="toggle-background"></div>
+          </label></div>
+        <div class="tree-container file-tree mod-nav-indicator" data-depth="0">
+          <div class="tree-header"><span class="sidebar-section-header">Code Verse</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
+          <div class="tree-scroll-area">
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="c++"><span class="tree-item-title">C++</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/c++.html"><span class="tree-item-title">C++</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/const-keyword.html"><span class="tree-item-title">Const keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/enum-and-enum-class.html"><span class="tree-item-title">Enum and Enum class</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/header-files.html"><span class="tree-item-title">Header Files</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/inline-keyword.html"><span class="tree-item-title">Inline keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/oop.html"><span class="tree-item-title">OOP</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/static-keyword.html"><span class="tree-item-title">Static keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="data-structures"><span class="tree-item-title">Data Structures</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/data-structures.html"><span class="tree-item-title">Data Structures</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session1.html"><span class="tree-item-title">DS-session1</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session10.html"><span class="tree-item-title">DS-session10</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session11.html"><span class="tree-item-title">DS-session11</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session12.html"><span class="tree-item-title">DS-session12</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session13.html"><span class="tree-item-title">DS-session13</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session14.html"><span class="tree-item-title">DS-session14</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session15.html"><span class="tree-item-title">DS-session15</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session2.html"><span class="tree-item-title">DS-session2</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session3.html"><span class="tree-item-title">DS-session3</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session4.html"><span class="tree-item-title">DS-session4</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session5.html"><span class="tree-item-title">DS-session5</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session6.html"><span class="tree-item-title">DS-session6</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session7.html"><span class="tree-item-title">DS-session7</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session8.html"><span class="tree-item-title">DS-session8</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session9.html"><span class="tree-item-title">DS-session9</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="git"><span class="tree-item-title">Git</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="git/git.html"><span class="tree-item-title">Git</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="git/git-cheat-sheet.html"><span class="tree-item-title">git cheat sheet</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="markdown"><span class="tree-item-title">Markdown</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/markdown.html"><span class="tree-item-title">Markdown</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/markdown-cheat-sheet.html"><span class="tree-item-title">markdown cheat sheet</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/mathjax.html"><span class="tree-item-title">MathJax</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="photos"><span class="tree-item-title">photos</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/convert-to-binary-tree.html"><span class="tree-item-title">Convert to binary tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/expression-tree.html"><span class="tree-item-title">expression tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/traversing-binary-tree.html"><span class="tree-item-title">Traversing binary tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="python"><span class="tree-item-title">Python</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="python/python.html"><span class="tree-item-title">Python</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="python/python-oop.html"><span class="tree-item-title">Python OOP</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-file" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="index.html"><span class="tree-item-title">index</span></a></div>
+              <div class="tree-item-children"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="document-container">
+      <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
+        <style id="MJX-CHTML-styles"></style>
+        <div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: ; padding-top: var(--file-margins); padding-right: var(--file-margins); padding-left: var(--file-margins); width: 100%; position: absolute;">
+          <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
+          <div class="mod-header"></div>
+          <div>
+            <h1 data-heading="Markdown Cheat Sheet" id="Markdown_Cheat_Sheet">Markdown Cheat Sheet</h1>
+          </div>
+          <div>
+            <p>Thanks for visiting <a data-tooltip-position="top" aria-label="https://www.markdownguide.org" rel="noopener" class="external-link" href="https://www.markdownguide.org" target="_blank">The Markdown Guide</a></p>
+          </div>
+          <div>
+            <p>This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for <a data-tooltip-position="top" aria-label="https://www.markdownguide.org/basic-syntax" rel="noopener" class="external-link" href="https://www.markdownguide.org/basic-syntax" target="_blank">basic syntax</a> and <a data-tooltip-position="top" aria-label="https://www.markdownguide.org/extended-syntax" rel="noopener" class="external-link" href="https://www.markdownguide.org/extended-syntax" target="_blank">extended syntax</a>.<br>
+              also for writing math equation check <a data-href="MathJax" href="markdown/mathjax.html" class="internal-link" target="_self" rel="noopener">MathJax</a></p>
+          </div>
+          <div>
+            <h2 data-heading="Basic Syntax" id="Basic_Syntax" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Basic Syntax
+            </h2>
+          </div>
+          <div>
+            <p>These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.</p>
+          </div>
+          <div>
+            <h3 data-heading="Heading" id="Heading" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Heading
+            </h3>
+          </div>
+          <div>
+            <h1 data-heading="H1" id="H1">H1</h1>
+          </div>
+          <div>
+            <h2 data-heading="H2" id="H2" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>H2
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="H3" id="H3" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>H3
+            </h3>
+          </div>
+          <div>
+            <h3 data-heading="Bold" id="Bold" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Bold
+            </h3>
+          </div>
+          <div>
+            <p><strong>bold text</strong></p>
+          </div>
+          <div>
+            <h3 data-heading="Italic" id="Italic" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Italic
+            </h3>
+          </div>
+          <div>
+            <p><em>italicized text</em></p>
+          </div>
+          <div>
+            <h3 data-heading="Blockquote" id="Blockquote" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Blockquote
+            </h3>
+          </div>
+          <div>
+            <blockquote>
+              <p>blockquote</p>
+            </blockquote>
+          </div>
+          <div>
+            <h3 data-heading="Ordered List" id="Ordered_List" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Ordered List
+            </h3>
+          </div>
+          <div>
+            <ol>
+              <li data-line="0">First item</li>
+              <li data-line="1">Second item</li>
+              <li data-line="2">Third item</li>
+            </ol>
+          </div>
+          <div>
+            <h3 data-heading="Unordered List" id="Unordered_List" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Unordered List
+            </h3>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>First item
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>Second item
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>Third item
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-heading="Code" id="Code" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Code
+            </h3>
+          </div>
+          <div>
+            <p><code>code</code></p>
+          </div>
+          <div>
+            <h3 data-heading="Horizontal Rule" id="Horizontal_Rule" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Horizontal Rule
+            </h3>
+          </div>
+          <div>
+            <hr>
+          </div>
+          <div>
+            <h3 data-heading="Link" id="Link" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Link
+            </h3>
+          </div>
+          <div>
+            <p><a data-tooltip-position="top" aria-label="https://www.markdownguide.org" rel="noopener" class="external-link" href="https://www.markdownguide.org" target="_blank">Markdown Guide</a></p>
+          </div>
+          <div>
+            <h3 data-heading="Image" id="Image" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Image
+            </h3>
+          </div>
+          <div>
+            <p><img alt="alt text" src="https://www.markdownguide.org/assets/images/tux.png" referrerpolicy="no-referrer"></p>
+          </div>
+          <div>
+            <h2 data-heading="Extended Syntax" id="Extended_Syntax" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Extended Syntax
+            </h2>
+          </div>
+          <div>
+            <p>These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.</p>
+          </div>
+          <div>
+            <h3 data-heading="Table" id="Table" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Table
+            </h3>
+          </div>
+          <div style="overflow-x: auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Syntax</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Header</td>
+                  <td>Title</td>
+                </tr>
+                <tr>
+                  <td>Paragraph</td>
+                  <td>Text</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3 data-heading="Fenced Code Block" id="Fenced_Code_Block" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Fenced Code Block
+            </h3>
+          </div>
+          <div>
+            <pre><code>{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h3 data-heading="Footnote" id="Footnote" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Footnote
+            </h3>
+          </div>
+          <div>
+            <p>Here's a sentence with a footnote. <sup data-footnote-id="fnref-1-3a5a26a625d14640" class="footnote-ref" id="fnref-1-3a5a26a625d14640"><a href="#fn-1-3a5a26a625d14640" class="footnote-link" target="_self" rel="noopener">[1]</a></sup></p>
+          </div>
+          <div></div>
+          <div>
+            <h3 data-heading="Heading ID" id="Heading_ID" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Heading ID
+            </h3>
+          </div>
+          <div>
+            <h3 data-heading="My Great Heading {#custom-id}" id="My_Great_Heading_{#custom-id}" style="display: flex;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>My Great Heading {#custom-id}</h3></div><div><h3 data-heading="Definition List" id="Definition_List" style="display: flex;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Definition List</h3></div><div><p>term<br>
+: definition</p></div><div><h3 data-heading="Strikethrough" id="Strikethrough" style="display: flex;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Strikethrough</h3></div><div><p><del>The world is flat.</del></p></div><div><h3 data-heading="Task List" id="Task_List" style="display: flex;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Task List</h3></div><div><ul class="contains-task-list has-list-bullet">
+<li data-line="0" data-task="x" class="task-list-item is-checked"><div class="list-bullet"></div><input data-line="0" checked="" type="checkbox" class="task-list-item-checkbox">Write the press release</li>
+<li data-line="1" data-task="x" class="task-list-item is-checked"><div class="list-bullet"></div><input data-line="1" checked="" type="checkbox" class="task-list-item-checkbox">Update the website</li>
+<li data-line="2" data-task="" class="task-list-item"><div class="list-bullet"></div><input data-line="2" type="checkbox" class="task-list-item-checkbox">Contact the media</li>
+</ul></div><div><h3 data-heading="Emoji" id="Emoji" style="display: flex;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Emoji</h3></div><div><p>That is so funny! :joy:</p></div><div><p>(See also <a data-tooltip-position="top" aria-label="https://www.markdownguide.org/extended-syntax/#copying-and-pasting-emoji" rel="noopener" class="external-link" href="https://www.markdownguide.org/extended-syntax/#copying-and-pasting-emoji" target="_blank">Copying and Pasting Emoji</a>)</p></div><div><h3 data-heading="Highlight" id="Highlight" style="display: flex;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Highlight</h3></div><div><p>I need to highlight these <mark>very important words</mark>.</p></div><div><h3 data-heading="Subscript" id="Subscript" style="display: flex;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Subscript</h3></div><div><p>H~2~O</p></div><div><h3 data-heading="Superscript" id="Superscript" style="display: flex;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Superscript</h3></div><div><p>X^2^</p></div><div>
+</div><div><section class="footnotes"><hr><ol>
+<li data-line="-37" data-footnote-id="fn-1-3a5a26a625d14640" id="fn-1-3a5a26a625d14640">This is the footnote.<a href="#fnref-1-3a5a26a625d14640" class="footnote-backref footnote-link" target="_self" rel="noopener">↩︎</a></li>
+</ol></section></div><div class="mod-footer"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-content"><span class="sidebar-section-header">Interactive Graph</span><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" width="512px" height="512px"></canvas>
+		</div>
+		</div><div class="tree-container outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div><div class="tree-scroll-area"><div class="tree-item mod-tree-heading" data-depth="1"><div class="tree-item-contents"><a class="tree-item-link" href="#Markdown_Cheat_Sheet"><span class="tree-item-title">Markdown Cheat Sheet</span></a></div><div class="tree-item-children"><div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2"><div class="tree-item-contents"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><a class="tree-item-link" href="#Basic_Syntax"><span class="tree-item-title">Basic Syntax</span></a></div><div class="tree-item-children"><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Heading"><span class="tree-item-title">Heading</span></a></div><div class="tree-item-children"></div></div></div></div></div></div><div class="tree-item mod-tree-heading" data-depth="1"><div class="tree-item-contents"><a class="tree-item-link" href="#H1"><span class="tree-item-title">H1</span></a></div><div class="tree-item-children"><div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2"><div class="tree-item-contents"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><a class="tree-item-link" href="#H2"><span class="tree-item-title">H2</span></a></div><div class="tree-item-children"><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#H3"><span class="tree-item-title">H3</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Bold"><span class="tree-item-title">Bold</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Italic"><span class="tree-item-title">Italic</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Blockquote"><span class="tree-item-title">Blockquote</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Ordered_List"><span class="tree-item-title">Ordered List</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Unordered_List"><span class="tree-item-title">Unordered List</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Code"><span class="tree-item-title">Code</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Horizontal_Rule"><span class="tree-item-title">Horizontal Rule</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Link"><span class="tree-item-title">Link</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Image"><span class="tree-item-title">Image</span></a></div><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2"><div class="tree-item-contents"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><a class="tree-item-link" href="#Extended_Syntax"><span class="tree-item-title">Extended Syntax</span></a></div><div class="tree-item-children"><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Table"><span class="tree-item-title">Table</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Fenced_Code_Block"><span class="tree-item-title">Fenced Code Block</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Footnote"><span class="tree-item-title">Footnote</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Heading_ID"><span class="tree-item-title">Heading ID</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#My_Great_Heading_{#custom-id}"><span class="tree-item-title">My Great Heading {#custom-id}</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Definition_List"><span class="tree-item-title">Definition List</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Strikethrough"><span class="tree-item-title">Strikethrough</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Task_List"><span class="tree-item-title">Task List</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Emoji"><span class="tree-item-title">Emoji</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Highlight"><span class="tree-item-title">Highlight</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Subscript"><span class="tree-item-title">Subscript</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-heading" data-depth="3"><div class="tree-item-contents"><a class="tree-item-link" href="#Superscript"><span class="tree-item-title">Superscript</span></a></div><div class="tree-item-children"></div></div></div></div></div></div></div></div></div></div></div></body></html>

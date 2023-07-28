@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>git cheat sheet</title>
+  <base href="../">
+  <meta id="root-path" root-path="../">
+
+  <link rel="icon" sizes="96x96" href="https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/favicon-96x96.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+  <meta charset="UTF-8">
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+
+  <link rel="stylesheet" href="lib/styles/obsidian-styles.css">
+  <link rel="stylesheet" href="lib/styles/theme.css">
+  <link rel="stylesheet" href="lib/styles/plugin-styles.css">
+  <link rel="stylesheet" href="lib/styles/snippets.css">
+  <style>
+    body.css-settings-manager {
+      --blur-depth: 10px;
+      --font-family-vault: 'TimeGoing', 'Segoe UI Emoji';
+      --font-size-vault-name: 1.9em;
+    }
+
+    body.theme-light.css-settings-manager {}
+
+    body.theme-dark.css-settings-manager {
+      --text-color-code: #FFFFFF;
+    }
+  </style>
+
+
+  <!-- Graph View Data -->
+  <script>
+    let nodes = {
+      "nodeCount": 34,
+      "linkCount": 31,
+      "radii": [7, 6.1787109375, 5.5146484375, 4.6552734375, 4.15234375, 4.15234375, 4.15234375, 4.15234375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3, 3, 3],
+      "labels": ["Data Structures", "C++", "index", "Markdown", "Python", "MathJax", "markdown cheat sheet", "Git", "Python OOP", "git cheat sheet", "DS-session9", "DS-session8", "DS-session7", "DS-session6", "DS-session5", "DS-session4", "DS-session3", "DS-session2", "DS-session15", "DS-session14", "DS-session13", "DS-session12", "DS-session11", "DS-session10", "DS-session1", "Static keyword", "OOP", "Inline keyword", "Header Files", "Enum and Enum class", "Const keyword", "Traversing binary tree", "expression tree", "Convert to binary tree"],
+      "paths": ["data-structures/data-structures.html", "c++/c++.html", "index.html", "markdown/markdown.html", "python/python.html", "markdown/mathjax.html", "markdown/markdown-cheat-sheet.html", "git/git.html", "python/python-oop.html", "git/git-cheat-sheet.html", "data-structures/ds-session9.html", "data-structures/ds-session8.html", "data-structures/ds-session7.html", "data-structures/ds-session6.html", "data-structures/ds-session5.html", "data-structures/ds-session4.html", "data-structures/ds-session3.html", "data-structures/ds-session2.html", "data-structures/ds-session15.html", "data-structures/ds-session14.html", "data-structures/ds-session13.html", "data-structures/ds-session12.html", "data-structures/ds-session11.html", "data-structures/ds-session10.html", "data-structures/ds-session1.html", "c++/static-keyword.html", "c++/oop.html", "c++/inline-keyword.html", "c++/header-files.html", "c++/enum-and-enum-class.html", "c++/const-keyword.html", "photos/traversing-binary-tree.html", "photos/expression-tree.html", "photos/convert-to-binary-tree.html"],
+      "linkSources": [2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 3, 3, 4],
+      "linkTargets": [0, 1, 7, 3, 4, 26, 29, 28, 30, 25, 27, 24, 17, 16, 15, 14, 13, 12, 11, 10, 23, 22, 21, 20, 19, 18, 9, 5, 5, 6, 8]
+    };
+    let attractionForce = 1;
+    let linkLength = 10;
+    let repulsionForce = 150;
+    let centralForce = 3;
+    let edgePruning = 100;
+  </script>
+
+  <script type="module" src="lib/scripts/graph_view.js"></script>
+
+  <script src="lib/scripts/graph_wasm.js"></script>
+
+  <script src="lib/scripts/tinycolor.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js" integrity="sha512-Ch/O6kL8BqUwAfCF7Ie5SX1Hin+BJgYH4pNjRqXdTEqMsis1TUYg+j6nnI9uduPjGaj7DN4UKCZgpvoExt6dkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="lib/scripts/webpage.js"></script>
+
+</head>
+
+<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app show-inline-title show-view-header is-maximized css-settings-manager color-scheme-options-topaz-nord background-settings-workplace-background-image background-settings-workplace-theme-light-leaf background-settings-workplace-theme-dark-dark-sky background-image-settings-markdown-page-default background-image-settings-markdown-page-random-default notebook-liked-markdown-page-grid-notebook-1 panel-page-bg-theme-ligt-curve panel-page-bg-theme-dark-sea default-left-ribbon-style layout-style-options-default default-search-bar default-scrollbar bt-default-highlight h1-text-align-start h2-text-align-start h3-text-align-start h4-text-align-start h5-text-align-start h6-text-align-start default-hr bt-default-unordered-list default-ol-list-marker list-no-border file-shape-default file-name-non-wrapped folder-style-change-options-colorful-default folder-colorful-one blockquote-style-default default-table table-width-100 table-style-default default-loading-page loading-text-typing-style rainbow-tag setting-style-traditional default-titlebar default-outline-style stack-tab-text-ori-mixed default-tab default-canvas-background traditional-callout-style style-options-for-admonition-plugin style-options-for-calendar-plugin-default style-options-for-kanban-plugin-static-default style-options-for-kanban-plugin-dynamic-default style-options-for-buttons-plugin dataview-list-style-pacman default-dvtable dialogue-style-default memos-default-light memos-default-dark quiet-outline-optimize code-theme-bt-default whole-code-wrap codebox-default-style" style="--zoom-factor:1; --font-text-size:15px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em; --content-width:500em; --sidebar-width:25em; --collapse-arrow-size:0.4em; --tree-horizontal-spacing:1em; --tree-vertical-spacing:0.5em; --sidebar-margin:12px;">
+  <div class="webpage-container">
+    <div class="sidebar-left sidebar">
+      <div class="sidebar-content">
+        <div><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle">
+            <div class="toggle-background"></div>
+          </label></div>
+        <div class="tree-container file-tree mod-nav-indicator" data-depth="0">
+          <div class="tree-header"><span class="sidebar-section-header">Code Verse</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
+          <div class="tree-scroll-area">
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="c++"><span class="tree-item-title">C++</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/c++.html"><span class="tree-item-title">C++</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/const-keyword.html"><span class="tree-item-title">Const keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/enum-and-enum-class.html"><span class="tree-item-title">Enum and Enum class</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/header-files.html"><span class="tree-item-title">Header Files</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/inline-keyword.html"><span class="tree-item-title">Inline keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/oop.html"><span class="tree-item-title">OOP</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/static-keyword.html"><span class="tree-item-title">Static keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="data-structures"><span class="tree-item-title">Data Structures</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/data-structures.html"><span class="tree-item-title">Data Structures</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session1.html"><span class="tree-item-title">DS-session1</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session10.html"><span class="tree-item-title">DS-session10</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session11.html"><span class="tree-item-title">DS-session11</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session12.html"><span class="tree-item-title">DS-session12</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session13.html"><span class="tree-item-title">DS-session13</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session14.html"><span class="tree-item-title">DS-session14</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session15.html"><span class="tree-item-title">DS-session15</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session2.html"><span class="tree-item-title">DS-session2</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session3.html"><span class="tree-item-title">DS-session3</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session4.html"><span class="tree-item-title">DS-session4</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session5.html"><span class="tree-item-title">DS-session5</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session6.html"><span class="tree-item-title">DS-session6</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session7.html"><span class="tree-item-title">DS-session7</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session8.html"><span class="tree-item-title">DS-session8</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session9.html"><span class="tree-item-title">DS-session9</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="git"><span class="tree-item-title">Git</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="git/git.html"><span class="tree-item-title">Git</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="git/git-cheat-sheet.html"><span class="tree-item-title">git cheat sheet</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="markdown"><span class="tree-item-title">Markdown</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/markdown.html"><span class="tree-item-title">Markdown</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/markdown-cheat-sheet.html"><span class="tree-item-title">markdown cheat sheet</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/mathjax.html"><span class="tree-item-title">MathJax</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="photos"><span class="tree-item-title">photos</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/convert-to-binary-tree.html"><span class="tree-item-title">Convert to binary tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/expression-tree.html"><span class="tree-item-title">expression tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/traversing-binary-tree.html"><span class="tree-item-title">Traversing binary tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="python"><span class="tree-item-title">Python</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="python/python.html"><span class="tree-item-title">Python</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="python/python-oop.html"><span class="tree-item-title">Python OOP</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-file" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="index.html"><span class="tree-item-title">index</span></a></div>
+              <div class="tree-item-children"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="document-container">
+      <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
+        <style id="MJX-CHTML-styles"></style>
+        <div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: ; padding-top: var(--file-margins); padding-right: var(--file-margins); padding-left: var(--file-margins); width: 100%; position: absolute;">
+          <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
+          <div class="mod-header"></div>
+          <div>
+            <h1 data-heading="GIT CHEAT SHEET" id="GIT_CHEAT_SHEET">GIT CHEAT SHEET</h1>
+          </div>
+          <div>
+            <h2 data-heading="STAGE &amp; SNAPSHOT" id="STAGE_&amp;_SNAPSHOT" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>STAGE &amp; SNAPSHOT
+            </h2>
+          </div>
+          <div>
+            <pre><code>git status
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Show modified files in working directory, staged for your next commit.</p>
+          </div>
+          <div>
+            <pre><code>git add [file]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Add a file as it looks now to your next commit (stage).</p>
+          </div>
+          <div>
+            <pre><code>git reset [file]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Unstage a file while retaining the changes in working directory.</p>
+          </div>
+          <div>
+            <pre><code>git diff
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Diff of what is changed but not staged.</p>
+          </div>
+          <div>
+            <pre><code>git diff --staged
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Diff of what is staged but not yet committed.</p>
+          </div>
+          <div>
+            <pre><code>git commit -m “[descriptive message]”
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Commit your staged content as a new commit snapshot.</p>
+          </div>
+          <div>
+            <h2 data-heading="SETUP" id="SETUP" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>SETUP
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="Configuring user information used across all local repositories" id="Configuring_user_information_used_across_all_local_repositories" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Configuring user information used across all local repositories
+            </h3>
+          </div>
+          <div>
+            <pre><code>git config --global user.name “[firstname lastname]”
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Set a name that is identifiable for credit when reviewing version history.</p>
+          </div>
+          <div>
+            <pre><code>git config --global user.email “[valid-email]”
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Set an email address that will be associated with each history marker.</p>
+          </div>
+          <div>
+            <pre><code>git config --global color.ui auto
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Set automatic command line coloring for Git for easy reviewing.</p>
+          </div>
+          <div>
+            <h2 data-heading="SETUP &amp; INIT" id="SETUP_&amp;_INIT" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>SETUP &amp; INIT
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="Configuring user information, initializing and cloning repositories" id="Configuring_user_information,_initializing_and_cloning_repositories" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Configuring user information, initializing and cloning repositories
+            </h3>
+          </div>
+          <div>
+            <pre><code>git init
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Initialize an existing directory as a Git repository.</p>
+          </div>
+          <div>
+            <pre><code>git clone [url]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Retrieve an entire repository from a hosted location via URL.</p>
+          </div>
+          <div>
+            <h2 data-heading="BRANCH &amp; MERGE" id="BRANCH_&amp;_MERGE" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>BRANCH &amp; MERGE
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="Isolating work in branches, changing context, and integrating changes" id="Isolating_work_in_branches,_changing_context,_and_integrating_changes" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Isolating work in branches, changing context, and integrating changes
+            </h3>
+          </div>
+          <div>
+            <pre><code>git branch
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>List your branches. A * will appear next to the currently active branch.</p>
+          </div>
+          <div>
+            <pre><code>git branch [branch-name]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Create a new branch at the current commit.</p>
+          </div>
+          <div>
+            <pre><code>git checkout
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Switch to another branch and check it out into your working directory.</p>
+          </div>
+          <div>
+            <pre><code>git merge [branch]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Merge the specified branch’s history into the current one.</p>
+          </div>
+          <div>
+            <pre><code>git log
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Show all commits in the current branch’s history.</p>
+          </div>
+          <div>
+            <h2 data-heading="INSTALLATION &amp; GUIS" id="INSTALLATION_&amp;_GUIS" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>INSTALLATION &amp; GUIS
+            </h2>
+          </div>
+          <div>
+            <p>With platform specific installers for Git, GitHub also provides the ease of staying up-to-date with the latest releases of the command line tool while providing a graphical user interface for day-to-day interaction, review, and repository synchronization.</p>
+          </div>
+          <div>
+            <pre><code>GitHub for Windows
+https://windows.github.com
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <pre><code>GitHub for Mac
+https://mac.github.com
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>For Linux and Solaris platforms, the latest release is available on the official Git website.</p>
+          </div>
+          <div>
+            <pre><code>Git for All Platforms
+http://git-scm.com
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h2 data-heading="EDUCATION" id="EDUCATION" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>EDUCATION
+            </h2>
+          </div>
+          <div>
+            <p>Teach and learn better, together. GitHub is free for students and teachers. Discounts available for other educational uses.</p>
+          </div>
+          <div>
+            <pre><code>education@github.com
+education.github.com
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h2 data-heading="SHARE &amp; UPDATE" id="SHARE_&amp;_UPDATE" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>SHARE &amp; UPDATE
+            </h2>
+          </div>
+          <div>
+            <p>Retrieving updates from another repository and updating local repositories.</p>
+          </div>
+          <div>
+            <pre><code>git remote add [alias] [url]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Add a Git URL as an alias.</p>
+          </div>
+          <div>
+            <pre><code>git fetch [alias]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Fetch down all the branches from that Git remote.</p>
+          </div>
+          <div>
+            <pre><code>git merge [alias]/[branch]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Merge a remote branch into your current branch to bring it up to date.</p>
+          </div>
+          <div>
+            <pre><code>git push [alias] [branch]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Transmit local branch commits to the remote repository branch.</p>
+          </div>
+          <div>
+            <pre><code>git pull
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Fetch and merge any commits from the tracking remote branch.</p>
+          </div>
+          <div>
+            <h2 data-heading="TRACKING PATH CHANGES" id="TRACKING_PATH_CHANGES" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>TRACKING PATH CHANGES
+            </h2>
+          </div>
+          <div>
+            <p>Versioning file removes and path changes.</p>
+          </div>
+          <div>
+            <pre><code>git rm [file]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Delete the file from the project and stage the removal for commit.</p>
+          </div>
+          <div>
+            <pre><code>git mv [existing-path] [new-path]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Change an existing file path and stage the move.</p>
+          </div>
+          <div>
+            <pre><code>git log --stat -M
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Show all commit logs with indication of any paths that moved.</p>
+          </div>
+          <div>
+            <h2 data-heading="TEMPORARY COMMITS" id="TEMPORARY_COMMITS" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>TEMPORARY COMMITS
+            </h2>
+          </div>
+          <div>
+            <p>Temporarily store modified, tracked files to change branches.</p>
+          </div>
+          <div>
+            <pre><code>git stash
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Save modified and staged changes.</p>
+          </div>
+          <div>
+            <pre><code>git stash list
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>List stack-order of stashed file changes.</p>
+          </div>
+          <div>
+            <pre><code>git stash pop
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Write working from the top of the stash stack.</p>
+          </div>
+          <div>
+            <pre><code>git stash drop
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Discard the changes from the top of the stash stack.</p>
+          </div>
+          <div>
+            <h2 data-heading="REWRITE HISTORY" id="REWRITE_HISTORY" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>REWRITE HISTORY
+            </h2>
+          </div>
+          <div>
+            <p>Rewriting branches, updating commits, and clearing history.</p>
+          </div>
+          <div>
+            <pre><code>git rebase [branch]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Apply any commits of the current branch ahead of the specified one.</p>
+          </div>
+          <div>
+            <pre><code>git reset --hard [commit]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Clear staging area, rewrite working tree from the specified commit.</p>
+          </div>
+          <div>
+            <h2 data-heading="INSPECT &amp; COMPARE" id="INSPECT_&amp;_COMPARE" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>INSPECT &amp; COMPARE
+            </h2>
+          </div>
+          <div>
+            <p>Examining logs, diffs, and object information.</p>
+          </div>
+          <div>
+            <pre><code>git log
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Show the commit history for the currently active branch.</p>
+          </div>
+          <div>
+            <pre><code>git log branchB..branchA
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Show the commits on branchA that are not on branchB.</p>
+          </div>
+          <div>
+            <pre><code>git log --follow [file]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Show the commits that changed file, even across renames.</p>
+          </div>
+          <div>
+            <pre><code>git diff branchB...branchA
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Show the diff of what is in branchA that is not in branchB.</p>
+          </div>
+          <div>
+            <h2 data-heading="IGNORING PATTERNS" id="IGNORING_PATTERNS" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>IGNORING PATTERNS
+            </h2>
+          </div>
+          <div>
+            <p>Preventing unintentional staging or committing of files.</p>
+          </div>
+          <div>
+            <pre><code>git config --global core.excludesfile [file]
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>System-wide ignore pattern for all local repositories.</p>
+          </div>
+          <div>
+            <pre><code>logs/
+*.notes
+pattern*/
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Save a file with desired patterns as .gitignore with either direct string matches or wildcard globs.</p>
+          </div>
+          <div>
+            <h1 data-heading="git tips and tricks" id="git_tips_and_tricks">git tips and tricks</h1>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>combine <code>git add</code> and <code>git commit</code> instead use <code>git commit -am "text here"</code>.
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>make a new alias using this<br>
+                <code>git config --global alias.ac "commit -am"</code><br>
+                now if I use git ac "text here" it adds and commits everything.
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div>to edit the last commit message use <code>git amend -m "replace text here"</code>.
+              </li>
+              <li data-line="5">
+                <div class="list-bullet"></div>make <code>git log</code> pretty with this command <code>git log --graph --oneline --decorate</code>
+              </li>
+            </ul>
+          </div>
+          <div class="mod-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-right sidebar">
+      <div class="sidebar-content"><span class="sidebar-section-header">Interactive Graph</span>
+        <div class="graph-view-placeholder">
+          <div class="graph-view-container">
+            <div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-arrow-up-right">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg></div>
+            <canvas id="graph-canvas" width="512px" height="512px"></canvas>
+          </div>
+        </div>
+        <div class="tree-container outline-tree" data-depth="0">
+          <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
+          <div class="tree-scroll-area">
+            <div class="tree-item mod-tree-heading" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="#GIT_CHEAT_SHEET"><span class="tree-item-title">GIT CHEAT SHEET</span></a></div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#STAGE_&amp;_SNAPSHOT"><span class="tree-item-title">STAGE &amp; SNAPSHOT</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#SETUP"><span class="tree-item-title">SETUP</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Configuring_user_information_used_across_all_local_repositories"><span class="tree-item-title">Configuring user information used across all local repositories</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#SETUP_&amp;_INIT"><span class="tree-item-title">SETUP &amp; INIT</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Configuring_user_information,_initializing_and_cloning_repositories"><span class="tree-item-title">Configuring user information, initializing and cloning repositories</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#BRANCH_&amp;_MERGE"><span class="tree-item-title">BRANCH &amp; MERGE</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Isolating_work_in_branches,_changing_context,_and_integrating_changes"><span class="tree-item-title">Isolating work in branches, changing context, and integrating changes</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#INSTALLATION_&amp;_GUIS"><span class="tree-item-title">INSTALLATION &amp; GUIS</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#EDUCATION"><span class="tree-item-title">EDUCATION</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#SHARE_&amp;_UPDATE"><span class="tree-item-title">SHARE &amp; UPDATE</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#TRACKING_PATH_CHANGES"><span class="tree-item-title">TRACKING PATH CHANGES</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#TEMPORARY_COMMITS"><span class="tree-item-title">TEMPORARY COMMITS</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#REWRITE_HISTORY"><span class="tree-item-title">REWRITE HISTORY</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#INSPECT_&amp;_COMPARE"><span class="tree-item-title">INSPECT &amp; COMPARE</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#IGNORING_PATTERNS"><span class="tree-item-title">IGNORING PATTERNS</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-heading" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="#git_tips_and_tricks"><span class="tree-item-title">git tips and tricks</span></a></div>
+              <div class="tree-item-children"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

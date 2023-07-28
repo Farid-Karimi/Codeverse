@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Enum and Enum class</title>
+  <base href="../">
+  <meta id="root-path" root-path="../">
+
+  <link rel="icon" sizes="96x96" href="https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/favicon-96x96.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+  <meta charset="UTF-8">
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+
+  <link rel="stylesheet" href="lib/styles/obsidian-styles.css">
+  <link rel="stylesheet" href="lib/styles/theme.css">
+  <link rel="stylesheet" href="lib/styles/plugin-styles.css">
+  <link rel="stylesheet" href="lib/styles/snippets.css">
+  <style>
+    body.css-settings-manager {
+      --blur-depth: 10px;
+      --font-family-vault: 'TimeGoing', 'Segoe UI Emoji';
+      --font-size-vault-name: 1.9em;
+    }
+
+    body.theme-light.css-settings-manager {}
+
+    body.theme-dark.css-settings-manager {
+      --text-color-code: #FFFFFF;
+    }
+  </style>
+
+
+  <!-- Graph View Data -->
+  <script>
+    let nodes = {
+      "nodeCount": 34,
+      "linkCount": 31,
+      "radii": [7, 6.1787109375, 5.5146484375, 4.6552734375, 4.15234375, 4.15234375, 4.15234375, 4.15234375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3.6005859375, 3, 3, 3],
+      "labels": ["Data Structures", "C++", "index", "Markdown", "Python", "MathJax", "markdown cheat sheet", "Git", "Python OOP", "git cheat sheet", "DS-session9", "DS-session8", "DS-session7", "DS-session6", "DS-session5", "DS-session4", "DS-session3", "DS-session2", "DS-session15", "DS-session14", "DS-session13", "DS-session12", "DS-session11", "DS-session10", "DS-session1", "Static keyword", "OOP", "Inline keyword", "Header Files", "Enum and Enum class", "Const keyword", "Traversing binary tree", "expression tree", "Convert to binary tree"],
+      "paths": ["data-structures/data-structures.html", "c++/c++.html", "index.html", "markdown/markdown.html", "python/python.html", "markdown/mathjax.html", "markdown/markdown-cheat-sheet.html", "git/git.html", "python/python-oop.html", "git/git-cheat-sheet.html", "data-structures/ds-session9.html", "data-structures/ds-session8.html", "data-structures/ds-session7.html", "data-structures/ds-session6.html", "data-structures/ds-session5.html", "data-structures/ds-session4.html", "data-structures/ds-session3.html", "data-structures/ds-session2.html", "data-structures/ds-session15.html", "data-structures/ds-session14.html", "data-structures/ds-session13.html", "data-structures/ds-session12.html", "data-structures/ds-session11.html", "data-structures/ds-session10.html", "data-structures/ds-session1.html", "c++/static-keyword.html", "c++/oop.html", "c++/inline-keyword.html", "c++/header-files.html", "c++/enum-and-enum-class.html", "c++/const-keyword.html", "photos/traversing-binary-tree.html", "photos/expression-tree.html", "photos/convert-to-binary-tree.html"],
+      "linkSources": [2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 3, 3, 4],
+      "linkTargets": [0, 1, 7, 3, 4, 26, 29, 28, 30, 25, 27, 24, 17, 16, 15, 14, 13, 12, 11, 10, 23, 22, 21, 20, 19, 18, 9, 5, 5, 6, 8]
+    };
+    let attractionForce = 1;
+    let linkLength = 10;
+    let repulsionForce = 150;
+    let centralForce = 3;
+    let edgePruning = 100;
+  </script>
+
+  <script type="module" src="lib/scripts/graph_view.js"></script>
+
+  <script src="lib/scripts/graph_wasm.js"></script>
+
+  <script src="lib/scripts/tinycolor.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js" integrity="sha512-Ch/O6kL8BqUwAfCF7Ie5SX1Hin+BJgYH4pNjRqXdTEqMsis1TUYg+j6nnI9uduPjGaj7DN4UKCZgpvoExt6dkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="lib/scripts/webpage.js"></script>
+
+</head>
+
+<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app show-inline-title show-view-header is-maximized css-settings-manager color-scheme-options-topaz-nord background-settings-workplace-background-image background-settings-workplace-theme-light-leaf background-settings-workplace-theme-dark-dark-sky background-image-settings-markdown-page-default background-image-settings-markdown-page-random-default notebook-liked-markdown-page-grid-notebook-1 panel-page-bg-theme-ligt-curve panel-page-bg-theme-dark-sea default-left-ribbon-style layout-style-options-default default-search-bar default-scrollbar bt-default-highlight h1-text-align-start h2-text-align-start h3-text-align-start h4-text-align-start h5-text-align-start h6-text-align-start default-hr bt-default-unordered-list default-ol-list-marker list-no-border file-shape-default file-name-non-wrapped folder-style-change-options-colorful-default folder-colorful-one blockquote-style-default default-table table-width-100 table-style-default default-loading-page loading-text-typing-style rainbow-tag setting-style-traditional default-titlebar default-outline-style stack-tab-text-ori-mixed default-tab default-canvas-background traditional-callout-style style-options-for-admonition-plugin style-options-for-calendar-plugin-default style-options-for-kanban-plugin-static-default style-options-for-kanban-plugin-dynamic-default style-options-for-buttons-plugin dataview-list-style-pacman default-dvtable dialogue-style-default memos-default-light memos-default-dark quiet-outline-optimize code-theme-bt-default whole-code-wrap codebox-default-style" style="--zoom-factor:1; --font-text-size:15px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em; --content-width:500em; --sidebar-width:25em; --collapse-arrow-size:0.4em; --tree-horizontal-spacing:1em; --tree-vertical-spacing:0.5em; --sidebar-margin:12px;">
+  <div class="webpage-container">
+    <div class="sidebar-left sidebar">
+      <div class="sidebar-content">
+        <div><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle">
+            <div class="toggle-background"></div>
+          </label></div>
+        <div class="tree-container file-tree mod-nav-indicator" data-depth="0">
+          <div class="tree-header"><span class="sidebar-section-header">Code Verse</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
+          <div class="tree-scroll-area">
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="c++"><span class="tree-item-title">C++</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/c++.html"><span class="tree-item-title">C++</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/const-keyword.html"><span class="tree-item-title">Const keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/enum-and-enum-class.html"><span class="tree-item-title">Enum and Enum class</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/header-files.html"><span class="tree-item-title">Header Files</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/inline-keyword.html"><span class="tree-item-title">Inline keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/oop.html"><span class="tree-item-title">OOP</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/static-keyword.html"><span class="tree-item-title">Static keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="data-structures"><span class="tree-item-title">Data Structures</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/data-structures.html"><span class="tree-item-title">Data Structures</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session1.html"><span class="tree-item-title">DS-session1</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session10.html"><span class="tree-item-title">DS-session10</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session11.html"><span class="tree-item-title">DS-session11</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session12.html"><span class="tree-item-title">DS-session12</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session13.html"><span class="tree-item-title">DS-session13</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session14.html"><span class="tree-item-title">DS-session14</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session15.html"><span class="tree-item-title">DS-session15</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session2.html"><span class="tree-item-title">DS-session2</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session3.html"><span class="tree-item-title">DS-session3</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session4.html"><span class="tree-item-title">DS-session4</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session5.html"><span class="tree-item-title">DS-session5</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session6.html"><span class="tree-item-title">DS-session6</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session7.html"><span class="tree-item-title">DS-session7</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session8.html"><span class="tree-item-title">DS-session8</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="data-structures/ds-session9.html"><span class="tree-item-title">DS-session9</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="git"><span class="tree-item-title">Git</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="git/git.html"><span class="tree-item-title">Git</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="git/git-cheat-sheet.html"><span class="tree-item-title">git cheat sheet</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="markdown"><span class="tree-item-title">Markdown</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/markdown.html"><span class="tree-item-title">Markdown</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/markdown-cheat-sheet.html"><span class="tree-item-title">markdown cheat sheet</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/mathjax.html"><span class="tree-item-title">MathJax</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="photos"><span class="tree-item-title">photos</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/convert-to-binary-tree.html"><span class="tree-item-title">Convert to binary tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/expression-tree.html"><span class="tree-item-title">expression tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/traversing-binary-tree.html"><span class="tree-item-title">Traversing binary tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="python"><span class="tree-item-title">Python</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="python/python.html"><span class="tree-item-title">Python</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="python/python-oop.html"><span class="tree-item-title">Python OOP</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-file" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="index.html"><span class="tree-item-title">index</span></a></div>
+              <div class="tree-item-children"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="document-container">
+      <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
+        <style id="MJX-CHTML-styles"></style>
+        <div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: ; padding-top: var(--file-margins); padding-right: var(--file-margins); padding-left: var(--file-margins); width: 100%; position: absolute;">
+          <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
+          <div class="mod-header">
+            <div class="inline-title" data-heading="Enum and Enum class" id="Enum_and_Enum_class" style="display: block;">Enum and Enum class</div>
+          </div>
+          <div>
+            <p>In C++, <code>enum</code> and <code>enum class</code> are used to define enumerations, which are user-defined data types that represent a set of named integer constants.</p>
+          </div>
+          <div>
+            <p>The main difference between <code>enum</code> and <code>enum class</code> is in how the underlying constants are scoped:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <p><code>enum</code>: The constants defined in an <code>enum</code> are placed in the outer scope, which means that they can potentially clash with other names in the same scope. For example:</p>
+                <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
+    RED<span class="token punctuation">,</span>
+    GREEN<span class="token punctuation">,</span>
+    BLUE
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> RED <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// this will cause a compilation error</span>
+</code><button class="copy-code-button">Copy</button></pre>
+              </li>
+              <li data-line="12">
+                <div class="list-bullet"></div>
+                <p><code>enum class</code>: The constants defined in an <code>enum class</code> are scoped within the enumeration itself, which means that they cannot clash with other names in the same scope. For example:</p>
+                <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
+    RED<span class="token punctuation">,</span>
+    GREEN<span class="token punctuation">,</span>
+    BLUE
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> RED <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// this is allowed</span>
+</code><button class="copy-code-button">Copy</button></pre>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>Another difference between <code>enum</code> and <code>enum class</code> is in how the underlying constants are implicitly converted to integers:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <p><code>enum</code>: The constants defined in an <code>enum</code> are implicitly converted to integers, which means that they can be used interchangeably with integers. For example:</p>
+                <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
+    RED<span class="token punctuation">,</span>
+    GREEN<span class="token punctuation">,</span>
+    BLUE
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> redValue <span class="token operator">=</span> RED<span class="token punctuation">;</span> <span class="token comment">// this is allowed</span>
+<span class="token keyword">int</span> blueValue <span class="token operator">=</span> BLUE<span class="token punctuation">;</span> <span class="token comment">// this is allowed</span>
+</code><button class="copy-code-button">Copy</button></pre>
+              </li>
+              <li data-line="13">
+                <div class="list-bullet"></div>
+                <p><code>enum class</code>: The constants defined in an <code>enum class</code> are not implicitly converted to integers, which means that they cannot be used interchangeably with integers. For example:</p>
+                <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
+    RED<span class="token punctuation">,</span>
+    GREEN<span class="token punctuation">,</span>
+    BLUE
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> redValue <span class="token operator">=</span> Color<span class="token double-colon punctuation">::</span>RED<span class="token punctuation">;</span> <span class="token comment">// this is not allowed</span>
+<span class="token keyword">int</span> blueValue <span class="token operator">=</span> <span class="token generic-function"><span class="token function">static_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>Color<span class="token double-colon punctuation">::</span>BLUE<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this is allowed with explicit conversion</span>
+</code><button class="copy-code-button">Copy</button></pre>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <pre><code>
+To summarize, `enum class` provides better scoping and type safety compared to `enum`, but requires explicit casting to convert the enum constants to integers.
+
+Here's an example of how to declare and use an `enum class` in C++:
+
+```cpp
+enum class Color {
+    RED,
+    GREEN,
+    BLUE
+};
+
+int main() {
+    Color myColor = Color::RED; // declare a variable of type Color and assign it the value Color::RED
+    
+    switch (myColor) {
+        case Color::RED:
+            std::cout &lt;&lt; "The color is red." &lt;&lt; std::endl;
+            break;
+        case Color::GREEN:
+            std::cout &lt;&lt; "The color is green." &lt;&lt; std::endl;
+            break;
+        case Color::BLUE:
+            std::cout &lt;&lt; "The color is blue." &lt;&lt; std::endl;
+            break;
+        default:
+            std::cout &lt;&lt; "Invalid color." &lt;&lt; std::endl;
+            break;
+    }
+    
+    return 0;
+}
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>In this example, we define an <code>enum class</code> called <code>Color</code> that contains three named constants: <code>RED</code>, <code>GREEN</code>, and <code>BLUE</code>. We then declare a variable <code>myColor</code> of type <code>Color</code> and assign it the value <code>Color::RED</code>. We use a <code>switch</code> statement to check the value of <code>myColor</code> and print a message depending on the color.</p>
+          </div>
+          <div>
+            <p>Note that we use the scope resolution operator <code>::</code> to access the named constants in the <code>enum class</code>. Also note that since the values in an <code>enum class</code> are not implicitly converted to integers, we must use the name of the <code>enum class</code> and the named constant to refer to the values.</p>
+          </div>
+          <div class="mod-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-right sidebar">
+      <div class="sidebar-content"><span class="sidebar-section-header">Interactive Graph</span>
+        <div class="graph-view-placeholder">
+          <div class="graph-view-container">
+            <div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-arrow-up-right">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg></div>
+            <canvas id="graph-canvas" width="512px" height="512px"></canvas>
+          </div>
+        </div>
+        <div class="tree-container outline-tree" data-depth="0">
+          <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
+          <div class="tree-scroll-area"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
