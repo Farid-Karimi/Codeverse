@@ -280,11 +280,10 @@
             <p>The main difference between <code>enum</code> and <code>enum class</code> is in how the underlying constants are scoped:</p>
           </div>
           <div>
-            <ul class="has-list-bullet">
-              <li data-line="0">
-                <div class="list-bullet"></div>
-                <p><code>enum</code>: The constants defined in an <code>enum</code> are placed in the outer scope, which means that they can potentially clash with other names in the same scope. For example:</p>
-                <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
+            <p><code>enum</code>: The constants defined in an <code>enum</code> are placed in the outer scope, which means that they can potentially clash with other names in the same scope. For example:</p>
+          </div>
+          <div>
+            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
     RED<span class="token punctuation">,</span>
     GREEN<span class="token punctuation">,</span>
     BLUE
@@ -292,11 +291,12 @@
 
 <span class="token keyword">int</span> RED <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// this will cause a compilation error</span>
 </code><button class="copy-code-button">Copy</button></pre>
-              </li>
-              <li data-line="12">
-                <div class="list-bullet"></div>
-                <p><code>enum class</code>: The constants defined in an <code>enum class</code> are scoped within the enumeration itself, which means that they cannot clash with other names in the same scope. For example:</p>
-                <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
+          </div>
+          <div>
+            <p><code>enum class</code>: The constants defined in an <code>enum class</code> are scoped within the enumeration itself, which means that they cannot clash with other names in the same scope. For example:</p>
+          </div>
+          <div>
+            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
     RED<span class="token punctuation">,</span>
     GREEN<span class="token punctuation">,</span>
     BLUE
@@ -304,31 +304,29 @@
 
 <span class="token keyword">int</span> RED <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// this is allowed</span>
 </code><button class="copy-code-button">Copy</button></pre>
-              </li>
-            </ul>
           </div>
           <div>
             <p>Another difference between <code>enum</code> and <code>enum class</code> is in how the underlying constants are implicitly converted to integers:</p>
           </div>
           <div>
-            <ul class="has-list-bullet">
-              <li data-line="0">
-                <div class="list-bullet"></div>
-                <p><code>enum</code>: The constants defined in an <code>enum</code> are implicitly converted to integers, which means that they can be used interchangeably with integers. For example:</p>
-                <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
-    RED<span class="token punctuation">,</span>
-    GREEN<span class="token punctuation">,</span>
-    BLUE
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">int</span> redValue <span class="token operator">=</span> RED<span class="token punctuation">;</span> <span class="token comment">// this is allowed</span>
-<span class="token keyword">int</span> blueValue <span class="token operator">=</span> BLUE<span class="token punctuation">;</span> <span class="token comment">// this is allowed</span>
+            <p><code>enum</code>: The constants defined in an <code>enum</code> are implicitly converted to integers, which means that they can be used interchangeably with integers. For example:</p>
+          </div>
+          <div>
+            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"> <span class="token keyword">enum</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
+     RED<span class="token punctuation">,</span>
+     GREEN<span class="token punctuation">,</span>
+     BLUE
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+ 
+ <span class="token keyword">int</span> redValue <span class="token operator">=</span> RED<span class="token punctuation">;</span> <span class="token comment">// this is allowed</span>
+ <span class="token keyword">int</span> blueValue <span class="token operator">=</span> BLUE<span class="token punctuation">;</span> <span class="token comment">// this is allowed</span>
 </code><button class="copy-code-button">Copy</button></pre>
-              </li>
-              <li data-line="13">
-                <div class="list-bullet"></div>
-                <p><code>enum class</code>: The constants defined in an <code>enum class</code> are not implicitly converted to integers, which means that they cannot be used interchangeably with integers. For example:</p>
-                <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
+          </div>
+          <div>
+            <p><code>enum class</code>: The constants defined in an <code>enum class</code> are not implicitly converted to integers, which means that they cannot be used interchangeably with integers. For example:</p>
+          </div>
+          <div>
+            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
     RED<span class="token punctuation">,</span>
     GREEN<span class="token punctuation">,</span>
     BLUE
@@ -336,43 +334,42 @@
 
 <span class="token keyword">int</span> redValue <span class="token operator">=</span> Color<span class="token double-colon punctuation">::</span>RED<span class="token punctuation">;</span> <span class="token comment">// this is not allowed</span>
 <span class="token keyword">int</span> blueValue <span class="token operator">=</span> <span class="token generic-function"><span class="token function">static_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>Color<span class="token double-colon punctuation">::</span>BLUE<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this is allowed with explicit conversion</span>
+
 </code><button class="copy-code-button">Copy</button></pre>
-              </li>
-            </ul>
           </div>
           <div>
-            <pre><code>
-To summarize, `enum class` provides better scoping and type safety compared to `enum`, but requires explicit casting to convert the enum constants to integers.
-
-Here's an example of how to declare and use an `enum class` in C++:
-
-```cpp
-enum class Color {
-    RED,
-    GREEN,
+            <p>To summarize, <code>enum class</code> provides better scoping and type safety compared to <code>enum</code>, but requires explicit casting to convert the enum constants to integers.</p>
+          </div>
+          <div>
+            <p>Here's an example of how to declare and use an <code>enum class</code> in C++:</p>
+          </div>
+          <div>
+            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">Color</span> <span class="token punctuation">{</span>
+    RED<span class="token punctuation">,</span>
+    GREEN<span class="token punctuation">,</span>
     BLUE
-};
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-int main() {
-    Color myColor = Color::RED; // declare a variable of type Color and assign it the value Color::RED
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Color myColor <span class="token operator">=</span> Color<span class="token double-colon punctuation">::</span>RED<span class="token punctuation">;</span> <span class="token comment">// declare a variable of type Color and assign it the value Color::RED</span>
     
-    switch (myColor) {
-        case Color::RED:
-            std::cout &lt;&lt; "The color is red." &lt;&lt; std::endl;
-            break;
-        case Color::GREEN:
-            std::cout &lt;&lt; "The color is green." &lt;&lt; std::endl;
-            break;
-        case Color::BLUE:
-            std::cout &lt;&lt; "The color is blue." &lt;&lt; std::endl;
-            break;
-        default:
-            std::cout &lt;&lt; "Invalid color." &lt;&lt; std::endl;
-            break;
-    }
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>myColor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> Color<span class="token double-colon punctuation">::</span>RED<span class="token operator">:</span>
+            std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"The color is red."</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> Color<span class="token double-colon punctuation">::</span>GREEN<span class="token operator">:</span>
+            std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"The color is green."</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> Color<span class="token double-colon punctuation">::</span>BLUE<span class="token operator">:</span>
+            std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"The color is blue."</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">default</span><span class="token operator">:</span>
+            std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Invalid color."</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
-    return 0;
-}
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code><button class="copy-code-button">Copy</button></pre>
           </div>
           <div>
