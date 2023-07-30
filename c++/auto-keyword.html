@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Const keyword</title>
+  <title>Auto keyword</title>
   <base href="../">
   <meta id="root-path" root-path="../">
 
@@ -61,7 +61,7 @@
 
 </head>
 
-<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app is-maximized show-inline-title show-view-header css-settings-manager color-scheme-options-topaz-nord background-settings-workplace-background-image background-settings-workplace-theme-light-leaf background-settings-workplace-theme-dark-dark-sky background-image-settings-switch background-image-settings-markdown-page-default background-image-settings-markdown-page-random-default notebook-liked-markdown-page-grid-notebook-1 panel-page-bg-theme-ligt-curve panel-page-bg-theme-dark-sea default-left-ribbon-style layout-style-options-default default-search-bar default-scrollbar bt-default-highlight h1-text-align-start h2-text-align-start h3-text-align-start h4-text-align-start h5-text-align-start h6-text-align-start default-hr bt-default-unordered-list default-ol-list-marker list-no-border file-shape-default file-name-non-wrapped folder-style-change-options-colorful-default folder-colorful-one blockquote-style-default default-table table-width-100 table-style-default default-loading-page loading-text-typing-style rainbow-tag setting-style-traditional default-titlebar default-outline-style stack-tab-text-ori-mixed default-tab default-canvas-background traditional-callout-style style-options-for-admonition-plugin style-options-for-calendar-plugin-default style-options-for-kanban-plugin-static-default style-options-for-kanban-plugin-dynamic-default style-options-for-buttons-plugin dataview-list-style-pacman default-dvtable dialogue-style-default memos-default-light memos-default-dark quiet-outline-optimize code-theme-bt-default whole-code-wrap codebox-default-style is-focused" style="--zoom-factor:1; --font-text-size:15px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em; --content-width:500em; --sidebar-width:25em; --collapse-arrow-size:0.4em; --tree-horizontal-spacing:1em; --tree-vertical-spacing:0.5em; --sidebar-margin:12px;">
+<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app is-maximized show-inline-title show-view-header css-settings-manager color-scheme-options-topaz-nord background-settings-workplace-background-image background-settings-workplace-theme-light-leaf background-settings-workplace-theme-dark-dark-sky background-image-settings-switch background-image-settings-markdown-page-default background-image-settings-markdown-page-random-default notebook-liked-markdown-page-grid-notebook-1 panel-page-bg-theme-ligt-curve panel-page-bg-theme-dark-sea default-left-ribbon-style layout-style-options-default default-search-bar default-scrollbar bt-default-highlight h1-text-align-start h2-text-align-start h3-text-align-start h4-text-align-start h5-text-align-start h6-text-align-start default-hr bt-default-unordered-list default-ol-list-marker list-no-border file-shape-default file-name-non-wrapped folder-style-change-options-colorful-default folder-colorful-one blockquote-style-default default-table table-width-100 table-style-default default-loading-page loading-text-typing-style rainbow-tag setting-style-traditional default-titlebar default-outline-style stack-tab-text-ori-mixed default-tab default-canvas-background traditional-callout-style style-options-for-admonition-plugin style-options-for-calendar-plugin-default style-options-for-kanban-plugin-static-default style-options-for-kanban-plugin-dynamic-default style-options-for-buttons-plugin dataview-list-style-pacman default-dvtable dialogue-style-default memos-default-light memos-default-dark quiet-outline-optimize code-theme-bt-default whole-code-wrap codebox-default-style" style="--zoom-factor:1; --font-text-size:15px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em; --content-width:500em; --sidebar-width:25em; --collapse-arrow-size:0.4em; --tree-horizontal-spacing:1em; --tree-vertical-spacing:0.5em; --sidebar-margin:12px;">
   <div class="webpage-container">
     <div class="sidebar-left sidebar">
       <div class="sidebar-content">
@@ -300,107 +300,124 @@
         <div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: ; padding-top: var(--file-margins); padding-right: var(--file-margins); padding-left: var(--file-margins); width: 100%; position: absolute;">
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
           <div class="mod-header">
-            <div class="inline-title" data-heading="Const keyword" id="Const_keyword" style="display: block;">Const keyword</div>
+            <div class="inline-title" data-heading="Auto keyword" id="Auto_keyword" style="display: block;">Auto keyword</div>
           </div>
           <div>
-            <p><a data-tooltip-position="top" aria-label="https://www.youtube.com/watch?v=4fJBrditnJU" rel="noopener" class="external-link" href="https://www.youtube.com/watch?v=4fJBrditnJU" target="_blank">Const</a> watch!!!<br>
-              In C++, the <code>const</code> keyword is used to indicate that a variable, pointer, reference, or function cannot be modified.</p>
+            <p><a data-tooltip-position="top" aria-label="https://www.youtube.com/watch?v=2vOPEuiGXVo" rel="noopener" class="external-link" href="https://www.youtube.com/watch?v=2vOPEuiGXVo" target="_blank">link</a><br>
+              Using <code>auto</code> allows you to omit the explicit type when declaring a variable. The compiler will deduce the type based on the initializer expression:</p>
           </div>
           <div>
-            <p>When used with a variable, <code>const</code> makes the variable read-only, meaning that its value cannot be changed after it has been initialized. For example:</p>
-          </div>
-          <div>
-            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">const</span> <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-x <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span> <span class="token comment">// Error: assignment of read-only variable 'x'</span>
+            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">auto</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">// x is int</span>
+<span class="token keyword">auto</span> y <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span> <span class="token comment">// y is double</span>
 </code><button class="copy-code-button">Copy</button></pre>
           </div>
           <div>
-            <p>When used with a pointer, <code>const</code> indicates that the value pointed to by the pointer cannot be modified, but the pointer itself can be changed to point to a different memory location. This is indicated by <code>const</code> appearing to the right of the <code>*</code>. For example:</p>
+            <p>This avoids having to spell out the type yourself and lets it be determined automatically.</p>
           </div>
           <div>
-            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span><span class="token operator">*</span> ptr <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span>
-<span class="token operator">*</span>ptr <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span> <span class="token comment">// Error: assignment of read-only location '*ptr'</span>
-ptr <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span> <span class="token comment">// ok, changes the value of ptr to null</span>
+            <h2 data-heading="Key Use Cases:" id="Key_Use_Cases:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Key Use Cases:
+            </h2>
+          </div>
+          <div>
+            <p>Some major cases where <code>auto</code> is helpful:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Declaring iterators or other long, complex STL types:
+              </li>
+            </ul>
+          </div>
+          <div>
+            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded">std<span class="token double-colon punctuation">::</span>map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span><span class="token double-colon punctuation">::</span>iterator it<span class="token punctuation">;</span>
+<span class="token comment">// vs</span>
+<span class="token keyword">auto</span> it <span class="token operator">=</span> myMap<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code><button class="copy-code-button">Copy</button></pre>
           </div>
           <div>
-            <p>When used with a pointer, <code>const</code> appearing to the left of the <code>*</code> indicates that the pointer itself is constant, but the value it points to can be changed. For example:</p>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Generic programming with templates
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>Lambda expressions and <code>std::function</code>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>Initializing variables with constructors
+              </li>
+            </ul>
           </div>
           <div>
-            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span><span class="token operator">*</span> <span class="token keyword">const</span> ptr <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span>
-<span class="token operator">*</span>ptr <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span> <span class="token comment">// ok, changes the value of x</span>
-ptr <span class="token operator">=</span> <span class="token operator">&amp;</span>y<span class="token punctuation">;</span> <span class="token comment">// Error: cannot assign to variable 'ptr' with const-qualified type 'int *const'</span>
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>In general, any time the type is lengthy or "obvious" from the context, <code>auto</code> can avoid verbosity.</p>
           </div>
           <div>
-            <p>When used with a reference, <code>const</code> indicates that the reference cannot be used to modify the object it refers to. For example:</p>
+            <h2 data-heading="Pros:" id="Pros:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Pros:
+            </h2>
           </div>
           <div>
-            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> ref <span class="token operator">=</span> x<span class="token punctuation">;</span>
-ref <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span> <span class="token comment">// Error: assignment of read-only reference 'ref'</span>
-</code><button class="copy-code-button">Copy</button></pre>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Avoids repetitive declarations
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>Makes code more maintainable
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>Allows flexibility for type changes
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div>Omits verbosity like complex STL types
+              </li>
+            </ul>
           </div>
           <div>
-            <p><code>const</code> can also be used with member functions to indicate that the function does not modify the object it is called on. This can be useful for improving code safety and preventing accidental modifications to objects.</p>
+            <h2 data-heading="Cons:" id="Cons:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Cons:
+            </h2>
           </div>
           <div>
-            <p>Overall, the <code>const</code> keyword is a powerful tool for making code safer and more maintainable by indicating that certain variables, pointers, references, and functions cannot be modified.</p>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Can reduce code readability since type not visible
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>Requires C++11 or higher
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>Auto type not explicitly stated
+              </li>
+            </ul>
           </div>
           <div>
-            <p>In C++, the <code>const</code> keyword is used to indicate that a variable or function cannot be modified.</p>
+            <h2 data-heading="Best Practices:" id="Best_Practices:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Best Practices:
+            </h2>
           </div>
           <div>
-            <p>When used with a variable, <code>const</code> makes the variable read-only, meaning that its value cannot be changed after it has been initialized. Here's an example:</p>
+            <p>When using <code>auto</code>:</p>
           </div>
           <div>
-            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">const</span> <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-x <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span> <span class="token comment">// Error: assignment of read-only variable 'x'</span>
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>In this example, <code>x</code> is declared as a <code>const</code> variable and initialized to the value of 5. When we try to assign a new value of 6 to <code>x</code>, the compiler generates an error because <code>x</code> is read-only.</p>
-          </div>
-          <div>
-            <p>Here's an example of using <code>const</code> with a reference:</p>
-          </div>
-          <div>
-            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> ref <span class="token operator">=</span> x<span class="token punctuation">;</span>
-ref <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span> <span class="token comment">// Error: assignment of read-only reference 'ref'</span>
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>In this example, <code>ref</code> is a <code>const</code> reference to <code>x</code>, which means that <code>ref</code> cannot be used to modify the value of <code>x</code>. When we try to assign a new value of 6 to <code>ref</code>, the compiler generates an error.</p>
-          </div>
-          <div>
-            <p><code>const</code> can also be used with member functions to indicate that the function does not modify the object it is called on. This can be useful for improving code safety and preventing accidental modifications to objects.</p>
-          </div>
-          <div>
-            <p>Here's an example:</p>
-          </div>
-          <div>
-            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-  <span class="token keyword">void</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
-    <span class="token comment">// This function does not modify the object</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>In this example, <code>foo()</code> is a <code>const</code> member function of the <code>MyClass</code> class. This means that the function cannot modify any non-<code>mutable</code> data members of the <code>MyClass</code> object it is called on.<br>
-              <strong><em>but</em></strong> there is a another way to get passed this imagine we have variable that we really want to change in a const method what should we do? we should make it <code>mutable</code> which means it should be changeable.
-            </p>
-          </div>
-          <div>
-            <p>Overall, the <code>const</code> keyword is a useful tool for making code safer and more maintainable by indicating that certain variables and functions cannot be modified.</p>
-          </div>
-          <div>
-            <p>if you have code like <code>int* a,b</code> this means a is a pointer but b is still and integer so to make this correct we do this instead <code>int* a,*b</code>.</p>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Only use when type is obvious from initializer
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>Avoid for multiple declarators in one statement
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>Avoid for numeric types like <code>int</code> and <code>double</code>
+              </li>
+            </ul>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -419,7 +436,29 @@ ref <span class="token operator">=</span> <span class="token number">6</span><sp
         </div>
         <div class="tree-container outline-tree" data-depth="0">
           <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
-          <div class="tree-scroll-area"></div>
+          <div class="tree-scroll-area">
+            <div class="tree-item mod-tree-heading" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="#Auto_keyword"><span class="tree-item-title">Auto keyword</span></a></div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Key_Use_Cases:"><span class="tree-item-title">Key Use Cases:</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Pros:"><span class="tree-item-title">Pros:</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Cons:"><span class="tree-item-title">Cons:</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Best_Practices:"><span class="tree-item-title">Best Practices:</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

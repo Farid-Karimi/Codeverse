@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>git cheat sheet</title>
+  <title>MongoDB</title>
   <base href="../">
   <meta id="root-path" root-path="../">
 
@@ -301,432 +301,479 @@
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
           <div class="mod-header"></div>
           <div>
-            <h1 data-heading="GIT CHEAT SHEET" id="GIT_CHEAT_SHEET">GIT CHEAT SHEET</h1>
+            <h1 data-heading="Introduction MongoDB?" id="Introduction_MongoDB?">Introduction MongoDB?</h1>
           </div>
           <div>
-            <h2 data-heading="STAGE &amp; SNAPSHOT" id="STAGE_&amp;_SNAPSHOT" style="display: flex;">
+            <p>MongoDB is a popular open-source, document-oriented NoSQL database. Instead of storing data in tables like traditional relational databases, MongoDB stores structured data in JSON-like documents.</p>
+          </div>
+          <div>
+            <h2 data-heading="Key Features" id="Key_Features" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>STAGE &amp; SNAPSHOT
+                </svg></div>Key Features
             </h2>
-          </div>
-          <div>
-            <pre><code>git status
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show modified files in working directory, staged for your next commit.</p>
-          </div>
-          <div>
-            <pre><code>git add [file]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Add a file as it looks now to your next commit (stage).</p>
-          </div>
-          <div>
-            <pre><code>git reset [file]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Unstage a file while retaining the changes in working directory.</p>
-          </div>
-          <div>
-            <pre><code>git diff
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Diff of what is changed but not staged.</p>
-          </div>
-          <div>
-            <pre><code>git diff --staged
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Diff of what is staged but not yet committed.</p>
-          </div>
-          <div>
-            <pre><code>git commit -m “[descriptive message]”
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Commit your staged content as a new commit snapshot.</p>
-          </div>
-          <div>
-            <h2 data-heading="SETUP" id="SETUP" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>SETUP
-            </h2>
-          </div>
-          <div>
-            <h3 data-heading="Configuring user information used across all local repositories" id="Configuring_user_information_used_across_all_local_repositories" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Configuring user information used across all local repositories
-            </h3>
-          </div>
-          <div>
-            <pre><code>git config --global user.name “[firstname lastname]”
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Set a name that is identifiable for credit when reviewing version history.</p>
-          </div>
-          <div>
-            <pre><code>git config --global user.email “[valid-email]”
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Set an email address that will be associated with each history marker.</p>
-          </div>
-          <div>
-            <pre><code>git config --global color.ui auto
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Set automatic command line coloring for Git for easy reviewing.</p>
-          </div>
-          <div>
-            <h2 data-heading="SETUP &amp; INIT" id="SETUP_&amp;_INIT" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>SETUP &amp; INIT
-            </h2>
-          </div>
-          <div>
-            <h3 data-heading="Configuring user information, initializing and cloning repositories" id="Configuring_user_information,_initializing_and_cloning_repositories" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Configuring user information, initializing and cloning repositories
-            </h3>
-          </div>
-          <div>
-            <pre><code>git init
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Initialize an existing directory as a Git repository.</p>
-          </div>
-          <div>
-            <pre><code>git clone [url]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Retrieve an entire repository from a hosted location via URL.</p>
-          </div>
-          <div>
-            <h2 data-heading="BRANCH &amp; MERGE" id="BRANCH_&amp;_MERGE" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>BRANCH &amp; MERGE
-            </h2>
-          </div>
-          <div>
-            <h3 data-heading="Isolating work in branches, changing context, and integrating changes" id="Isolating_work_in_branches,_changing_context,_and_integrating_changes" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Isolating work in branches, changing context, and integrating changes
-            </h3>
-          </div>
-          <div>
-            <pre><code>git branch
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>List your branches. A * will appear next to the currently active branch.</p>
-          </div>
-          <div>
-            <pre><code>git branch [branch-name]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Create a new branch at the current commit.</p>
-          </div>
-          <div>
-            <pre><code>git checkout
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Switch to another branch and check it out into your working directory.</p>
-          </div>
-          <div>
-            <pre><code>git merge [branch]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Merge the specified branch’s history into the current one.</p>
-          </div>
-          <div>
-            <pre><code>git log
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show all commits in the current branch’s history.</p>
-          </div>
-          <div>
-            <h2 data-heading="INSTALLATION &amp; GUIS" id="INSTALLATION_&amp;_GUIS" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>INSTALLATION &amp; GUIS
-            </h2>
-          </div>
-          <div>
-            <p>With platform specific installers for Git, GitHub also provides the ease of staying up-to-date with the latest releases of the command line tool while providing a graphical user interface for day-to-day interaction, review, and repository synchronization.</p>
-          </div>
-          <div>
-            <pre><code>GitHub for Windows
-https://windows.github.com
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <pre><code>GitHub for Mac
-https://mac.github.com
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>For Linux and Solaris platforms, the latest release is available on the official Git website.</p>
-          </div>
-          <div>
-            <pre><code>Git for All Platforms
-http://git-scm.com
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <h2 data-heading="EDUCATION" id="EDUCATION" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>EDUCATION
-            </h2>
-          </div>
-          <div>
-            <p>Teach and learn better, together. GitHub is free for students and teachers. Discounts available for other educational uses.</p>
-          </div>
-          <div>
-            <pre><code>education@github.com
-education.github.com
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <h2 data-heading="SHARE &amp; UPDATE" id="SHARE_&amp;_UPDATE" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>SHARE &amp; UPDATE
-            </h2>
-          </div>
-          <div>
-            <p>Retrieving updates from another repository and updating local repositories.</p>
-          </div>
-          <div>
-            <pre><code>git remote add [alias] [url]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Add a Git URL as an alias.</p>
-          </div>
-          <div>
-            <pre><code>git fetch [alias]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Fetch down all the branches from that Git remote.</p>
-          </div>
-          <div>
-            <pre><code>git merge [alias]/[branch]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Merge a remote branch into your current branch to bring it up to date.</p>
-          </div>
-          <div>
-            <pre><code>git push [alias] [branch]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Transmit local branch commits to the remote repository branch.</p>
-          </div>
-          <div>
-            <pre><code>git pull
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Fetch and merge any commits from the tracking remote branch.</p>
-          </div>
-          <div>
-            <h2 data-heading="TRACKING PATH CHANGES" id="TRACKING_PATH_CHANGES" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>TRACKING PATH CHANGES
-            </h2>
-          </div>
-          <div>
-            <p>Versioning file removes and path changes.</p>
-          </div>
-          <div>
-            <pre><code>git rm [file]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Delete the file from the project and stage the removal for commit.</p>
-          </div>
-          <div>
-            <pre><code>git mv [existing-path] [new-path]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Change an existing file path and stage the move.</p>
-          </div>
-          <div>
-            <pre><code>git log --stat -M
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show all commit logs with indication of any paths that moved.</p>
-          </div>
-          <div>
-            <h2 data-heading="TEMPORARY COMMITS" id="TEMPORARY_COMMITS" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>TEMPORARY COMMITS
-            </h2>
-          </div>
-          <div>
-            <p>Temporarily store modified, tracked files to change branches.</p>
-          </div>
-          <div>
-            <pre><code>git stash
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Save modified and staged changes.</p>
-          </div>
-          <div>
-            <pre><code>git stash list
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>List stack-order of stashed file changes.</p>
-          </div>
-          <div>
-            <pre><code>git stash pop
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Write working from the top of the stash stack.</p>
-          </div>
-          <div>
-            <pre><code>git stash drop
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Discard the changes from the top of the stash stack.</p>
-          </div>
-          <div>
-            <h2 data-heading="REWRITE HISTORY" id="REWRITE_HISTORY" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>REWRITE HISTORY
-            </h2>
-          </div>
-          <div>
-            <p>Rewriting branches, updating commits, and clearing history.</p>
-          </div>
-          <div>
-            <pre><code>git rebase [branch]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Apply any commits of the current branch ahead of the specified one.</p>
-          </div>
-          <div>
-            <pre><code>git reset --hard [commit]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Clear staging area, rewrite working tree from the specified commit.</p>
-          </div>
-          <div>
-            <h2 data-heading="INSPECT &amp; COMPARE" id="INSPECT_&amp;_COMPARE" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>INSPECT &amp; COMPARE
-            </h2>
-          </div>
-          <div>
-            <p>Examining logs, diffs, and object information.</p>
-          </div>
-          <div>
-            <pre><code>git log
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show the commit history for the currently active branch.</p>
-          </div>
-          <div>
-            <pre><code>git log branchB..branchA
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show the commits on branchA that are not on branchB.</p>
-          </div>
-          <div>
-            <pre><code>git log --follow [file]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show the commits that changed file, even across renames.</p>
-          </div>
-          <div>
-            <pre><code>git diff branchB...branchA
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show the diff of what is in branchA that is not in branchB.</p>
-          </div>
-          <div>
-            <h2 data-heading="IGNORING PATTERNS" id="IGNORING_PATTERNS" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>IGNORING PATTERNS
-            </h2>
-          </div>
-          <div>
-            <p>Preventing unintentional staging or committing of files.</p>
-          </div>
-          <div>
-            <pre><code>git config --global core.excludesfile [file]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>System-wide ignore pattern for all local repositories.</p>
-          </div>
-          <div>
-            <pre><code>logs/
-*.notes
-pattern*/
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Save a file with desired patterns as .gitignore with either direct string matches or wildcard globs.</p>
-          </div>
-          <div>
-            <h1 data-heading="git tips and tricks" id="git_tips_and_tricks">git tips and tricks</h1>
           </div>
           <div>
             <ul class="has-list-bullet">
               <li data-line="0">
-                <div class="list-bullet"></div>combine <code>git add</code> and <code>git commit</code> instead use <code>git commit -am "text here"</code>.
+                <div class="list-bullet"></div>Document-oriented - stores data in flexible, JSON-like documents instead of rows and columns
               </li>
               <li data-line="1">
-                <div class="list-bullet"></div>make a new alias using this<br>
-                <code>git config --global alias.ac "commit -am"</code><br>
-                now if I use git ac "text here" it adds and commits everything.
+                <div class="list-bullet"></div>Scalability - easy to scale horizontally with automatic sharding
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>High performance - performs well with large datasets and heavy workloads
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div>High availability - supports replication and failover for high availability
               </li>
               <li data-line="4">
-                <div class="list-bullet"></div>to edit the last commit message use <code>git amend -m "replace text here"</code>.
+                <div class="list-bullet"></div>Flexible data model - dynamic schemas allow you to store different data in the same collection
               </li>
               <li data-line="5">
-                <div class="list-bullet"></div>make <code>git log</code> pretty with this command <code>git log --graph --oneline --decorate</code>
+                <div class="list-bullet"></div>Indexing - indexes support faster queries and can include keys from embedded documents and arrays
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Components" id="Components" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Components
+            </h2>
+          </div>
+          <div>
+            <p>The main components of MongoDB are:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><strong>mongod</strong> - The MongoDB daemon that does the core data storage
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><strong>mongos</strong> - The query router that provides sharding
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><strong>Documents</strong> - Data records composed of field-value pairs
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div><strong>Collections</strong> - Groupings of MongoDB documents
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div><strong>Databases</strong> - Container for collections
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Basic Concepts" id="Basic_Concepts" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Basic Concepts
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>JSON-like documents contain field-value pairs
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>Collections contain sets of documents
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>Databases contain collections
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div>Uses BSON format to store documents (binary JSON)
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h1 data-heading="Syntax" id="Syntax">Syntax</h1>
+          </div>
+          <div>
+            <h2 data-heading="Data Bases" id="Data_Bases" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Data Bases
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>show data bases</strong>: <code>show dbs</code>
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div>if you have a data base which is empty the <code>show dbs</code> command won't show the empty data base.
+                  </li>
+                </ul>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><strong>switch to data base</strong> : <code>use 'data base name'</code>
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div><strong>create data base</strong> : <code>use 'name of the data base you want'</code>
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div><strong>create collection</strong> : <code>db.createCollection("name")</code>
+              </li>
+              <li data-line="5">
+                <div class="list-bullet"></div><strong>drop data base</strong> : <code>db.dropDatabase()</code>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Insert" id="Insert" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Insert
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><strong>to insert a document</strong> : <code>db.students.insertOne({name:"gholi", age:30, gpa:2.5})</code>
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><strong>to return all documents in a collection</strong> : <code>db.students.find()</code>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><strong>add multiple documents</strong> : <code>db.students.insertMany([{name: "gholi", age: 38, gpa: 2.5}, {name: "gholam", age: 39, gpa: 3.5}, {name: "ghodrat", age: 40, gpa: 4.5}])</code>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Data Types" id="Data_Types" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Data Types
+            </h2>
+          </div>
+          <div>
+            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded">db<span class="token punctuation">.</span>students<span class="token punctuation">.</span><span class="token function">insertOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+name<span class="token operator">:</span><span class="token string">"gholi"</span><span class="token punctuation">,</span> <span class="token comment">//string</span>
+age<span class="token operator">:</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token comment">//integer</span>
+gpa<span class="token operator">:</span><span class="token number">2.8</span><span class="token punctuation">,</span> <span class="token comment">// double</span>
+fullTime<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// boolean</span>
+registerDate<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// date</span>
+gradDate<span class="token operator">:</span> null<span class="token punctuation">,</span> <span class="token comment">// null</span>
+courses<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"chemistry"</span><span class="token punctuation">,</span> <span class="token string">"physics"</span><span class="token punctuation">,</span> <span class="token string">"calculus"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// array</span>
+addres<span class="token operator">:</span> <span class="token punctuation">{</span>street<span class="token operator">:</span><span class="token string">"fake street"</span><span class="token punctuation">,</span>
+		 city<span class="token operator">:</span> <span class="token string">"gholi abad"</span><span class="token punctuation">,</span>
+		 zip<span class="token operator">:</span> <span class="token number">12345</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// nested documents</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h2 data-heading="Sorting and Limiting" id="Sorting_and_Limiting" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Sorting and Limiting
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="Sorting" id="Sorting" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Sorting
+            </h3>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><strong>in alphabetical order</strong> : <code>db.students.find().sort({name:1})</code>
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><strong>in reverse alphabetical order</strong> : <code>db.students.find().sort({name:-1})</code>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><strong>in ascending order</strong> : <code>db.students.find().sort({gpa:1})</code>
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div><strong>in descending order</strong> : <code>db.students.find().sort({gpa:-1})</code>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-heading="Limiting" id="Limiting" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Limiting
+            </h3>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><strong>limiting by number of documents from top of the list</strong> : <code>db.students.find().limit(3)</code> which returns top 3 documents.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-heading="Sort and Limit combined :" id="Sort_and_Limit_combined_:" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Sort and Limit combined :
+            </h3>
+          </div>
+          <div>
+            <p><code>db.students.sort({gpa:-1}).limit(1)</code> this query returns the student with highest gpa.</p>
+          </div>
+          <div>
+            <h2 data-heading="Find" id="Find" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Find
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>find any students named "gholi"</strong> : <code>db.students.find({name:"gholi"})</code>
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div><strong>you can add multiple filters</strong> : <code>db.students.find({name:"gholi", gpa: 4.0})</code>
+                  </li>
+                </ul>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>find every students but only show their name</strong> : <code>db.students.find({}, {name:true})</code>
+                <ul class="has-list-bullet">
+                  <li data-line="3">
+                    <div class="list-bullet"></div><strong>disable id's</strong> : <code>db.students.find({}, {_id:false, name:true})</code>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Update" id="Update" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Update
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><strong>update one data</strong> : <code>db.students.updateOne(filter, update)</code>
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><strong>adding / changing a full time field</strong> : <code>db.students.updateOne({name:"gholi"}, {$set:{fulltime:true}})</code>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>remove field</strong> : <code>db.students.updateOne({name:"gholi"}, {$unset:{fulltime:""}})</code>
+                <ul class="has-list-bullet">
+                  <li data-line="3">
+                    <div class="list-bullet"></div>to remove a field just set to an empty string.
+                  </li>
+                </ul>
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div><strong>update multiple</strong> : <code>db.students.updateMany({name:"gholi"}, {$set:{fulltime:false}})</code>
+              </li>
+              <li data-line="5">
+                <div class="list-bullet"></div><strong>remove multiple</strong> : <code>db.students.updateMany({name:"gholi"}, {$set:{fulltime:false}})</code>
+              </li>
+              <li data-line="6">
+                <div class="list-bullet"></div><strong>check if a field exist</strong> : <code>db.students.updateMany({fullTime:{$exists:false}}, {$set:{fulltime:true}})</code>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Delete" id="Delete" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Delete
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><strong>delete one document</strong> : <code>db.students.deleteOne({name:"gholi"})</code>
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><strong>delete multiple document</strong> : <code>db.students.deleteMany({name:"gholi"})</code>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><strong>delete if something doesn't exist</strong> : <code>db.students.deleteMany({registerDate:{$exist:false}})</code>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Comparison Operators" id="Comparison_Operators" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Comparison Operators
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>the not(!) operator</strong> : <code>$ne</code>
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div><strong>example to find anyone but "gholi"</strong> : <code>db.students.find({name:{$ne:"gholi"}})</code>
+                  </li>
+                </ul>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>less than(&lt;) operator</strong> : <code>$lt</code>
+                <ul class="has-list-bullet">
+                  <li data-line="3">
+                    <div class="list-bullet"></div><strong>example to find people under 20 yo</strong> : <code>db.students.find({age:{$lt:20}})</code>
+                  </li>
+                  <li data-line="4">
+                    <div class="list-bullet"></div><strong>less than or equal</strong> : <code>$lte</code>
+                  </li>
+                  <li data-line="5">
+                    <div class="list-bullet"></div><strong>greater than</strong> : <code>$gt</code>
+                  </li>
+                  <li data-line="6">
+                    <div class="list-bullet"></div><strong>greater than or equal</strong> : <code>$gte</code>
+                  </li>
+                </ul>
+              </li>
+              <li data-line="7">
+                <div class="list-bullet"></div><strong>multiple operators</strong> : <code>db.students.find({gpa:{$lt:4, $gte:3}})</code>
+              </li>
+              <li data-line="8">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>in operator</strong> : <code>$in</code>
+                <ul class="has-list-bullet">
+                  <li data-line="9">
+                    <div class="list-bullet"></div><strong>example</strong> : <code>db.students.find({age:{$in:["gholi", "ghodrat"]}})</code>
+                  </li>
+                </ul>
+              </li>
+              <li data-line="10">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>not in operator</strong> : <code>$nin</code>
+                <ul class="has-list-bullet">
+                  <li data-line="11">
+                    <div class="list-bullet"></div><strong>example</strong> : <code>db.students.find({age:{$nin:["gholi", "ghodrat"]}})</code>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Logical Operators" id="Logical_Operators" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Logical Operators
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>and operator</strong> : <code>$and</code>
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div><strong>example</strong> : <code>db.students.find({$and: [{fullTime: true}, {age:{$lte:22}}]})</code>
+                  </li>
+                </ul>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>or operator</strong> : <code>$or</code>
+                <ul class="has-list-bullet">
+                  <li data-line="3">
+                    <div class="list-bullet"></div><strong>example</strong> : <code>db.students.find({$or: [{fullTime: true}, {age:{$lte:22}}]})</code>
+                  </li>
+                </ul>
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>nor operator</strong> : <code>$nor</code>
+                <ul class="has-list-bullet">
+                  <li data-line="5">
+                    <div class="list-bullet"></div><strong>example</strong> : <code>db.students.find({$nor: [{fullTime: true}, {age:{$lte:22}}]})</code>
+                  </li>
+                </ul>
+              </li>
+              <li data-line="6">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>not operator</strong> : <code>$not</code>
+                <ul class="has-list-bullet">
+                  <li data-line="7">
+                    <div class="list-bullet"></div><code>db.students.find({age:{$not:{$gte:30}}})</code>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Indexes" id="Indexes" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Indexes
+            </h2>
+          </div>
+          <div>
+            <ol>
+              <li data-line="0">Indexes help MongoDB perform queries faster by sorting documents in the collection on a specific field or set of fields.</li>
+              <li data-line="1">Indexes are created on one or more fields of a collection to improve the speed of find(), sort() and grouping operations.</li>
+            </ol>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><strong>how to make alphabetical index for a field</strong> : <code>db.students.createIndex({name: 1})</code>
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><strong>get Indexes</strong> : <code>db.students.getIndex()</code>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><strong>drop Index by using name of the Index</strong> : <code>db.students.getIndex("name_1")</code>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Collections" id="Collections" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Collections
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><strong>create Collections</strong> : <code>db.createCollection("teachers")</code>
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><strong>set max size to a collection</strong> : <code>db.createCollection("teachers", {capped:true, size:10000000, max:100})</code> this means the size is at most 10 megabytes and maximum number of documents can be 100.
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><strong>you can set indexes to false so the insert and other operations are faster</strong> : <code>db.createCollection("teachers", {capped:true, size:10000000, max:100}, {autoIndexId: false})</code>
               </li>
             </ul>
           </div>
@@ -749,88 +796,87 @@ pattern*/
           <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
           <div class="tree-scroll-area">
             <div class="tree-item mod-tree-heading" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="#GIT_CHEAT_SHEET"><span class="tree-item-title">GIT CHEAT SHEET</span></a></div>
+              <div class="tree-item-contents"><a class="tree-item-link" href="#Introduction_MongoDB?"><span class="tree-item-title">Introduction MongoDB?</span></a></div>
               <div class="tree-item-children">
                 <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#STAGE_&amp;_SNAPSHOT"><span class="tree-item-title">STAGE &amp; SNAPSHOT</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
-                  <div class="tree-item-contents">
-                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                        <path d="M3 8L12 17L21 8"></path>
-                      </svg></div><a class="tree-item-link" href="#SETUP"><span class="tree-item-title">SETUP</span></a>
-                  </div>
-                  <div class="tree-item-children">
-                    <div class="tree-item mod-tree-heading" data-depth="3">
-                      <div class="tree-item-contents"><a class="tree-item-link" href="#Configuring_user_information_used_across_all_local_repositories"><span class="tree-item-title">Configuring user information used across all local repositories</span></a></div>
-                      <div class="tree-item-children"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
-                  <div class="tree-item-contents">
-                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                        <path d="M3 8L12 17L21 8"></path>
-                      </svg></div><a class="tree-item-link" href="#SETUP_&amp;_INIT"><span class="tree-item-title">SETUP &amp; INIT</span></a>
-                  </div>
-                  <div class="tree-item-children">
-                    <div class="tree-item mod-tree-heading" data-depth="3">
-                      <div class="tree-item-contents"><a class="tree-item-link" href="#Configuring_user_information,_initializing_and_cloning_repositories"><span class="tree-item-title">Configuring user information, initializing and cloning repositories</span></a></div>
-                      <div class="tree-item-children"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
-                  <div class="tree-item-contents">
-                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                        <path d="M3 8L12 17L21 8"></path>
-                      </svg></div><a class="tree-item-link" href="#BRANCH_&amp;_MERGE"><span class="tree-item-title">BRANCH &amp; MERGE</span></a>
-                  </div>
-                  <div class="tree-item-children">
-                    <div class="tree-item mod-tree-heading" data-depth="3">
-                      <div class="tree-item-contents"><a class="tree-item-link" href="#Isolating_work_in_branches,_changing_context,_and_integrating_changes"><span class="tree-item-title">Isolating work in branches, changing context, and integrating changes</span></a></div>
-                      <div class="tree-item-children"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#INSTALLATION_&amp;_GUIS"><span class="tree-item-title">INSTALLATION &amp; GUIS</span></a></div>
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Key_Features"><span class="tree-item-title">Key Features</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
                 <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#EDUCATION"><span class="tree-item-title">EDUCATION</span></a></div>
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Components"><span class="tree-item-title">Components</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
                 <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#SHARE_&amp;_UPDATE"><span class="tree-item-title">SHARE &amp; UPDATE</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#TRACKING_PATH_CHANGES"><span class="tree-item-title">TRACKING PATH CHANGES</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#TEMPORARY_COMMITS"><span class="tree-item-title">TEMPORARY COMMITS</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#REWRITE_HISTORY"><span class="tree-item-title">REWRITE HISTORY</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#INSPECT_&amp;_COMPARE"><span class="tree-item-title">INSPECT &amp; COMPARE</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#IGNORING_PATTERNS"><span class="tree-item-title">IGNORING PATTERNS</span></a></div>
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Basic_Concepts"><span class="tree-item-title">Basic Concepts</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
               </div>
             </div>
             <div class="tree-item mod-tree-heading" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="#git_tips_and_tricks"><span class="tree-item-title">git tips and tricks</span></a></div>
-              <div class="tree-item-children"></div>
+              <div class="tree-item-contents"><a class="tree-item-link" href="#Syntax"><span class="tree-item-title">Syntax</span></a></div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Data_Bases"><span class="tree-item-title">Data Bases</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Insert"><span class="tree-item-title">Insert</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Data_Types"><span class="tree-item-title">Data Types</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#Sorting_and_Limiting"><span class="tree-item-title">Sorting and Limiting</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Sorting"><span class="tree-item-title">Sorting</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Limiting"><span class="tree-item-title">Limiting</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Sort_and_Limit_combined_:"><span class="tree-item-title">Sort and Limit combined :</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Find"><span class="tree-item-title">Find</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Update"><span class="tree-item-title">Update</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Delete"><span class="tree-item-title">Delete</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Comparison_Operators"><span class="tree-item-title">Comparison Operators</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Logical_Operators"><span class="tree-item-title">Logical Operators</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Indexes"><span class="tree-item-title">Indexes</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Collections"><span class="tree-item-title">Collections</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
