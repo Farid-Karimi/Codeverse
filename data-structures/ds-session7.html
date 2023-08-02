@@ -17,30 +17,24 @@
   <link rel="stylesheet" href="lib/styles/plugin-styles.css">
   <link rel="stylesheet" href="lib/styles/snippets.css">
   <style>
-    body.css-settings-manager {
-      --blur-depth: 10px;
-      --font-family-vault: 'TimeGoing', 'Segoe UI Emoji';
-      --font-size-vault-name: 1.9em;
-    }
+    body.css-settings-manager {}
 
     body.theme-light.css-settings-manager {}
 
-    body.theme-dark.css-settings-manager {
-      --text-color-code: #FFFFFF;
-    }
+    body.theme-dark.css-settings-manager {}
   </style>
 
 
   <!-- Graph View Data -->
   <script>
     let nodes = {
-      "nodeCount": 39,
-      "linkCount": 36,
-      "radii": [7, 6.75, 6, 4.75, 4.75, 4.222222222222222, 4.222222222222222, 4.222222222222222, 4.222222222222222, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3, 3, 3],
-      "labels": ["Data Structures", "C++", "index", "Data Base", "Markdown", "Python", "MathJax", "markdown cheat sheet", "Git", "MongoDB cheat Sheet", "MongoDB", "Python OOP", "git cheat sheet", "DS-session9", "DS-session8", "DS-session7", "DS-session6", "DS-session5", "DS-session4", "DS-session3", "DS-session2", "DS-session15", "DS-session14", "DS-session13", "DS-session12", "DS-session11", "DS-session10", "DS-session1", "Type punning", "Auto keyword", "Static keyword", "OOP", "Inline keyword", "Header Files", "Enum and Enum class", "Const keyword", "Traversing binary tree", "expression tree", "Convert to binary tree"],
-      "paths": ["data-structures/data-structures.html", "c++/c++.html", "index.html", "data-base/data-base.html", "markdown/markdown.html", "python/python.html", "markdown/mathjax.html", "markdown/markdown-cheat-sheet.html", "git/git.html", "data-base/mongodb-cheat-sheet.html", "data-base/mongodb.html", "python/python-oop.html", "git/git-cheat-sheet.html", "data-structures/ds-session9.html", "data-structures/ds-session8.html", "data-structures/ds-session7.html", "data-structures/ds-session6.html", "data-structures/ds-session5.html", "data-structures/ds-session4.html", "data-structures/ds-session3.html", "data-structures/ds-session2.html", "data-structures/ds-session15.html", "data-structures/ds-session14.html", "data-structures/ds-session13.html", "data-structures/ds-session12.html", "data-structures/ds-session11.html", "data-structures/ds-session10.html", "data-structures/ds-session1.html", "c++/type-punning.html", "c++/auto-keyword.html", "c++/static-keyword.html", "c++/oop.html", "c++/inline-keyword.html", "c++/header-files.html", "c++/enum-and-enum-class.html", "c++/const-keyword.html", "photos/traversing-binary-tree.html", "photos/expression-tree.html", "photos/convert-to-binary-tree.html"],
-      "linkSources": [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 4, 4, 7, 5, 2, 2, 2, 2, 2, 2, 3, 3],
-      "linkTargets": [31, 34, 33, 35, 30, 32, 29, 28, 27, 20, 19, 18, 17, 16, 15, 14, 13, 26, 25, 24, 23, 22, 21, 12, 6, 7, 6, 11, 0, 1, 8, 4, 5, 3, 10, 9]
+      "nodeCount": 41,
+      "linkCount": 37,
+      "radii": [7, 6.888888888888888, 6, 4.75, 4.75, 4.222222222222222, 4.222222222222222, 4.222222222222222, 4.222222222222222, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3.6388888888888893, 3, 3, 3, 3],
+      "labels": ["Data Structures", "C++", "Welcome to Code Verse", "Markdown", "Data Base", "Markdown Cheat Sheet", "MathJax", "Git", "Python", "Git Cheat Sheet", "MongoDB", "MongoDB cheat Sheet", "Python OOP", "DS-session7", "DS-session9", "DS-session8", "DS-session6", "DS-session5", "DS-session4", "DS-session3", "DS-session2", "DS-session15", "DS-session14", "DS-session13", "DS-session12", "DS-session1", "DS-session10", "DS-session11", "Type punning", "Timing", "Static keyword", "OOP", "Inline keyword", "Header Files", "Enum and Enum class", "Auto keyword", "Const keyword", "Min-max heap.excalidraw", "Traversing binary tree", "expression tree", "Convert to binary tree"],
+      "paths": ["data-structures/data-structures.html", "c++/c++.html", "welcome-to-code-verse.html", "markdown/markdown.html", "data-base/data-base.html", "markdown/markdown-cheat-sheet.html", "markdown/mathjax.html", "git/git.html", "python/python.html", "git/git-cheat-sheet.html", "data-base/mongodb.html", "data-base/mongodb-cheat-sheet.html", "python/python-oop.html", "data-structures/ds-session7.html", "data-structures/ds-session9.html", "data-structures/ds-session8.html", "data-structures/ds-session6.html", "data-structures/ds-session5.html", "data-structures/ds-session4.html", "data-structures/ds-session3.html", "data-structures/ds-session2.html", "data-structures/ds-session15.html", "data-structures/ds-session14.html", "data-structures/ds-session13.html", "data-structures/ds-session12.html", "data-structures/ds-session1.html", "data-structures/ds-session10.html", "data-structures/ds-session11.html", "c++/type-punning.html", "c++/timing.html", "c++/static-keyword.html", "c++/oop.html", "c++/inline-keyword.html", "c++/header-files.html", "c++/enum-and-enum-class.html", "c++/auto-keyword.html", "c++/const-keyword.html", "photos/min-max-heap.excalidraw.html", "photos/traversing-binary-tree.html", "photos/expression-tree.html", "photos/convert-to-binary-tree.html"],
+      "linkSources": [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 3, 8, 5, 2, 2, 2, 2, 2, 2],
+      "linkTargets": [31, 34, 33, 36, 30, 32, 35, 28, 29, 10, 11, 25, 20, 19, 18, 17, 16, 13, 15, 14, 26, 27, 24, 23, 22, 21, 9, 6, 5, 12, 6, 0, 1, 7, 3, 8, 4]
     };
     let attractionForce = 1;
     let linkLength = 10;
@@ -61,7 +55,7 @@
 
 </head>
 
-<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app is-maximized show-inline-title show-view-header css-settings-manager color-scheme-options-topaz-nord background-settings-workplace-background-image background-settings-workplace-theme-light-leaf background-settings-workplace-theme-dark-dark-sky background-image-settings-switch background-image-settings-markdown-page-default background-image-settings-markdown-page-random-default notebook-liked-markdown-page-grid-notebook-1 panel-page-bg-theme-ligt-curve panel-page-bg-theme-dark-sea default-left-ribbon-style layout-style-options-default default-search-bar default-scrollbar bt-default-highlight h1-text-align-start h2-text-align-start h3-text-align-start h4-text-align-start h5-text-align-start h6-text-align-start default-hr bt-default-unordered-list default-ol-list-marker list-no-border file-shape-default file-name-non-wrapped folder-style-change-options-colorful-default folder-colorful-one blockquote-style-default default-table table-width-100 table-style-default default-loading-page loading-text-typing-style rainbow-tag setting-style-traditional default-titlebar default-outline-style stack-tab-text-ori-mixed default-tab default-canvas-background traditional-callout-style style-options-for-admonition-plugin style-options-for-calendar-plugin-default style-options-for-kanban-plugin-static-default style-options-for-kanban-plugin-dynamic-default style-options-for-buttons-plugin dataview-list-style-pacman default-dvtable dialogue-style-default memos-default-light memos-default-dark quiet-outline-optimize code-theme-bt-default whole-code-wrap codebox-default-style" style="--zoom-factor:1; --font-text-size:15px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em; --content-width:500em; --sidebar-width:25em; --collapse-arrow-size:0.4em; --tree-horizontal-spacing:1em; --tree-vertical-spacing:0.5em; --sidebar-margin:12px;">
+<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app is-maximized show-inline-title show-view-header css-settings-manager panel-page-bg-theme-ligt-curve anp-td-none" style="--zoom-factor:1; --font-text-size:15px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em; --content-width:500em; --sidebar-width:25em; --collapse-arrow-size:0.4em; --tree-horizontal-spacing:1em; --tree-vertical-spacing:0.5em; --sidebar-margin:12px;">
   <div class="webpage-container">
     <div class="sidebar-left sidebar">
       <div class="sidebar-content">
@@ -108,6 +102,10 @@
                 </div>
                 <div class="tree-item mod-tree-file" data-depth="2">
                   <div class="tree-item-contents"><a class="tree-item-link" href="c++/static-keyword.html"><span class="tree-item-title">Static keyword</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="c++/timing.html"><span class="tree-item-title">Timing</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
                 <div class="tree-item mod-tree-file" data-depth="2">
@@ -222,7 +220,7 @@
                   <div class="tree-item-children"></div>
                 </div>
                 <div class="tree-item mod-tree-file" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="git/git-cheat-sheet.html"><span class="tree-item-title">git cheat sheet</span></a></div>
+                  <div class="tree-item-contents"><a class="tree-item-link" href="git/git-cheat-sheet.html"><span class="tree-item-title">Git Cheat Sheet</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
               </div>
@@ -239,7 +237,7 @@
                   <div class="tree-item-children"></div>
                 </div>
                 <div class="tree-item mod-tree-file" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/markdown-cheat-sheet.html"><span class="tree-item-title">markdown cheat sheet</span></a></div>
+                  <div class="tree-item-contents"><a class="tree-item-link" href="markdown/markdown-cheat-sheet.html"><span class="tree-item-title">Markdown Cheat Sheet</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
                 <div class="tree-item mod-tree-file" data-depth="2">
@@ -261,6 +259,10 @@
                 </div>
                 <div class="tree-item mod-tree-file" data-depth="2">
                   <div class="tree-item-contents"><a class="tree-item-link" href="photos/expression-tree.html"><span class="tree-item-title">expression tree</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="photos/min-max-heap.excalidraw.html"><span class="tree-item-title">Min-max heap.excalidraw</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
                 <div class="tree-item mod-tree-file" data-depth="2">
@@ -287,7 +289,7 @@
               </div>
             </div>
             <div class="tree-item mod-tree-file" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="index.html"><span class="tree-item-title">index</span></a></div>
+              <div class="tree-item-contents"><a class="tree-item-link" href="welcome-to-code-verse.html"><span class="tree-item-title">Welcome to Code Verse</span></a></div>
               <div class="tree-item-children"></div>
             </div>
           </div>
@@ -297,6 +299,36 @@
     <div class="document-container">
       <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
         <style id="MJX-CHTML-styles">
+          mjx-c.mjx-c1D451.TEX-I::before {
+            padding: 0.694em 0.52em 0.01em 0px;
+            content: "d";
+          }
+
+          mjx-c.mjx-c1D452.TEX-I::before {
+            padding: 0.442em 0.466em 0.011em 0px;
+            content: "e";
+          }
+
+          mjx-c.mjx-c1D434.TEX-I::before {
+            padding: 0.716em 0.75em 0px 0px;
+            content: "A";
+          }
+
+          mjx-c.mjx-c1D435.TEX-I::before {
+            padding: 0.683em 0.759em 0px 0px;
+            content: "B";
+          }
+
+          mjx-c.mjx-c1D436.TEX-I::before {
+            padding: 0.705em 0.76em 0.022em 0px;
+            content: "C";
+          }
+
+          mjx-c.mjx-c1D43C.TEX-I::before {
+            padding: 0.683em 0.504em 0px 0px;
+            content: "I";
+          }
+
           mjx-c.mjx-c1D43E.TEX-I::before {
             padding: 0.683em 0.889em 0px 0px;
             content: "K";
@@ -386,11 +418,6 @@
             content: "Ω";
           }
 
-          mjx-c.mjx-c1D45A.TEX-I::before {
-            padding: 0.442em 0.878em 0.011em 0px;
-            content: "m";
-          }
-
           mjx-c.mjx-c1D446.TEX-I::before {
             padding: 0.705em 0.645em 0.022em 0px;
             content: "S";
@@ -416,11 +443,6 @@
             text-align: left;
           }
 
-          mjx-c.mjx-c1D442.TEX-I::before {
-            padding: 0.704em 0.763em 0.022em 0px;
-            content: "O";
-          }
-
           mjx-c.mjx-c66::before {
             padding: 0.705em 0.372em 0px 0px;
             content: "f";
@@ -431,9 +453,9 @@
             content: "r";
           }
 
-          mjx-c.mjx-c2061::before {
-            padding: 0px;
-            content: "";
+          mjx-c.mjx-c2F::before {
+            padding: 0.75em 0.5em 0.25em 0px;
+            content: "/";
           }
 
           mjx-c.mjx-c34::before {
@@ -459,6 +481,21 @@
           mjx-c.mjx-c6D::before {
             padding: 0.442em 0.833em 0px 0px;
             content: "m";
+          }
+
+          mjx-c.mjx-c1D437.TEX-I::before {
+            padding: 0.683em 0.828em 0px 0px;
+            content: "D";
+          }
+
+          mjx-c.mjx-c1D456.TEX-I::before {
+            padding: 0.661em 0.345em 0.011em 0px;
+            content: "i";
+          }
+
+          mjx-c.mjx-c1D450.TEX-I::before {
+            padding: 0.442em 0.433em 0.011em 0px;
+            content: "c";
           }
 
           mjx-c.mjx-c30::before {
@@ -496,6 +533,11 @@
             content: "φ";
           }
 
+          mjx-c.mjx-c3A::before {
+            padding: 0.43em 0.278em 0px 0px;
+            content: ":";
+          }
+
           mjx-c.mjx-c5E::before {
             padding: 0.694em 0.5em 0px 0px;
             content: "^";
@@ -506,14 +548,29 @@
             content: "∑";
           }
 
-          mjx-c.mjx-c1D461.TEX-I::before {
-            padding: 0.626em 0.361em 0.011em 0px;
-            content: "t";
-          }
-
           mjx-c.mjx-c2211.TEX-S1::before {
             padding: 0.75em 1.056em 0.25em 0px;
             content: "∑";
+          }
+
+          mjx-msub {
+            display: inline-block;
+            text-align: left;
+          }
+
+          mjx-c.mjx-c1D445.TEX-I::before {
+            padding: 0.683em 0.759em 0.021em 0px;
+            content: "R";
+          }
+
+          mjx-c.mjx-c2C::before {
+            padding: 0.121em 0.278em 0.194em 0px;
+            content: ",";
+          }
+
+          mjx-c.mjx-c1D447.TEX-I::before {
+            padding: 0.677em 0.704em 0px 0px;
+            content: "T";
           }
 
           mjx-mtable {
@@ -678,9 +735,19 @@
             vertical-align: 0.25em;
           }
 
+          mjx-c.mjx-c1D453.TEX-I::before {
+            padding: 0.705em 0.55em 0.205em 0px;
+            content: "f";
+          }
+
           mjx-c.mjx-c3D::before {
             padding: 0.583em 0.778em 0.082em 0px;
             content: "=";
+          }
+
+          mjx-c.mjx-c2212::before {
+            padding: 0.583em 0.778em 0.082em 0px;
+            content: "−";
           }
 
           mjx-c.mjx-c1D457.TEX-I::before {
@@ -698,44 +765,9 @@
             content: "N";
           }
 
-          mjx-msub {
+          mjx-mrow {
             display: inline-block;
             text-align: left;
-          }
-
-          mjx-mn {
-            display: inline-block;
-            text-align: left;
-          }
-
-          mjx-c.mjx-c1D445.TEX-I::before {
-            padding: 0.683em 0.759em 0.021em 0px;
-            content: "R";
-          }
-
-          mjx-c.mjx-c2C::before {
-            padding: 0.121em 0.278em 0.194em 0px;
-            content: ",";
-          }
-
-          mjx-c.mjx-c1D447.TEX-I::before {
-            padding: 0.677em 0.704em 0px 0px;
-            content: "T";
-          }
-
-          mjx-c.mjx-c31::before {
-            padding: 0.666em 0.5em 0px 0px;
-            content: "1";
-          }
-
-          mjx-c.mjx-c32::before {
-            padding: 0.666em 0.5em 0px 0px;
-            content: "2";
-          }
-
-          mjx-c.mjx-c1D458.TEX-I::before {
-            padding: 0.694em 0.521em 0.011em 0px;
-            content: "k";
           }
 
           mjx-mover {
@@ -763,6 +795,11 @@
           }
 
           mjx-mtext {
+            display: inline-block;
+            text-align: left;
+          }
+
+          mjx-mspace {
             display: inline-block;
             text-align: left;
           }
@@ -809,6 +846,246 @@
           mjx-stretchy-h.mjx-c2192 mjx-end mjx-c::before {
             content: "→";
             padding: 0.583em 0px 0.082em;
+          }
+
+          mjx-c.mjx-c2016.TEX-S1::before {
+            padding: 0.602em 0.778em 0px 0px;
+            content: "‖";
+          }
+
+          mjx-c.mjx-c3C::before {
+            padding: 0.54em 0.778em 0.04em 0px;
+            content: "<";
+          }
+
+          mjx-c.mjx-c3E::before {
+            padding: 0.54em 0.778em 0.04em 0px;
+            content: ">";
+          }
+
+          mjx-c.mjx-c2264::before {
+            padding: 0.636em 0.778em 0.138em 0px;
+            content: "≤";
+          }
+
+          mjx-c.mjx-c2266.TEX-A::before {
+            padding: 0.753em 0.778em 0.175em 0px;
+            content: "≦";
+          }
+
+          mjx-c.mjx-c2A7D.TEX-A::before {
+            padding: 0.636em 0.778em 0.138em 0px;
+            content: "⩽";
+          }
+
+          mjx-c.mjx-c2265::before {
+            padding: 0.636em 0.778em 0.138em 0px;
+            content: "≥";
+          }
+
+          mjx-c.mjx-c2267.TEX-A::before {
+            padding: 0.753em 0.778em 0.175em 0px;
+            content: "≧";
+          }
+
+          mjx-c.mjx-c2A7E.TEX-A::before {
+            padding: 0.636em 0.778em 0.138em 0px;
+            content: "⩾";
+          }
+
+          mjx-c.mjx-c2260::before {
+            padding: 0.716em 0.778em 0.215em 0px;
+            content: "≠";
+          }
+
+          mjx-c.mjx-c2227::before {
+            padding: 0.598em 0.667em 0.022em 0px;
+            content: "∧";
+          }
+
+          mjx-c.mjx-c2228::before {
+            padding: 0.598em 0.667em 0.022em 0px;
+            content: "∨";
+          }
+
+          mjx-c.mjx-cAC::before {
+            padding: 0.356em 0.667em 0px 0px;
+            content: "¬";
+          }
+
+          mjx-c.mjx-c2200::before {
+            padding: 0.694em 0.556em 0.022em 0px;
+            content: "∀";
+          }
+
+          mjx-c.mjx-c2203::before {
+            padding: 0.694em 0.556em 0px 0px;
+            content: "∃";
+          }
+
+          mjx-c.mjx-c2204::before {
+            padding: 0.716em 0.556em 0.215em 0px;
+            content: "∄";
+          }
+
+          mjx-c.mjx-c22A4::before {
+            padding: 0.668em 0.778em 0px 0px;
+            content: "⊤";
+          }
+
+          mjx-c.mjx-c22A5::before {
+            padding: 0.668em 0.778em 0px 0px;
+            content: "⊥";
+          }
+
+          mjx-c.mjx-c22A2::before {
+            padding: 0.694em 0.611em 0px 0px;
+            content: "⊢";
+          }
+
+          mjx-c.mjx-c22A8.TEX-A::before {
+            padding: 0.694em 0.611em 0px 0px;
+            content: "⊨";
+          }
+
+          mjx-c.mjx-c2248::before {
+            padding: 0.483em 0.778em 0px 0px;
+            content: "≈";
+          }
+
+          mjx-c.mjx-c223C::before {
+            padding: 0.367em 0.778em 0px 0px;
+            content: "∼";
+          }
+
+          mjx-c.mjx-c2243::before {
+            padding: 0.464em 0.778em 0px 0px;
+            content: "≃";
+          }
+
+          mjx-c.mjx-c2245::before {
+            padding: 0.589em 0.778em 0px 0px;
+            content: "≅";
+          }
+
+          mjx-c.mjx-c2261::before {
+            padding: 0.464em 0.778em 0px 0px;
+            content: "≡";
+          }
+
+          mjx-c.mjx-c227A::before {
+            padding: 0.539em 0.778em 0.041em 0px;
+            content: "≺";
+          }
+
+          mjx-c.mjx-c22B2.TEX-A::before {
+            padding: 0.539em 0.778em 0.041em 0px;
+            content: "⊲";
+          }
+
+          mjx-c.mjx-c2234.TEX-A::before {
+            padding: 0.471em 0.667em 0.082em 0px;
+            content: "∴";
+          }
+
+          mjx-c.mjx-cD7::before {
+            padding: 0.491em 0.778em 0px 0px;
+            content: "×";
+          }
+
+          mjx-c.mjx-cF7::before {
+            padding: 0.537em 0.778em 0.036em 0px;
+            content: "÷";
+          }
+
+          mjx-c.mjx-cB1::before {
+            padding: 0.666em 0.778em 0px 0px;
+            content: "±";
+          }
+
+          mjx-c.mjx-c2213::before {
+            padding: 0.5em 0.778em 0.166em 0px;
+            content: "∓";
+          }
+
+          mjx-c.mjx-c22C5::before {
+            padding: 0.31em 0.278em 0px 0px;
+            content: "⋅";
+          }
+
+          mjx-c.mjx-c22C6::before {
+            padding: 0.486em 0.5em 0px 0px;
+            content: "⋆";
+          }
+
+          mjx-c.mjx-c2217::before {
+            padding: 0.465em 0.5em 0px 0px;
+            content: "∗";
+          }
+
+          mjx-c.mjx-c2295::before {
+            padding: 0.583em 0.778em 0.083em 0px;
+            content: "⊕";
+          }
+
+          mjx-c.mjx-c2218::before {
+            padding: 0.444em 0.5em 0px 0px;
+            content: "∘";
+          }
+
+          mjx-c.mjx-c2219::before {
+            padding: 0.444em 0.5em 0px 0px;
+            content: "∙";
+          }
+
+          mjx-c.mjx-c222A::before {
+            padding: 0.598em 0.667em 0.022em 0px;
+            content: "∪";
+          }
+
+          mjx-c.mjx-c2229::before {
+            padding: 0.598em 0.667em 0.022em 0px;
+            content: "∩";
+          }
+
+          mjx-c.mjx-c2282::before {
+            padding: 0.54em 0.778em 0.04em 0px;
+            content: "⊂";
+          }
+
+          mjx-c.mjx-c2286::before {
+            padding: 0.636em 0.778em 0.138em 0px;
+            content: "⊆";
+          }
+
+          mjx-c.mjx-c2283::before {
+            padding: 0.54em 0.778em 0.04em 0px;
+            content: "⊃";
+          }
+
+          mjx-c.mjx-c2287::before {
+            padding: 0.636em 0.778em 0.138em 0px;
+            content: "⊇";
+          }
+
+          mjx-c.mjx-c2208::before {
+            padding: 0.54em 0.667em 0.04em 0px;
+            content: "∈";
+          }
+
+          mjx-c.mjx-c2209::before {
+            padding: 0.716em 0.667em 0.215em 0px;
+            content: "∉";
+          }
+
+          mjx-c.mjx-c2205::before {
+            padding: 0.772em 0.5em 0.078em 0px;
+            content: "∅";
+          }
+
+          mjx-c.mjx-c2205.TEX-A::before {
+            padding: 0.587em 0.778em 0px 0px;
+            content: "∅";
           }
 
           mjx-c.mjx-c2192::before {
@@ -916,11 +1193,6 @@
             content: "c";
           }
 
-          mjx-c.mjx-c6F::before {
-            padding: 0.448em 0.5em 0.01em 0px;
-            content: "o";
-          }
-
           mjx-c.mjx-c61::before {
             padding: 0.448em 0.5em 0.011em 0px;
             content: "a";
@@ -931,24 +1203,9 @@
             content: "√";
           }
 
-          mjx-c.mjx-c6C::before {
-            padding: 0.694em 0.278em 0px 0px;
-            content: "l";
-          }
-
-          mjx-c.mjx-c67::before {
-            padding: 0.453em 0.5em 0.206em 0px;
-            content: "g";
-          }
-
           mjx-c.mjx-c70::before {
             padding: 0.442em 0.556em 0.194em 0px;
             content: "p";
-          }
-
-          mjx-c.mjx-c1D6FC.TEX-I::before {
-            padding: 0.442em 0.64em 0.011em 0px;
-            content: "α";
           }
 
           mjx-c.mjx-c1D6FD.TEX-I::before {
@@ -1121,239 +1378,74 @@
             content: "Ω";
           }
 
-          mjx-mrow {
+          mjx-c.mjx-c1D6FC.TEX-I::before {
+            padding: 0.442em 0.64em 0.011em 0px;
+            content: "α";
+          }
+
+          mjx-c.mjx-c1D45A.TEX-I::before {
+            padding: 0.442em 0.878em 0.011em 0px;
+            content: "m";
+          }
+
+          mjx-c.mjx-c1D458.TEX-I::before {
+            padding: 0.694em 0.521em 0.011em 0px;
+            content: "k";
+          }
+
+          mjx-c.mjx-c1D461.TEX-I::before {
+            padding: 0.626em 0.361em 0.011em 0px;
+            content: "t";
+          }
+
+          mjx-c.mjx-c1D442.TEX-I::before {
+            padding: 0.704em 0.763em 0.022em 0px;
+            content: "O";
+          }
+
+          mjx-c.mjx-c6C::before {
+            padding: 0.694em 0.278em 0px 0px;
+            content: "l";
+          }
+
+          mjx-c.mjx-c6F::before {
+            padding: 0.448em 0.5em 0.01em 0px;
+            content: "o";
+          }
+
+          mjx-c.mjx-c67::before {
+            padding: 0.453em 0.5em 0.206em 0px;
+            content: "g";
+          }
+
+          mjx-c.mjx-c2061::before {
+            padding: 0px;
+            content: "";
+          }
+
+          mjx-mn {
             display: inline-block;
             text-align: left;
           }
 
-          mjx-c.mjx-c2016.TEX-S1::before {
-            padding: 0.602em 0.778em 0px 0px;
-            content: "‖";
+          mjx-c.mjx-c32::before {
+            padding: 0.666em 0.5em 0px 0px;
+            content: "2";
           }
 
-          mjx-c.mjx-c3C::before {
-            padding: 0.54em 0.778em 0.04em 0px;
-            content: "<";
+          mjx-c.mjx-c1D45B.TEX-I::before {
+            padding: 0.442em 0.6em 0.011em 0px;
+            content: "n";
           }
 
-          mjx-c.mjx-c3E::before {
-            padding: 0.54em 0.778em 0.04em 0px;
-            content: ">";
+          mjx-c.mjx-c2B::before {
+            padding: 0.583em 0.778em 0.082em 0px;
+            content: "+";
           }
 
-          mjx-c.mjx-c2264::before {
-            padding: 0.636em 0.778em 0.138em 0px;
-            content: "≤";
-          }
-
-          mjx-c.mjx-c2266.TEX-A::before {
-            padding: 0.753em 0.778em 0.175em 0px;
-            content: "≦";
-          }
-
-          mjx-c.mjx-c2A7D.TEX-A::before {
-            padding: 0.636em 0.778em 0.138em 0px;
-            content: "⩽";
-          }
-
-          mjx-c.mjx-c2265::before {
-            padding: 0.636em 0.778em 0.138em 0px;
-            content: "≥";
-          }
-
-          mjx-c.mjx-c2267.TEX-A::before {
-            padding: 0.753em 0.778em 0.175em 0px;
-            content: "≧";
-          }
-
-          mjx-c.mjx-c2A7E.TEX-A::before {
-            padding: 0.636em 0.778em 0.138em 0px;
-            content: "⩾";
-          }
-
-          mjx-c.mjx-c2260::before {
-            padding: 0.716em 0.778em 0.215em 0px;
-            content: "≠";
-          }
-
-          mjx-c.mjx-c2227::before {
-            padding: 0.598em 0.667em 0.022em 0px;
-            content: "∧";
-          }
-
-          mjx-c.mjx-c2228::before {
-            padding: 0.598em 0.667em 0.022em 0px;
-            content: "∨";
-          }
-
-          mjx-c.mjx-cAC::before {
-            padding: 0.356em 0.667em 0px 0px;
-            content: "¬";
-          }
-
-          mjx-c.mjx-c2200::before {
-            padding: 0.694em 0.556em 0.022em 0px;
-            content: "∀";
-          }
-
-          mjx-c.mjx-c2203::before {
-            padding: 0.694em 0.556em 0px 0px;
-            content: "∃";
-          }
-
-          mjx-c.mjx-c2204::before {
-            padding: 0.716em 0.556em 0.215em 0px;
-            content: "∄";
-          }
-
-          mjx-c.mjx-c22A4::before {
-            padding: 0.668em 0.778em 0px 0px;
-            content: "⊤";
-          }
-
-          mjx-c.mjx-c22A5::before {
-            padding: 0.668em 0.778em 0px 0px;
-            content: "⊥";
-          }
-
-          mjx-c.mjx-c22A2::before {
-            padding: 0.694em 0.611em 0px 0px;
-            content: "⊢";
-          }
-
-          mjx-c.mjx-c22A8.TEX-A::before {
-            padding: 0.694em 0.611em 0px 0px;
-            content: "⊨";
-          }
-
-          mjx-c.mjx-c2248::before {
-            padding: 0.483em 0.778em 0px 0px;
-            content: "≈";
-          }
-
-          mjx-c.mjx-c223C::before {
-            padding: 0.367em 0.778em 0px 0px;
-            content: "∼";
-          }
-
-          mjx-c.mjx-c2243::before {
-            padding: 0.464em 0.778em 0px 0px;
-            content: "≃";
-          }
-
-          mjx-c.mjx-c2245::before {
-            padding: 0.589em 0.778em 0px 0px;
-            content: "≅";
-          }
-
-          mjx-c.mjx-c2261::before {
-            padding: 0.464em 0.778em 0px 0px;
-            content: "≡";
-          }
-
-          mjx-c.mjx-c227A::before {
-            padding: 0.539em 0.778em 0.041em 0px;
-            content: "≺";
-          }
-
-          mjx-c.mjx-c22B2.TEX-A::before {
-            padding: 0.539em 0.778em 0.041em 0px;
-            content: "⊲";
-          }
-
-          mjx-c.mjx-c2234.TEX-A::before {
-            padding: 0.471em 0.667em 0.082em 0px;
-            content: "∴";
-          }
-
-          mjx-c.mjx-cF7::before {
-            padding: 0.537em 0.778em 0.036em 0px;
-            content: "÷";
-          }
-
-          mjx-c.mjx-cB1::before {
-            padding: 0.666em 0.778em 0px 0px;
-            content: "±";
-          }
-
-          mjx-c.mjx-c2213::before {
-            padding: 0.5em 0.778em 0.166em 0px;
-            content: "∓";
-          }
-
-          mjx-c.mjx-c22C5::before {
-            padding: 0.31em 0.278em 0px 0px;
-            content: "⋅";
-          }
-
-          mjx-c.mjx-c22C6::before {
-            padding: 0.486em 0.5em 0px 0px;
-            content: "⋆";
-          }
-
-          mjx-c.mjx-c2295::before {
-            padding: 0.583em 0.778em 0.083em 0px;
-            content: "⊕";
-          }
-
-          mjx-c.mjx-c2218::before {
-            padding: 0.444em 0.5em 0px 0px;
-            content: "∘";
-          }
-
-          mjx-c.mjx-c2219::before {
-            padding: 0.444em 0.5em 0px 0px;
-            content: "∙";
-          }
-
-          mjx-c.mjx-c222A::before {
-            padding: 0.598em 0.667em 0.022em 0px;
-            content: "∪";
-          }
-
-          mjx-c.mjx-c2229::before {
-            padding: 0.598em 0.667em 0.022em 0px;
-            content: "∩";
-          }
-
-          mjx-c.mjx-c2282::before {
-            padding: 0.54em 0.778em 0.04em 0px;
-            content: "⊂";
-          }
-
-          mjx-c.mjx-c2286::before {
-            padding: 0.636em 0.778em 0.138em 0px;
-            content: "⊆";
-          }
-
-          mjx-c.mjx-c2283::before {
-            padding: 0.54em 0.778em 0.04em 0px;
-            content: "⊃";
-          }
-
-          mjx-c.mjx-c2287::before {
-            padding: 0.636em 0.778em 0.138em 0px;
-            content: "⊇";
-          }
-
-          mjx-c.mjx-c2208::before {
-            padding: 0.54em 0.667em 0.04em 0px;
-            content: "∈";
-          }
-
-          mjx-c.mjx-c2209::before {
-            padding: 0.716em 0.667em 0.215em 0px;
-            content: "∉";
-          }
-
-          mjx-c.mjx-c2205::before {
-            padding: 0.772em 0.5em 0.078em 0px;
-            content: "∅";
-          }
-
-          mjx-c.mjx-c2205.TEX-A::before {
-            padding: 0.587em 0.778em 0px 0px;
-            content: "∅";
+          mjx-c.mjx-c31::before {
+            padding: 0.666em 0.5em 0px 0px;
+            content: "1";
           }
 
           mjx-container[jax="CHTML"] {
@@ -1534,121 +1626,6 @@
             text-align: right;
           }
 
-          mjx-mo {
-            display: inline-block;
-            text-align: left;
-          }
-
-          mjx-stretchy-h {
-            display: inline-table;
-            width: 100%;
-          }
-
-          mjx-stretchy-h>* {
-            display: table-cell;
-            width: 0px;
-          }
-
-          mjx-stretchy-h>*>mjx-c {
-            display: inline-block;
-            transform: scaleX(1);
-          }
-
-          mjx-stretchy-h>*>mjx-c::before {
-            display: inline-block;
-            width: initial;
-          }
-
-          mjx-stretchy-h>mjx-ext {
-            overflow: clip visible;
-            width: 100%;
-          }
-
-          mjx-stretchy-h>mjx-ext>mjx-c::before {
-            transform: scaleX(500);
-          }
-
-          mjx-stretchy-h>mjx-ext>mjx-c {
-            width: 0px;
-          }
-
-          mjx-stretchy-h>mjx-beg>mjx-c {
-            margin-right: -0.1em;
-          }
-
-          mjx-stretchy-h>mjx-end>mjx-c {
-            margin-left: -0.1em;
-          }
-
-          mjx-stretchy-v {
-            display: inline-block;
-          }
-
-          mjx-stretchy-v>* {
-            display: block;
-          }
-
-          mjx-stretchy-v>mjx-beg {
-            height: 0px;
-          }
-
-          mjx-stretchy-v>mjx-end>mjx-c {
-            display: block;
-          }
-
-          mjx-stretchy-v>*>mjx-c {
-            transform: scaleY(1);
-            transform-origin: left center;
-            overflow: hidden;
-          }
-
-          mjx-stretchy-v>mjx-ext {
-            display: block;
-            height: 100%;
-            box-sizing: border-box;
-            border: 0px solid transparent;
-            overflow: visible clip;
-          }
-
-          mjx-stretchy-v>mjx-ext>mjx-c::before {
-            width: initial;
-            box-sizing: border-box;
-          }
-
-          mjx-stretchy-v>mjx-ext>mjx-c {
-            transform: scaleY(500) translateY(0.075em);
-            overflow: visible;
-          }
-
-          mjx-mark {
-            display: inline-block;
-            height: 0px;
-          }
-
-          mjx-c {
-            display: inline-block;
-          }
-
-          mjx-utext {
-            display: inline-block;
-            padding: 0.75em 0px 0.2em;
-          }
-
-          mjx-mi {
-            display: inline-block;
-            text-align: left;
-          }
-
-          mjx-texatom {
-            display: inline-block;
-            text-align: left;
-          }
-
-          mjx-mspace {
-            display: inline-block;
-            text-align: left;
-          }
-
           mjx-mfrac {
             display: inline-block;
             text-align: left;
@@ -1752,6 +1729,116 @@
 
           mjx-line[type="d"] {
             margin: 0.18em -0.1em;
+          }
+
+          mjx-mi {
+            display: inline-block;
+            text-align: left;
+          }
+
+          mjx-c {
+            display: inline-block;
+          }
+
+          mjx-utext {
+            display: inline-block;
+            padding: 0.75em 0px 0.2em;
+          }
+
+          mjx-texatom {
+            display: inline-block;
+            text-align: left;
+          }
+
+          mjx-mo {
+            display: inline-block;
+            text-align: left;
+          }
+
+          mjx-stretchy-h {
+            display: inline-table;
+            width: 100%;
+          }
+
+          mjx-stretchy-h>* {
+            display: table-cell;
+            width: 0px;
+          }
+
+          mjx-stretchy-h>*>mjx-c {
+            display: inline-block;
+            transform: scaleX(1);
+          }
+
+          mjx-stretchy-h>*>mjx-c::before {
+            display: inline-block;
+            width: initial;
+          }
+
+          mjx-stretchy-h>mjx-ext {
+            overflow: clip visible;
+            width: 100%;
+          }
+
+          mjx-stretchy-h>mjx-ext>mjx-c::before {
+            transform: scaleX(500);
+          }
+
+          mjx-stretchy-h>mjx-ext>mjx-c {
+            width: 0px;
+          }
+
+          mjx-stretchy-h>mjx-beg>mjx-c {
+            margin-right: -0.1em;
+          }
+
+          mjx-stretchy-h>mjx-end>mjx-c {
+            margin-left: -0.1em;
+          }
+
+          mjx-stretchy-v {
+            display: inline-block;
+          }
+
+          mjx-stretchy-v>* {
+            display: block;
+          }
+
+          mjx-stretchy-v>mjx-beg {
+            height: 0px;
+          }
+
+          mjx-stretchy-v>mjx-end>mjx-c {
+            display: block;
+          }
+
+          mjx-stretchy-v>*>mjx-c {
+            transform: scaleY(1);
+            transform-origin: left center;
+            overflow: hidden;
+          }
+
+          mjx-stretchy-v>mjx-ext {
+            display: block;
+            height: 100%;
+            box-sizing: border-box;
+            border: 0px solid transparent;
+            overflow: visible clip;
+          }
+
+          mjx-stretchy-v>mjx-ext>mjx-c::before {
+            width: initial;
+            box-sizing: border-box;
+          }
+
+          mjx-stretchy-v>mjx-ext>mjx-c {
+            transform: scaleY(500) translateY(0.075em);
+            overflow: visible;
+          }
+
+          mjx-mark {
+            display: inline-block;
+            height: 0px;
           }
 
           mjx-c::before {
@@ -1958,19 +2045,9 @@
             src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
           }
 
-          mjx-c.mjx-c28::before {
-            padding: 0.75em 0.389em 0.25em 0px;
-            content: "(";
-          }
-
           mjx-c.mjx-c1D44E.TEX-I::before {
             padding: 0.441em 0.529em 0.01em 0px;
             content: "a";
-          }
-
-          mjx-c.mjx-c2B::before {
-            padding: 0.583em 0.778em 0.082em 0px;
-            content: "+";
           }
 
           mjx-c.mjx-c1D44F.TEX-I::before {
@@ -1978,94 +2055,9 @@
             content: "b";
           }
 
-          mjx-c.mjx-cD7::before {
-            padding: 0.491em 0.778em 0px 0px;
-            content: "×";
-          }
-
-          mjx-c.mjx-c1D450.TEX-I::before {
-            padding: 0.442em 0.433em 0.011em 0px;
-            content: "c";
-          }
-
-          mjx-c.mjx-c29::before {
-            padding: 0.75em 0.389em 0.25em 0px;
-            content: ")";
-          }
-
-          mjx-c.mjx-c2F::before {
-            padding: 0.75em 0.5em 0.25em 0px;
-            content: "/";
-          }
-
-          mjx-c.mjx-c1D451.TEX-I::before {
-            padding: 0.694em 0.52em 0.01em 0px;
-            content: "d";
-          }
-
-          mjx-c.mjx-c2212::before {
-            padding: 0.583em 0.778em 0.082em 0px;
-            content: "−";
-          }
-
-          mjx-c.mjx-c1D452.TEX-I::before {
-            padding: 0.442em 0.466em 0.011em 0px;
-            content: "e";
-          }
-
-          mjx-c.mjx-c1D434.TEX-I::before {
-            padding: 0.716em 0.75em 0px 0px;
-            content: "A";
-          }
-
-          mjx-c.mjx-c1D435.TEX-I::before {
-            padding: 0.683em 0.759em 0px 0px;
-            content: "B";
-          }
-
-          mjx-c.mjx-c1D436.TEX-I::before {
-            padding: 0.705em 0.76em 0.022em 0px;
-            content: "C";
-          }
-
-          mjx-c.mjx-c1D437.TEX-I::before {
-            padding: 0.683em 0.828em 0px 0px;
-            content: "D";
-          }
-
-          mjx-c.mjx-c2217::before {
-            padding: 0.465em 0.5em 0px 0px;
-            content: "∗";
-          }
-
-          mjx-c.mjx-c1D43C.TEX-I::before {
-            padding: 0.683em 0.504em 0px 0px;
-            content: "I";
-          }
-
-          mjx-c.mjx-c1D45B.TEX-I::before {
-            padding: 0.442em 0.6em 0.011em 0px;
-            content: "n";
-          }
-
-          mjx-c.mjx-c1D453.TEX-I::before {
-            padding: 0.705em 0.55em 0.205em 0px;
-            content: "f";
-          }
-
-          mjx-c.mjx-c1D456.TEX-I::before {
-            padding: 0.661em 0.345em 0.011em 0px;
-            content: "i";
-          }
-
           mjx-c.mjx-c1D465.TEX-I::before {
             padding: 0.442em 0.572em 0.011em 0px;
             content: "x";
-          }
-
-          mjx-c.mjx-c3A::before {
-            padding: 0.43em 0.278em 0px 0px;
-            content: ":";
           }
 
           mjx-c.mjx-c1D466.TEX-I::before {
@@ -2073,9 +2065,19 @@
             content: "y";
           }
 
+          mjx-c.mjx-c28::before {
+            padding: 0.75em 0.389em 0.25em 0px;
+            content: "(";
+          }
+
           mjx-c.mjx-c2E::before {
             padding: 0.12em 0.278em 0px 0px;
             content: ".";
+          }
+
+          mjx-c.mjx-c29::before {
+            padding: 0.75em 0.389em 0.25em 0px;
+            content: ")";
           }
 
           mjx-c.mjx-c5B::before {
@@ -2141,7 +2143,7 @@
         <div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: ; padding-top: var(--file-margins); padding-right: var(--file-margins); padding-left: var(--file-margins); width: 100%; position: absolute;">
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
           <div class="mod-header">
-            <div class="inline-title" data-heading="DS-session7" id="DS-session7" style="display: block;">DS-session7</div>
+            <div class="inline-title" contenteditable="true" spellcheck="true" autocapitalize="on" tabindex="-1" enterkeyhint="done">DS-session7</div>
           </div>
           <div>
             <h2 data-heading="Data Structure:" id="Data_Structure:" style="display: flex;">
@@ -2279,7 +2281,9 @@
           <div>
             <p><a data-tooltip-position="top" aria-label="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-%D8%AC%D9%84%D8%B3%D9%87-%D9%87%D9%81%D8%AA%D9%85-%D9%84%DB%8C%D8%B3%D8%AA-%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87/" rel="noopener" class="external-link" href="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-%D8%AC%D9%84%D8%B3%D9%87-%D9%87%D9%81%D8%AA%D9%85-%D9%84%DB%8C%D8%B3%D8%AA-%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87/" target="_blank">session 7</a></p>
           </div>
-          <div class="mod-footer"></div>
+          <div class="mod-footer">
+            <div class="embedded-backlinks" style="display: none;"></div>
+          </div>
         </div>
       </div>
     </div>

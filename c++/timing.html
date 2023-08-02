@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Python</title>
+  <title>Timing</title>
   <base href="../">
   <meta id="root-path" root-path="../">
 
@@ -301,22 +301,89 @@
         <style id="MJX-CHTML-styles"></style>
         <div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: ; padding-top: var(--file-margins); padding-right: var(--file-margins); padding-left: var(--file-margins); width: 100%; position: absolute;">
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
-          <div class="mod-header"></div>
-          <div>
-            <h1 data-heading="📒 Contents:" id="📒_Contents:">📒 Contents:</h1>
+          <div class="mod-header">
+            <div class="inline-title" data-heading="Timing" id="Timing" style="display: block;">Timing</div>
           </div>
           <div>
-            <ol>
-              <li data-line="0"><a data-href="Python OOP" href="python/python-oop.html" class="internal-link" target="_self" rel="noopener">Python OOP</a></li>
-            </ol>
+            <p><a data-tooltip-position="top" aria-label="https://www.youtube.com/watch?v=oEx5vGNFrLk&amp;list=WL&amp;index=2" rel="noopener" class="external-link" href="https://www.youtube.com/watch?v=oEx5vGNFrLk&amp;list=WL&amp;index=2" target="_blank">link</a></p>
           </div>
           <div>
-            <h1 data-heading="🔗 References:" id="🔗_References:">🔗 References:</h1>
+            <h2 data-heading="Chrono" id="Chrono" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Chrono
+            </h2>
           </div>
           <div>
-            <p><a data-tooltip-position="top" aria-label="https://santoshk.dev/posts/2022/__init__-vs-__new__-and-when-to-use-them/" rel="noopener" class="external-link" href="https://santoshk.dev/posts/2022/__init__-vs-__new__-and-when-to-use-them/" target="_blank">init vs new</a><br>
-              <a data-tooltip-position="top" aria-label="https://www.google.com/books/edition/Python_Crash_Course/igYvDwAAQBAJ?hl=en&amp;gbpv=1&amp;printsec=frontcover" rel="noopener" class="external-link" href="https://www.google.com/books/edition/Python_Crash_Course/igYvDwAAQBAJ?hl=en&amp;gbpv=1&amp;printsec=frontcover" target="_blank">Python Crash Course Book</a>
-            </p>
+            <p>the first way to time the execution is by using the built in timer <code>Chrono</code> in C++:</p>
+          </div>
+          <div>
+            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;chrono&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;thread&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+	<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token double-colon punctuation">::</span>literals<span class="token double-colon punctuation">::</span>chrono_literals<span class="token punctuation">;</span>
+	<span class="token keyword">auto</span> start <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>high_resolution_clock<span class="token double-colon punctuation">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span><span class="token function">this_thread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token double-colon punctuation">::</span><span class="token function">sleep_for</span><span class="token punctuation">(</span><span class="token number">1</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">auto</span> end <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>high_resolution_clock<span class="token double-colon punctuation">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>duration<span class="token operator">&lt;</span><span class="token keyword">float</span><span class="token operator">&gt;</span> duration <span class="token operator">=</span> end <span class="token operator">-</span> start<span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> duration <span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"s "</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+	
+	std<span class="token double-colon punctuation">::</span>cin<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>now a better way to use this with less code :</p>
+          </div>
+          <div>
+            <pre class="language-cpp" tabindex="0"><code class="language-cpp is-loaded"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;chrono&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;thread&gt;</span></span>
+<span class="token keyword">struct</span> <span class="token class-name">Timer</span><span class="token punctuation">{</span>
+
+	std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>time_point<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>steady_clock<span class="token operator">&gt;</span> start<span class="token punctuation">,</span> end<span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>duration<span class="token operator">&lt;</span><span class="token keyword">float</span><span class="token operator">&gt;</span> duration<span class="token punctuation">;</span>
+	
+	<span class="token function">Timer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">auto</span> start <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>high_resolution_clock<span class="token double-colon punctuation">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token operator">~</span><span class="token function">Timer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		end <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>high_resolution_clock<span class="token double-colon punctuation">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		duration <span class="token operator">=</span> end <span class="token operator">-</span> start<span class="token punctuation">;</span>
+		<span class="token keyword">float</span> ms <span class="token operator">=</span>  duration<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">1000.0f</span><span class="token punctuation">;</span>
+		std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Timer took "</span> <span class="token operator">&lt;&lt;</span> duration <span class="token operator">&lt;&lt;</span> ms <span class="token operator">&lt;&lt;</span> <span class="token string">"ms "</span> <span class="token operator">&lt;&lt;</span>  
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	Timer timer<span class="token punctuation">;</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">fasterFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	Timer timer<span class="token punctuation">;</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token comment">//fasterfunction</span>
+	<span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cin<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>you can also use the operating system timer e.g. in windows you can use something like winsock.
+              </li>
+            </ul>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -337,12 +404,13 @@
           <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
           <div class="tree-scroll-area">
             <div class="tree-item mod-tree-heading" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="#📒_Contents:"><span class="tree-item-title">📒 Contents:</span></a></div>
-              <div class="tree-item-children"></div>
-            </div>
-            <div class="tree-item mod-tree-heading" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="#🔗_References:"><span class="tree-item-title">🔗 References:</span></a></div>
-              <div class="tree-item-children"></div>
+              <div class="tree-item-contents"><a class="tree-item-link" href="#Timing"><span class="tree-item-title">Timing</span></a></div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Chrono"><span class="tree-item-title">Chrono</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
