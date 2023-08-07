@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>DS-session3</title>
+  <title>DS-session16</title>
   <base href="../">
   <meta id="root-path" root-path="../">
 
@@ -2218,125 +2218,93 @@
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
           <div class="mod-header"></div>
           <div>
-            <h1 data-heading="Execution time for operations:" id="Execution_time_for_operations:">Execution time for operations:</h1>
+            <h1 data-heading="Order in Data Structures" id="Order_in_Data_Structures">Order in Data Structures</h1>
           </div>
           <div>
-            <ol>
-              <li data-line="0">simple operations like assigning values or multiply, subtraction, etc. = <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>.</li>
-              <li data-line="1">for calculating <code>if</code> statements we count the maximum bracket.</li>
-            </ol>
+            <p>The order of elements in a data structure refers to how the elements are organized and accessed. we start this by a simple example: let assume we want to find the maximum value in an array of n numbers. we can do this by using a for loop and it takes us <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math></mjx-container></span> comparison operations to achieve.<br>
+              now what about finding minimum and maximum at the same time? if we want to probe the array linearly and do 2 comparison operations for every <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math></mjx-container></span> the amount of operations add up to : <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span><br>
+              but here is a different approach we can compare 2 numbers <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math></mjx-container></span> times and separate them into 2 groups, now we look for maximum in the bigger numbers group and minimum in the other one with this algorithm the number of operations is : <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> which is faster than the previous algorithm. There are three main types of order in data structures:</p>
           </div>
           <div>
-            <h3 data-heading="Bubble Sort:" id="Bubble_Sort:" style="display: flex;">
+            <h2 data-heading="Linear Order" id="Linear_Order" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Bubble Sort:
-            </h3>
+                </svg></div>Linear Order
+            </h2>
           </div>
           <div>
-            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">def</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	
-	<span class="token comment"># Traverse through all array elements</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-		swapped <span class="token operator">=</span> <span class="token boolean">False</span>
-
-		<span class="token comment"># Last i elements are already in place</span>
-		<span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n<span class="token operator">-</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-
-			<span class="token comment"># Traverse the array from 0 to n-i-1</span>
-			<span class="token comment"># Swap if the element found is greater</span>
-			<span class="token comment"># than the next element</span>
-			<span class="token keyword">if</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-				swapped <span class="token operator">=</span> <span class="token boolean">True</span>
-		<span class="token keyword">if</span> <span class="token punctuation">(</span>swapped <span class="token operator">==</span> <span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-			<span class="token keyword">break</span>
-
-
-<span class="token comment"># Driver code to test above</span>
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
-	arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">]</span>
-
-	bubbleSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sorted array:"</span><span class="token punctuation">)</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%d"</span> <span class="token operator">%</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>In a linear data structure, elements are organized sequentially one after the other. Examples include:</p>
           </div>
           <div>
-            <p>for bubble sort best case, worst case and average are all equal to <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> cause is does not check if the array is sorted or not and just repeats the comparison operations.</p>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Arrays
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>Linked Lists
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>Stacks
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div>Queues
+              </li>
+            </ul>
           </div>
           <div>
-            <h3 data-heading="Merge Sort:" id="Merge_Sort:" style="display: flex;">
+            <p>Elements in these data structures are accessed in a strict linear order - from beginning to end.</p>
+          </div>
+          <div>
+            <h2 data-heading="Hierarchical Order" id="Hierarchical_Order" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Merge Sort:
-            </h3>
+                </svg></div>Hierarchical Order
+            </h2>
           </div>
           <div>
-            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">def</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">:</span>
-
-		<span class="token comment"># Finding the mid of the array</span>
-		mid <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">//</span><span class="token number">2</span>
-
-		<span class="token comment"># Dividing the array elements</span>
-		L <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span>
-
-		<span class="token comment"># Into 2 halves</span>
-		R <span class="token operator">=</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span>
-
-		<span class="token comment"># Sorting the first half</span>
-		mergeSort<span class="token punctuation">(</span>L<span class="token punctuation">)</span>
-
-		<span class="token comment"># Sorting the second half</span>
-		mergeSort<span class="token punctuation">(</span>R<span class="token punctuation">)</span>
-
-		i <span class="token operator">=</span> j <span class="token operator">=</span> k <span class="token operator">=</span> <span class="token number">0</span>
-
-		<span class="token comment"># Copy data to temp arrays L[] and R[]</span>
-		<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span> <span class="token keyword">and</span> j <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			<span class="token keyword">if</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-				i <span class="token operator">+=</span> <span class="token number">1</span>
-			<span class="token keyword">else</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-				j <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-		<span class="token comment"># Checking if any element was left</span>
-		<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-			i <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-		<span class="token keyword">while</span> j <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-			j <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-
-<span class="token comment"># Code to print the list</span>
-<span class="token keyword">def</span> <span class="token function">printList</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-		<span class="token keyword">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-
-<span class="token comment"># Driver Code</span>
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-	arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Given array is"</span><span class="token punctuation">)</span>
-	printList<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	mergeSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nSorted array is "</span><span class="token punctuation">)</span>
-	printList<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>In a hierarchical data structure, elements have a nested parent-child relationship. Examples include:</p>
           </div>
           <div>
-            <p><a data-tooltip-position="top" aria-label="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%B3%D9%88%D9%85-%D8%AA%D8%AD%D9%84%DB%8C%D9%84-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%DB%8C-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C/" rel="noopener" class="external-link" href="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%B3%D9%88%D9%85-%D8%AA%D8%AD%D9%84%DB%8C%D9%84-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%DB%8C-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C/" target="_blank">session 3</a></p>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Trees (<a data-href="DS-session9" href="data-structures/ds-session9.html" class="internal-link" target="_self" rel="noopener">DS-session9</a>)
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>Graphs
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>Elements are organized in a hierarchy with root nodes at the top and child nodes nested under parent nodes. Elements can be accessed through various traversal methods like depth-first or breadth-first.</p>
+          </div>
+          <div>
+            <h2 data-heading="Unordered" id="Unordered" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Unordered
+            </h2>
+          </div>
+          <div>
+            <p>In an unordered data structure, elements do not have a specific order and can be accessed in any random order. Examples include:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Hash Tables (<a data-href="DS-session14" href="data-structures/ds-session14.html" class="internal-link" target="_self" rel="noopener">DS-session14</a>)
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>Sets
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>There is no concept of first or last element. Elements are stored and accessed in an arbitrary order based on hashing functions or comparison operations.</p>
+          </div>
+          <div>
+            <p>The order of elements impacts how we access and manipulate data structures. Choosing the right order is crucial for designing efficient data structures and algorithms.</p>
+          </div>
+          <div>
+            <p><a data-tooltip-position="top" aria-label="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%B4%D8%A7%D9%86%D8%B2%D8%AF%D9%87%D9%85-%D9%85%D8%B1%D8%AA%D8%A8%D9%87/" rel="noopener" class="external-link" href="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%B4%D8%A7%D9%86%D8%B2%D8%AF%D9%87%D9%85-%D9%85%D8%B1%D8%AA%D8%A8%D9%87/" target="_blank">session 16</a></p>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -2357,14 +2325,18 @@
           <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
           <div class="tree-scroll-area">
             <div class="tree-item mod-tree-heading" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="#Execution_time_for_operations:"><span class="tree-item-title">Execution time for operations:</span></a></div>
+              <div class="tree-item-contents"><a class="tree-item-link" href="#Order_in_Data_Structures"><span class="tree-item-title">Order in Data Structures</span></a></div>
               <div class="tree-item-children">
-                <div class="tree-item mod-tree-heading" data-depth="3">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#Bubble_Sort:"><span class="tree-item-title">Bubble Sort:</span></a></div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Linear_Order"><span class="tree-item-title">Linear Order</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
-                <div class="tree-item mod-tree-heading" data-depth="3">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#Merge_Sort:"><span class="tree-item-title">Merge Sort:</span></a></div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Hierarchical_Order"><span class="tree-item-title">Hierarchical Order</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Unordered"><span class="tree-item-title">Unordered</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
               </div>

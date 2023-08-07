@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Git Cheat Sheet</title>
+  <title>SQL Cheat Sheet</title>
   <base href="../">
   <meta id="root-path" root-path="../">
 
@@ -347,434 +347,534 @@
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
           <div class="mod-header"></div>
           <div>
-            <h1 data-heading="GIT CHEAT SHEET" id="GIT_CHEAT_SHEET">GIT CHEAT SHEET</h1>
+            <h1 data-heading="SQL Basics Cheat Sheet" id="SQL_Basics_Cheat_Sheet">SQL Basics Cheat Sheet</h1>
           </div>
           <div>
-            <h2 data-heading="STAGE &amp; SNAPSHOT" id="STAGE_&amp;_SNAPSHOT" style="display: flex;">
+            <h2 data-heading="SQL" id="SQL" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>STAGE &amp; SNAPSHOT
+                </svg></div>SQL
             </h2>
           </div>
           <div>
-            <pre><code>git status
-</code><button class="copy-code-button">Copy</button></pre>
+            <p><strong>SQL</strong>, or <em>Structured Query Language</em>, is a language to talk to databases. It allows you to select specific data and to build complex reports. Today, SQL is a universal language of data. It is used in practically all technologies that process data.</p>
           </div>
           <div>
-            <p>Show modified files in working directory, staged for your next commit.</p>
-          </div>
-          <div>
-            <pre><code>git add [file]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Add a file as it looks now to your next commit (stage).</p>
-          </div>
-          <div>
-            <pre><code>git reset [file]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Unstage a file while retaining the changes in working directory.</p>
-          </div>
-          <div>
-            <pre><code>git diff
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Diff of what is changed but not staged.</p>
-          </div>
-          <div>
-            <pre><code>git diff --staged
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Diff of what is staged but not yet committed.</p>
-          </div>
-          <div>
-            <pre><code>git commit -m “[descriptive message]”
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Commit your staged content as a new commit snapshot.</p>
-          </div>
-          <div>
-            <h2 data-heading="SETUP" id="SETUP" style="display: flex;">
+            <h3 data-heading="QUERYING SINGLE TABLE" id="QUERYING_SINGLE_TABLE" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>SETUP
-            </h2>
-          </div>
-          <div>
-            <h3 data-heading="Configuring user information used across all local repositories" id="Configuring_user_information_used_across_all_local_repositories" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Configuring user information used across all local repositories
+                </svg></div>QUERYING SINGLE TABLE
             </h3>
           </div>
           <div>
-            <pre><code>git config --global user.name “[firstname lastname]”
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>Fetch all columns from the <code>country</code> table:</p>
           </div>
           <div>
-            <p>Set a name that is identifiable for credit when reviewing version history.</p>
+            <p>SELECT *<br>
+              FROM country;</p>
           </div>
           <div>
-            <pre><code>git config --global user.email “[valid-email]”
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>Fetch id and name columns from the city table:</p>
           </div>
           <div>
-            <p>Set an email address that will be associated with each history marker.</p>
+            <p>SELECT id, name<br>
+              FROM city;</p>
           </div>
           <div>
-            <pre><code>git config --global color.ui auto
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>Fetch city names sorted by the <code>rating</code> column in the default ASCending order:</p>
           </div>
           <div>
-            <p>Set automatic command line coloring for Git for easy reviewing.</p>
+            <p>SELECT name<br>
+              FROM city<br>
+              ORDER BY rating [ASC];</p>
           </div>
           <div>
-            <h2 data-heading="SETUP &amp; INIT" id="SETUP_&amp;_INIT" style="display: flex;">
+            <p>Fetch city names sorted by the <code>rating</code> column in the DESCending order:</p>
+          </div>
+          <div>
+            <p>SELECT name<br>
+              FROM city<br>
+              ORDER BY rating DESC;</p>
+          </div>
+          <div>
+            <h3 data-heading="Aliases" id="Aliases" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>SETUP &amp; INIT
-            </h2>
-          </div>
-          <div>
-            <h3 data-heading="Configuring user information, initializing and cloning repositories" id="Configuring_user_information,_initializing_and_cloning_repositories" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Configuring user information, initializing and cloning repositories
+                </svg></div>Aliases
             </h3>
           </div>
           <div>
-            <pre><code>git init
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Initialize an existing directory as a Git repository.</p>
-          </div>
-          <div>
-            <pre><code>git clone [url]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Retrieve an entire repository from a hosted location via URL.</p>
-          </div>
-          <div>
-            <h2 data-heading="BRANCH &amp; MERGE" id="BRANCH_&amp;_MERGE" style="display: flex;">
+            <h4 data-heading="Columns" id="Columns" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>BRANCH &amp; MERGE
-            </h2>
+                </svg></div>Columns
+            </h4>
           </div>
           <div>
-            <h3 data-heading="Isolating work in branches, changing context, and integrating changes" id="Isolating_work_in_branches,_changing_context,_and_integrating_changes" style="display: flex;">
+            <p>SELECT name AS city_name<br>
+              FROM city;</p>
+          </div>
+          <div>
+            <h4 data-heading="Tables" id="Tables" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Isolating work in branches, changing context, and integrating changes
+                </svg></div>Tables
+            </h4>
+          </div>
+          <div>
+            <p>SELECT co.name, ci.name<br>
+              FROM city AS ci<br>
+              JOIN country AS co<br>
+              ON ci.country_id = co.id;</p>
+          </div>
+          <div>
+            <h3 data-heading="FILTERING THE OUTPUT" id="FILTERING_THE_OUTPUT" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>FILTERING THE OUTPUT
             </h3>
           </div>
           <div>
-            <pre><code>git branch
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>List your branches. A * will appear next to the currently active branch.</p>
-          </div>
-          <div>
-            <pre><code>git branch [branch-name]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Create a new branch at the current commit.</p>
-          </div>
-          <div>
-            <pre><code>git checkout
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Switch to another branch and check it out into your working directory.</p>
-          </div>
-          <div>
-            <pre><code>git merge [branch]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Merge the specified branch’s history into the current one.</p>
-          </div>
-          <div>
-            <pre><code>git log
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show all commits in the current branch’s history.</p>
-          </div>
-          <div>
-            <h2 data-heading="INSTALLATION &amp; GUIS" id="INSTALLATION_&amp;_GUIS" style="display: flex;">
+            <h4 data-heading="COMPARISON OPERATORS" id="COMPARISON_OPERATORS" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>INSTALLATION &amp; GUIS
-            </h2>
+                </svg></div>COMPARISON OPERATORS
+            </h4>
           </div>
           <div>
-            <p>With platform specific installers for Git, GitHub also provides the ease of staying up-to-date with the latest releases of the command line tool while providing a graphical user interface for day-to-day interaction, review, and repository synchronization.</p>
+            <p>Fetch names of cities that have a rating above 3:</p>
           </div>
           <div>
-            <pre><code>GitHub for Windows
-https://windows.github.com
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>SELECT name<br>
+              FROM city<br>
+              WHERE rating &gt; 3;</p>
           </div>
           <div>
-            <pre><code>GitHub for Mac
-https://mac.github.com
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>Fetch names of cities that are neither Berlin nor Madrid:</p>
           </div>
           <div>
-            <p>For Linux and Solaris platforms, the latest release is available on the official Git website.</p>
+            <p>SELECT name<br>
+              FROM city<br>
+              WHERE name != 'Berlin'<br>
+              AND name != 'Madrid';</p>
           </div>
           <div>
-            <pre><code>Git for All Platforms
-http://git-scm.com
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <h2 data-heading="EDUCATION" id="EDUCATION" style="display: flex;">
+            <h4 data-heading="TEXT OPERATORS" id="TEXT_OPERATORS" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>EDUCATION
-            </h2>
+                </svg></div>TEXT OPERATORS
+            </h4>
           </div>
           <div>
-            <p>Teach and learn better, together. GitHub is free for students and teachers. Discounts available for other educational uses.</p>
+            <p>Fetch names of cities that start with a 'P' or end with an 's':</p>
           </div>
           <div>
-            <pre><code>education@github.com
-education.github.com
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>SELECT name<br>
+              FROM city<br>
+              WHERE name LIKE 'P%'<br>
+              OR name LIKE '%s';</p>
           </div>
           <div>
-            <h2 data-heading="SHARE &amp; UPDATE" id="SHARE_&amp;_UPDATE" style="display: flex;">
+            <p>Fetch names of cities that start with any letter followed by 'ublin' (like Dublin in Ireland or Lublin in Poland):</p>
+          </div>
+          <div>
+            <p>SELECT name<br>
+              FROM city<br>
+              WHERE name LIKE '_ublin';</p>
+          </div>
+          <div>
+            <h4 data-heading="OTHER OPERATORS" id="OTHER_OPERATORS" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>SHARE &amp; UPDATE
-            </h2>
+                </svg></div>OTHER OPERATORS
+            </h4>
           </div>
           <div>
-            <p>Retrieving updates from another repository and updating local repositories.</p>
+            <p>Fetch names of cities that have a population between 500K and 5M:</p>
           </div>
           <div>
-            <pre><code>git remote add [alias] [url]
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>SELECT name<br>
+              FROM city<br>
+              WHERE population BETWEEN 500000 AND 5000000;</p>
           </div>
           <div>
-            <p>Add a Git URL as an alias.</p>
+            <p>Fetch names of cities that don't miss a rating value:</p>
           </div>
           <div>
-            <pre><code>git fetch [alias]
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>SELECT name<br>
+              FROM city<br>
+              WHERE rating IS NOT NULL;</p>
           </div>
           <div>
-            <p>Fetch down all the branches from that Git remote.</p>
+            <p>Fetch names of cities that are in countries with IDs 1, 4, 7, or 8:</p>
           </div>
           <div>
-            <pre><code>git merge [alias]/[branch]
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>SELECT name<br>
+              FROM city<br>
+              WHERE country_id IN (1, 4, 7, 8);</p>
           </div>
           <div>
-            <p>Merge a remote branch into your current branch to bring it up to date.</p>
-          </div>
-          <div>
-            <pre><code>git push [alias] [branch]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Transmit local branch commits to the remote repository branch.</p>
-          </div>
-          <div>
-            <pre><code>git pull
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Fetch and merge any commits from the tracking remote branch.</p>
-          </div>
-          <div>
-            <h2 data-heading="TRACKING PATH CHANGES" id="TRACKING_PATH_CHANGES" style="display: flex;">
+            <h3 data-heading="QUERYING MULTIPLE TABLES" id="QUERYING_MULTIPLE_TABLES" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>TRACKING PATH CHANGES
-            </h2>
+                </svg></div>QUERYING MULTIPLE TABLES
+            </h3>
           </div>
           <div>
-            <p>Versioning file removes and path changes.</p>
-          </div>
-          <div>
-            <pre><code>git rm [file]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Delete the file from the project and stage the removal for commit.</p>
-          </div>
-          <div>
-            <pre><code>git mv [existing-path] [new-path]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Change an existing file path and stage the move.</p>
-          </div>
-          <div>
-            <pre><code>git log --stat -M
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show all commit logs with indication of any paths that moved.</p>
-          </div>
-          <div>
-            <h2 data-heading="TEMPORARY COMMITS" id="TEMPORARY_COMMITS" style="display: flex;">
+            <h4 data-heading="INNER JOIN" id="INNER_JOIN" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>TEMPORARY COMMITS
-            </h2>
+                </svg></div>INNER JOIN
+            </h4>
           </div>
           <div>
-            <p>Temporarily store modified, tracked files to change branches.</p>
+            <p><strong><code>JOIN</code></strong> (or explicitly <strong><code>INNER JOIN</code></strong>) returns rows that have matching values in both tables.</p>
           </div>
           <div>
-            <pre><code>git stash
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>SELECT city.name, country.name<br>
+              FROM city<br>
+              [INNER] JOIN country<br>
+              ON city.country_id = country.id;</p>
           </div>
           <div>
-            <p>Save modified and staged changes.</p>
-          </div>
-          <div>
-            <pre><code>git stash list
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>List stack-order of stashed file changes.</p>
-          </div>
-          <div>
-            <pre><code>git stash pop
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Write working from the top of the stash stack.</p>
-          </div>
-          <div>
-            <pre><code>git stash drop
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Discard the changes from the top of the stash stack.</p>
-          </div>
-          <div>
-            <h2 data-heading="REWRITE HISTORY" id="REWRITE_HISTORY" style="display: flex;">
+            <h4 data-heading="LEFT JOIN" id="LEFT_JOIN" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>REWRITE HISTORY
-            </h2>
+                </svg></div>LEFT JOIN
+            </h4>
           </div>
           <div>
-            <p>Rewriting branches, updating commits, and clearing history.</p>
+            <p><strong><code>LEFT JOIN</code></strong> returns all rows from the left table with corresponding rows from the right table. If there's no matching row, <strong><code>NULL</code></strong>s are returned as values from the second table.</p>
           </div>
           <div>
-            <pre><code>git rebase [branch]
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>SELECT city.name, country.name<br>
+              FROM city<br>
+              LEFT JOIN country<br>
+              ON city.country_id = country.id;</p>
           </div>
           <div>
-            <p>Apply any commits of the current branch ahead of the specified one.</p>
-          </div>
-          <div>
-            <pre><code>git reset --hard [commit]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Clear staging area, rewrite working tree from the specified commit.</p>
-          </div>
-          <div>
-            <h2 data-heading="INSPECT &amp; COMPARE" id="INSPECT_&amp;_COMPARE" style="display: flex;">
+            <h4 data-heading="RIGHT JOIN" id="RIGHT_JOIN" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>INSPECT &amp; COMPARE
-            </h2>
+                </svg></div>RIGHT JOIN
+            </h4>
           </div>
           <div>
-            <p>Examining logs, diffs, and object information.</p>
+            <p><strong><code>RIGHT JOIN</code></strong> returns all rows from the right table with corresponding rows from the left table. If there's no matching row, <strong><code>NULL</code></strong>s are returned as values from the left table.</p>
           </div>
           <div>
-            <pre><code>git log
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>SELECT city.name, country.name<br>
+              FROM city<br>
+              RIGHT JOIN country<br>
+              ON city.country_id = country.id;</p>
           </div>
           <div>
-            <p>Show the commit history for the currently active branch.</p>
-          </div>
-          <div>
-            <pre><code>git log branchB..branchA
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show the commits on branchA that are not on branchB.</p>
-          </div>
-          <div>
-            <pre><code>git log --follow [file]
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show the commits that changed file, even across renames.</p>
-          </div>
-          <div>
-            <pre><code>git diff branchB...branchA
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>Show the diff of what is in branchA that is not in branchB.</p>
-          </div>
-          <div>
-            <h2 data-heading="IGNORING PATTERNS" id="IGNORING_PATTERNS" style="display: flex;">
+            <h4 data-heading="FULL JOIN" id="FULL_JOIN" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>IGNORING PATTERNS
-            </h2>
+                </svg></div>FULL JOIN
+            </h4>
           </div>
           <div>
-            <p>Preventing unintentional staging or committing of files.</p>
+            <p><strong><code>FULL JOIN</code></strong> (or explicitly <strong><code>FULL OUTER JOIN</code></strong>) returns all rows from both tables – if there's no matching row in the second table, <strong><code>NULL</code></strong>s are returned.</p>
           </div>
           <div>
-            <pre><code>git config --global core.excludesfile [file]
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>SELECT city.name, country.name<br>
+              FROM city<br>
+              FULL [OUTER] JOIN country<br>
+              ON city.country_id = country.id;</p>
           </div>
           <div>
-            <p>System-wide ignore pattern for all local repositories.</p>
+            <h4 data-heading="CROSS JOIN" id="CROSS_JOIN" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>CROSS JOIN
+            </h4>
           </div>
           <div>
-            <pre><code>logs/
-*.notes
-pattern*/
-</code><button class="copy-code-button">Copy</button></pre>
+            <p><strong><code>CROSS JOIN</code></strong> returns all possible combinations of rows from both tables. There are two syntaxes available.</p>
           </div>
           <div>
-            <p>Save a file with desired patterns as .gitignore with either direct string matches or wildcard globs.</p>
+            <p>SELECT city.name, country.name<br>
+              FROM city<br>
+              CROSS JOIN country;</p>
           </div>
           <div>
-            <h1 data-heading="git tips and tricks" id="git_tips_and_tricks">git tips and tricks</h1>
+            <p>SELECT city.name, country.name<br>
+              FROM city, country;</p>
+          </div>
+          <div>
+            <h4 data-heading="NATURAL JOIN" id="NATURAL_JOIN" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>NATURAL JOIN
+            </h4>
+          </div>
+          <div>
+            <p><strong><code>NATURAL JOIN</code></strong> will join tables by all columns with the same name.</p>
+          </div>
+          <div>
+            <p>SELECT city.name, country.name<br>
+              FROM city<br>
+              NATURAL JOIN country;</p>
+          </div>
+          <div>
+            <p><strong><code>NATURAL JOIN</code></strong> used these columns to match rows:<br>
+              <strong><code>city.id</code></strong>, <strong><code>city.name</code></strong>, <strong><code>country.id</code></strong>, <strong><code>country.name</code></strong>.<br>
+              <strong><code>NATURAL JOIN</code></strong> is very rarely used in practice.
+            </p>
+          </div>
+          <div>
+            <h3 data-heading="AGGREGATION AND GROUPING" id="AGGREGATION_AND_GROUPING" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>AGGREGATION AND GROUPING
+            </h3>
+          </div>
+          <div>
+            <p><code>GROUP BY</code> <strong>groups</strong> together rows that have the same values in specified columns. It computes summaries (aggregates) for each unique combination of values.</p>
+          </div>
+          <div>
+            <h4 data-heading="AGGREGATE FUNCTIONS" id="AGGREGATE_FUNCTIONS" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>AGGREGATE FUNCTIONS
+            </h4>
           </div>
           <div>
             <ul class="has-list-bullet">
               <li data-line="0">
-                <div class="list-bullet"></div>combine <code>git add</code> and <code>git commit</code> instead use <code>git commit -am "text here"</code>.
+                <div class="list-bullet"></div><code>avg(expr)</code> − average value for rows within the group
               </li>
               <li data-line="1">
-                <div class="list-bullet"></div>make a new alias using this<br>
-                <code>git config --global alias.ac "commit -am"</code><br>
-                now if I use git ac "text here" it adds and commits everything.
+                <div class="list-bullet"></div><code>count(expr)</code> − count of values for rows within the group
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><code>max(expr)</code> − maximum value within the group
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div><code>min(expr)</code> − minimum value within the group
               </li>
               <li data-line="4">
-                <div class="list-bullet"></div>to edit the last commit message use <code>git amend -m "replace text here"</code>.
-              </li>
-              <li data-line="5">
-                <div class="list-bullet"></div>make <code>git log</code> pretty with this command <code>git log --graph --oneline --decorate</code>
+                <div class="list-bullet"></div><code>sum(expr)</code> − sum of values within the group
               </li>
             </ul>
+          </div>
+          <div>
+            <h4 data-heading="EXAMPLE QUERIES" id="EXAMPLE_QUERIES" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>EXAMPLE QUERIES
+            </h4>
+          </div>
+          <div>
+            <p>Find out the number of cities:</p>
+          </div>
+          <div>
+            <p>SELECT COUNT(*)<br>
+              FROM city;</p>
+          </div>
+          <div>
+            <p>Find out the number of cities with non-null ratings:</p>
+          </div>
+          <div>
+            <p>SELECT COUNT(rating)<br>
+              FROM city;</p>
+          </div>
+          <div>
+            <p>Find out the number of distinctive country values:</p>
+          </div>
+          <div>
+            <p>SELECT COUNT(DISTINCT country_id)<br>
+              FROM city;</p>
+          </div>
+          <div>
+            <p>Find out the smallest and the greatest country populations:</p>
+          </div>
+          <div>
+            <p>SELECT MIN(population), MAX(population)<br>
+              FROM country;</p>
+          </div>
+          <div>
+            <p>Find out the total population of cities in respective countries:</p>
+          </div>
+          <div>
+            <p>SELECT country_id, SUM(population)<br>
+              FROM city<br>
+              GROUP BY country_id;</p>
+          </div>
+          <div>
+            <p>Find out the average rating for cities in respective countries if the average is above 3.0:</p>
+          </div>
+          <div>
+            <p>SELECT country_id, AVG(rating)<br>
+              FROM city<br>
+              GROUP BY country_id<br>
+              HAVING AVG(rating) &gt; 3.0;</p>
+          </div>
+          <div>
+            <h3 data-heading="SUBQUERIES" id="SUBQUERIES" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>SUBQUERIES
+            </h3>
+          </div>
+          <div>
+            <p>A subquery is a query that is nested inside another query, or inside another subquery. There are different types of subqueries.</p>
+          </div>
+          <div>
+            <h4 data-heading="SINGLE VALUE" id="SINGLE_VALUE" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>SINGLE VALUE
+            </h4>
+          </div>
+          <div>
+            <p>The simplest subquery returns exactly one column and exactly one row. It can be used with comparison operators <code>=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, or <code>&gt;=</code>.</p>
+          </div>
+          <div>
+            <p>This query finds cities with the same rating as Paris:</p>
+          </div>
+          <div>
+            <p>SELECT name<br>
+              FROM city<br>
+              WHERE rating = (<br>
+              SELECT rating<br>
+              FROM city<br>
+              WHERE name = 'Paris'<br>
+              );</p>
+          </div>
+          <div>
+            <h4 data-heading="MULTIPLE VALUES" id="MULTIPLE_VALUES" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>MULTIPLE VALUES
+            </h4>
+          </div>
+          <div>
+            <p>A subquery can also return multiple columns or multiple rows. Such subqueries can be used with operators <code>IN</code>, <code>EXISTS</code>, <code>ALL</code>, or <code>ANY</code>.</p>
+          </div>
+          <div>
+            <p>This query finds cities in countries that have a population above 20M:</p>
+          </div>
+          <div>
+            <p>SELECT name<br>
+              FROM city<br>
+              WHERE country_id IN (<br>
+              SELECT country_id<br>
+              FROM country<br>
+              WHERE population &gt; 20000000<br>
+              );</p>
+          </div>
+          <div>
+            <h4 data-heading="CORRELATED" id="CORRELATED" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>CORRELATED
+            </h4>
+          </div>
+          <div>
+            <p>A correlated subquery refers to the tables introduced in the outer query. A correlated subquery depends on the outer query. It cannot be run independently from the outer query.</p>
+          </div>
+          <div>
+            <p>This query finds cities with a population greater than the average population in the country:</p>
+          </div>
+          <div>
+            <p>SELECT *<br>
+              FROM city main_city<br>
+              WHERE population &gt; (<br>
+              SELECT AVG(population)<br>
+              FROM city average_city<br>
+              WHERE average_city.country_id = main_city.country_id<br>
+              );</p>
+          </div>
+          <div>
+            <p>This query finds countries that have at least one city:</p>
+          </div>
+          <div>
+            <p>SELECT name<br>
+              FROM country<br>
+              WHERE EXISTS (<br>
+              SELECT *<br>
+              FROM city<br>
+              WHERE country_id = country.id<br>
+              );</p>
+          </div>
+          <div>
+            <h3 data-heading="SET OPERATIONS" id="SET_OPERATIONS" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>SET OPERATIONS
+            </h3>
+          </div>
+          <div>
+            <p>Set operations are used to combine the results of two or more queries into a single result. The combined queries must return the same number of columns and compatible data types. The names of the corresponding columns can be different</p>
+          </div>
+          <div>
+            <h4 data-heading="UNION" id="UNION" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>UNION
+            </h4>
+          </div>
+          <div>
+            <p><strong><code>UNION</code></strong> combines the results of two result sets and removes duplicates. <strong><code>UNION ALL</code></strong> doesn't remove duplicate rows.</p>
+          </div>
+          <div>
+            <p>This query displays German cyclists together with German skaters:</p>
+          </div>
+          <div>
+            <p>SELECT name<br>
+              FROM cycling<br>
+              WHERE country = 'DE'<br>
+              UNION / UNION ALL<br>
+              SELECT name<br>
+              FROM skating<br>
+              WHERE country = 'DE';</p>
+          </div>
+          <div>
+            <h4 data-heading="INTERSECT" id="INTERSECT" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>INTERSECT
+            </h4>
+          </div>
+          <div>
+            <p><strong><code>INTERSECT</code></strong> returns only rows that appear in both result sets.</p>
+          </div>
+          <div>
+            <p>This query displays German cyclists who are also German skaters at the same time:</p>
+          </div>
+          <div>
+            <p>SELECT name<br>
+              FROM cycling<br>
+              WHERE country = 'DE'<br>
+              INTERSECT<br>
+              SELECT name<br>
+              FROM skating<br>
+              WHERE country = 'DE';</p>
+          </div>
+          <div>
+            <h4 data-heading="EXCEPT" id="EXCEPT" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>EXCEPT
+            </h4>
+          </div>
+          <div>
+            <p><strong><code>EXCEPT</code></strong> returns only the rows that appear in the first result set but do not appear in the second result set.</p>
+          </div>
+          <div>
+            <p>This query displays German cyclists unless they are also German skaters at the same time:</p>
+          </div>
+          <div>
+            <p>SELECT name<br>
+              FROM cycling<br>
+              WHERE country = 'DE'<br>
+              EXCEPT / MINUS<br>
+              SELECT name<br>
+              FROM skating<br>
+              WHERE country = 'DE';</p>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -795,88 +895,152 @@ pattern*/
           <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
           <div class="tree-scroll-area">
             <div class="tree-item mod-tree-heading" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="#GIT_CHEAT_SHEET"><span class="tree-item-title">GIT CHEAT SHEET</span></a></div>
+              <div class="tree-item-contents"><a class="tree-item-link" href="#SQL_Basics_Cheat_Sheet"><span class="tree-item-title">SQL Basics Cheat Sheet</span></a></div>
               <div class="tree-item-children">
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#STAGE_&amp;_SNAPSHOT"><span class="tree-item-title">STAGE &amp; SNAPSHOT</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
                 <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
                   <div class="tree-item-contents">
                     <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                         <path d="M3 8L12 17L21 8"></path>
-                      </svg></div><a class="tree-item-link" href="#SETUP"><span class="tree-item-title">SETUP</span></a>
+                      </svg></div><a class="tree-item-link" href="#SQL"><span class="tree-item-title">SQL</span></a>
                   </div>
                   <div class="tree-item-children">
                     <div class="tree-item mod-tree-heading" data-depth="3">
-                      <div class="tree-item-contents"><a class="tree-item-link" href="#Configuring_user_information_used_across_all_local_repositories"><span class="tree-item-title">Configuring user information used across all local repositories</span></a></div>
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#QUERYING_SINGLE_TABLE"><span class="tree-item-title">QUERYING SINGLE TABLE</span></a></div>
                       <div class="tree-item-children"></div>
                     </div>
-                  </div>
-                </div>
-                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
-                  <div class="tree-item-contents">
-                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                        <path d="M3 8L12 17L21 8"></path>
-                      </svg></div><a class="tree-item-link" href="#SETUP_&amp;_INIT"><span class="tree-item-title">SETUP &amp; INIT</span></a>
-                  </div>
-                  <div class="tree-item-children">
-                    <div class="tree-item mod-tree-heading" data-depth="3">
-                      <div class="tree-item-contents"><a class="tree-item-link" href="#Configuring_user_information,_initializing_and_cloning_repositories"><span class="tree-item-title">Configuring user information, initializing and cloning repositories</span></a></div>
-                      <div class="tree-item-children"></div>
+                    <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="3">
+                      <div class="tree-item-contents">
+                        <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                            <path d="M3 8L12 17L21 8"></path>
+                          </svg></div><a class="tree-item-link" href="#Aliases"><span class="tree-item-title">Aliases</span></a>
+                      </div>
+                      <div class="tree-item-children">
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#Columns"><span class="tree-item-title">Columns</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#Tables"><span class="tree-item-title">Tables</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="3">
+                      <div class="tree-item-contents">
+                        <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                            <path d="M3 8L12 17L21 8"></path>
+                          </svg></div><a class="tree-item-link" href="#FILTERING_THE_OUTPUT"><span class="tree-item-title">FILTERING THE OUTPUT</span></a>
+                      </div>
+                      <div class="tree-item-children">
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#COMPARISON_OPERATORS"><span class="tree-item-title">COMPARISON OPERATORS</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#TEXT_OPERATORS"><span class="tree-item-title">TEXT OPERATORS</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#OTHER_OPERATORS"><span class="tree-item-title">OTHER OPERATORS</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="3">
+                      <div class="tree-item-contents">
+                        <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                            <path d="M3 8L12 17L21 8"></path>
+                          </svg></div><a class="tree-item-link" href="#QUERYING_MULTIPLE_TABLES"><span class="tree-item-title">QUERYING MULTIPLE TABLES</span></a>
+                      </div>
+                      <div class="tree-item-children">
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#INNER_JOIN"><span class="tree-item-title">INNER JOIN</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#LEFT_JOIN"><span class="tree-item-title">LEFT JOIN</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#RIGHT_JOIN"><span class="tree-item-title">RIGHT JOIN</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#FULL_JOIN"><span class="tree-item-title">FULL JOIN</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#CROSS_JOIN"><span class="tree-item-title">CROSS JOIN</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#NATURAL_JOIN"><span class="tree-item-title">NATURAL JOIN</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="3">
+                      <div class="tree-item-contents">
+                        <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                            <path d="M3 8L12 17L21 8"></path>
+                          </svg></div><a class="tree-item-link" href="#AGGREGATION_AND_GROUPING"><span class="tree-item-title">AGGREGATION AND GROUPING</span></a>
+                      </div>
+                      <div class="tree-item-children">
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#AGGREGATE_FUNCTIONS"><span class="tree-item-title">AGGREGATE FUNCTIONS</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#EXAMPLE_QUERIES"><span class="tree-item-title">EXAMPLE QUERIES</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="3">
+                      <div class="tree-item-contents">
+                        <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                            <path d="M3 8L12 17L21 8"></path>
+                          </svg></div><a class="tree-item-link" href="#SUBQUERIES"><span class="tree-item-title">SUBQUERIES</span></a>
+                      </div>
+                      <div class="tree-item-children">
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#SINGLE_VALUE"><span class="tree-item-title">SINGLE VALUE</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#MULTIPLE_VALUES"><span class="tree-item-title">MULTIPLE VALUES</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#CORRELATED"><span class="tree-item-title">CORRELATED</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="3">
+                      <div class="tree-item-contents">
+                        <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                            <path d="M3 8L12 17L21 8"></path>
+                          </svg></div><a class="tree-item-link" href="#SET_OPERATIONS"><span class="tree-item-title">SET OPERATIONS</span></a>
+                      </div>
+                      <div class="tree-item-children">
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#UNION"><span class="tree-item-title">UNION</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#INTERSECT"><span class="tree-item-title">INTERSECT</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                        <div class="tree-item mod-tree-heading" data-depth="4">
+                          <div class="tree-item-contents"><a class="tree-item-link" href="#EXCEPT"><span class="tree-item-title">EXCEPT</span></a></div>
+                          <div class="tree-item-children"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
-                  <div class="tree-item-contents">
-                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                        <path d="M3 8L12 17L21 8"></path>
-                      </svg></div><a class="tree-item-link" href="#BRANCH_&amp;_MERGE"><span class="tree-item-title">BRANCH &amp; MERGE</span></a>
-                  </div>
-                  <div class="tree-item-children">
-                    <div class="tree-item mod-tree-heading" data-depth="3">
-                      <div class="tree-item-contents"><a class="tree-item-link" href="#Isolating_work_in_branches,_changing_context,_and_integrating_changes"><span class="tree-item-title">Isolating work in branches, changing context, and integrating changes</span></a></div>
-                      <div class="tree-item-children"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#INSTALLATION_&amp;_GUIS"><span class="tree-item-title">INSTALLATION &amp; GUIS</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#EDUCATION"><span class="tree-item-title">EDUCATION</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#SHARE_&amp;_UPDATE"><span class="tree-item-title">SHARE &amp; UPDATE</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#TRACKING_PATH_CHANGES"><span class="tree-item-title">TRACKING PATH CHANGES</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#TEMPORARY_COMMITS"><span class="tree-item-title">TEMPORARY COMMITS</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#REWRITE_HISTORY"><span class="tree-item-title">REWRITE HISTORY</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#INSPECT_&amp;_COMPARE"><span class="tree-item-title">INSPECT &amp; COMPARE</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="2">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#IGNORING_PATTERNS"><span class="tree-item-title">IGNORING PATTERNS</span></a></div>
-                  <div class="tree-item-children"></div>
                 </div>
               </div>
-            </div>
-            <div class="tree-item mod-tree-heading" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="#git_tips_and_tricks"><span class="tree-item-title">git tips and tricks</span></a></div>
-              <div class="tree-item-children"></div>
             </div>
           </div>
         </div>

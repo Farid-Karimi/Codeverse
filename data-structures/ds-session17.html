@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>DS-session3</title>
+  <title>DS-session17</title>
   <base href="../">
   <meta id="root-path" root-path="../">
 
@@ -2218,125 +2218,190 @@
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
           <div class="mod-header"></div>
           <div>
-            <h1 data-heading="Execution time for operations:" id="Execution_time_for_operations:">Execution time for operations:</h1>
+            <h1 data-heading="Sorting Algorithms" id="Sorting_Algorithms">Sorting Algorithms</h1>
           </div>
           <div>
-            <ol>
-              <li data-line="0">simple operations like assigning values or multiply, subtraction, etc. = <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>.</li>
-              <li data-line="1">for calculating <code>if</code> statements we count the maximum bracket.</li>
-            </ol>
+            <p><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/sorting-algorithms/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/sorting-algorithms/" target="_blank">GFG</a> | <a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/Sorting_algorithm" rel="noopener" class="external-link" href="https://en.wikipedia.org/wiki/Sorting_algorithm" target="_blank">wiki</a></p>
           </div>
           <div>
-            <h3 data-heading="Bubble Sort:" id="Bubble_Sort:" style="display: flex;">
+            <p>A Sorting Algorithm is used to rearrange a given array or list of elements according to a comparison operator on the elements. The comparison operator is used to decide the new order of elements in the respective data structure.</p>
+          </div>
+          <div>
+            <p>the sorting algorithms we talked about in the beginning where base on comparison now we want to see if we can sort an array without comparing the elements an if it is even possible to sort without comparison?. YES it is possible lets see an example: assume we have an array where the value in each cell is an integer let say the numbers are (1,4,2,5) now we create another array of size 5 and read every element from the initial array and write them in the cell where the index is equal to the value of the cell in the original array. as you can see with have sorted the array with zero comparison.</p>
+          </div>
+          <div>
+            <h2 data-heading="Stable or Unstable algorithms" id="Stable_or_Unstable_algorithms" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Bubble Sort:
-            </h3>
+                </svg></div>Stable or Unstable algorithms
+            </h2>
           </div>
           <div>
-            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">def</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	
-	<span class="token comment"># Traverse through all array elements</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-		swapped <span class="token operator">=</span> <span class="token boolean">False</span>
-
-		<span class="token comment"># Last i elements are already in place</span>
-		<span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n<span class="token operator">-</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-
-			<span class="token comment"># Traverse the array from 0 to n-i-1</span>
-			<span class="token comment"># Swap if the element found is greater</span>
-			<span class="token comment"># than the next element</span>
-			<span class="token keyword">if</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-				swapped <span class="token operator">=</span> <span class="token boolean">True</span>
-		<span class="token keyword">if</span> <span class="token punctuation">(</span>swapped <span class="token operator">==</span> <span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-			<span class="token keyword">break</span>
-
-
-<span class="token comment"># Driver code to test above</span>
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
-	arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">]</span>
-
-	bubbleSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sorted array:"</span><span class="token punctuation">)</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%d"</span> <span class="token operator">%</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set</p>
+          </div>
+          <div style="overflow-x: auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th align="left">Table of Complexity Comparison:</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left">Name</td>
+                  <td>Best Case</td>
+                  <td>Average Case</td>
+                  <td>Worst Case</td>
+                  <td>Memory</td>
+                  <td>Stable</td>
+                  <td>Method Used</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="http://www.geeksforgeeks.org/quick-sort/" rel="noopener" class="external-link" href="http://www.geeksforgeeks.org/quick-sort/" target="_blank">Quick Sort</a></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td>No</td>
+                  <td>Partitioning</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="http://www.geeksforgeeks.org/merge-sort/" rel="noopener" class="external-link" href="http://www.geeksforgeeks.org/merge-sort/" target="_blank">Merge Sort</a></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td>n</td>
+                  <td>Yes</td>
+                  <td>Merging</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/heap-sort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/heap-sort/" target="_blank">Heap Sort</a></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td>1</td>
+                  <td>No</td>
+                  <td>Selection</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="http://www.geeksforgeeks.org/insertion-sort/" rel="noopener" class="external-link" href="http://www.geeksforgeeks.org/insertion-sort/" target="_blank">Insertion Sort</a></td>
+                  <td>n</td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td>1</td>
+                  <td>Yes</td>
+                  <td>Insertion</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/timsort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/timsort/" target="_blank">Tim Sort</a></td>
+                  <td>n</td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td>n</td>
+                  <td>Yes</td>
+                  <td>Insertion &amp; Merging</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="http://www.geeksforgeeks.org/selection-sort/" rel="noopener" class="external-link" href="http://www.geeksforgeeks.org/selection-sort/" target="_blank">Selection Sort</a></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td>1</td>
+                  <td>No</td>
+                  <td>Selection</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/shellsort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/shellsort/" target="_blank">Shell Sort</a></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td>1</td>
+                  <td>No</td>
+                  <td>Insertion</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="http://www.geeksforgeeks.org/bubble-sort/" rel="noopener" class="external-link" href="http://www.geeksforgeeks.org/bubble-sort/" target="_blank">Bubble Sort</a></td>
+                  <td>n</td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td>1</td>
+                  <td>Yes</td>
+                  <td>Exchanging</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/tree-sort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/tree-sort/" target="_blank">Tree Sort</a></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td>n</td>
+                  <td>Yes</td>
+                  <td>Insertion</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/cycle-sort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/cycle-sort/" target="_blank">Cycle Sort</a></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td>1</td>
+                  <td>No</td>
+                  <td>Selection</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/strand-sort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/strand-sort/" target="_blank">Strand Sort</a></td>
+                  <td>n</td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td>n</td>
+                  <td>Yes</td>
+                  <td>Selection</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/cocktail-sort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/cocktail-sort/" target="_blank">Cocktail Shaker Sort</a></td>
+                  <td>n</td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td>1</td>
+                  <td>Yes</td>
+                  <td>Exchanging</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/comb-sort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/comb-sort/" target="_blank">Comb Sort</a></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td>1</td>
+                  <td>No</td>
+                  <td>Exchanging</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/gnome-sort-a-stupid-one/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/gnome-sort-a-stupid-one/" target="_blank">Gnome Sort</a></td>
+                  <td>n</td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td>1</td>
+                  <td>Yes</td>
+                  <td>Exchanging</td>
+                </tr>
+                <tr>
+                  <td align="left"><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/odd-even-sort-brick-sort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/odd-even-sort-brick-sort/" target="_blank">Odd–even Sort</a></td>
+                  <td>n</td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+                  <td>1</td>
+                  <td>Yes</td>
+                  <td>Exchanging</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div>
-            <p>for bubble sort best case, worst case and average are all equal to <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> cause is does not check if the array is sorted or not and just repeats the comparison operations.</p>
-          </div>
-          <div>
-            <h3 data-heading="Merge Sort:" id="Merge_Sort:" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Merge Sort:
-            </h3>
-          </div>
-          <div>
-            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">def</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">:</span>
-
-		<span class="token comment"># Finding the mid of the array</span>
-		mid <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">//</span><span class="token number">2</span>
-
-		<span class="token comment"># Dividing the array elements</span>
-		L <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span>
-
-		<span class="token comment"># Into 2 halves</span>
-		R <span class="token operator">=</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span>
-
-		<span class="token comment"># Sorting the first half</span>
-		mergeSort<span class="token punctuation">(</span>L<span class="token punctuation">)</span>
-
-		<span class="token comment"># Sorting the second half</span>
-		mergeSort<span class="token punctuation">(</span>R<span class="token punctuation">)</span>
-
-		i <span class="token operator">=</span> j <span class="token operator">=</span> k <span class="token operator">=</span> <span class="token number">0</span>
-
-		<span class="token comment"># Copy data to temp arrays L[] and R[]</span>
-		<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span> <span class="token keyword">and</span> j <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			<span class="token keyword">if</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-				i <span class="token operator">+=</span> <span class="token number">1</span>
-			<span class="token keyword">else</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-				j <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-		<span class="token comment"># Checking if any element was left</span>
-		<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-			i <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-		<span class="token keyword">while</span> j <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-			j <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-
-<span class="token comment"># Code to print the list</span>
-<span class="token keyword">def</span> <span class="token function">printList</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-		<span class="token keyword">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-
-<span class="token comment"># Driver Code</span>
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-	arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Given array is"</span><span class="token punctuation">)</span>
-	printList<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	mergeSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nSorted array is "</span><span class="token punctuation">)</span>
-	printList<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p><a data-tooltip-position="top" aria-label="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%B3%D9%88%D9%85-%D8%AA%D8%AD%D9%84%DB%8C%D9%84-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%DB%8C-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C/" rel="noopener" class="external-link" href="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%B3%D9%88%D9%85-%D8%AA%D8%AD%D9%84%DB%8C%D9%84-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%DB%8C-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C/" target="_blank">session 3</a></p>
+            <p><a data-tooltip-position="top" aria-label="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D9%87%D9%81%D8%AF%D9%87%D9%85-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C/" rel="noopener" class="external-link" href="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D9%87%D9%81%D8%AF%D9%87%D9%85-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C/" target="_blank">session 17</a></p>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -2357,14 +2422,10 @@
           <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
           <div class="tree-scroll-area">
             <div class="tree-item mod-tree-heading" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="#Execution_time_for_operations:"><span class="tree-item-title">Execution time for operations:</span></a></div>
+              <div class="tree-item-contents"><a class="tree-item-link" href="#Sorting_Algorithms"><span class="tree-item-title">Sorting Algorithms</span></a></div>
               <div class="tree-item-children">
-                <div class="tree-item mod-tree-heading" data-depth="3">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#Bubble_Sort:"><span class="tree-item-title">Bubble Sort:</span></a></div>
-                  <div class="tree-item-children"></div>
-                </div>
-                <div class="tree-item mod-tree-heading" data-depth="3">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#Merge_Sort:"><span class="tree-item-title">Merge Sort:</span></a></div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Stable_or_Unstable_algorithms"><span class="tree-item-title">Stable or Unstable algorithms</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
               </div>

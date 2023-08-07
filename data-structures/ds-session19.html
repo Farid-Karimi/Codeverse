@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>DS-session3</title>
+  <title>DS-session19</title>
   <base href="../">
   <meta id="root-path" root-path="../">
 
@@ -2218,125 +2218,202 @@
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
           <div class="mod-header"></div>
           <div>
-            <h1 data-heading="Execution time for operations:" id="Execution_time_for_operations:">Execution time for operations:</h1>
+            <h1 data-heading="Linear Sorting Algorithm" id="Linear_Sorting_Algorithm">Linear Sorting Algorithm</h1>
+          </div>
+          <div>
+            <h2 data-heading="Counting Sort" id="Counting_Sort" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Counting Sort
+            </h2>
+          </div>
+          <div>
+            <p><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/counting-sort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/counting-sort/" target="_blank">GFG</a></p>
+          </div>
+          <div>
+            <p><strong>Counting sort</strong> is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (a kind of hashing). Then do some arithmetic operations to calculate the position of each object in the output sequence.</p>
+          </div>
+          <div>
+            <p>lets assume we have an array where the biggest number in this array is less than or equal to n:</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment"># in this example n is 9.</span>
+a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>we start by counting the occurences of each number and store them in a secondary array:</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">:</span>
+	b<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>then we store the last position of the number <code>i</code> in the sorted array <code>a</code> in a different array called <code>c</code> or we can also overwrite <code>b</code> because we don’t need it anymore:</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	b<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+=</span>b<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>we create an array called <code>d</code> with the size equal to <code>a</code> to output the sorted array. to do this we read every cells from <code>a</code> then read the corresponding cell in <code>c</code> and insert the value from the cell in <code>a</code> into the position stored in <code>c</code> and then decrement the <code>c[a[i]]</code> by 1 until the output array is full.</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">def</span> <span class="token function">countSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># The output character array that will have sorted arr</span>
+    output <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token comment"># Create a count array to store count of individual</span>
+    <span class="token comment"># characters and initialize count array as 0</span>
+    count <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token comment"># For storing the resulting answer since the</span>
+    <span class="token comment"># string is immutable</span>
+    ans <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">""</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> arr<span class="token punctuation">]</span>
+    
+    <span class="token comment"># Store count of each character</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> arr<span class="token punctuation">:</span>
+        count<span class="token punctuation">[</span><span class="token builtin">ord</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+        
+    <span class="token comment"># Change count[i] so that count[i] now contains actual</span>
+    <span class="token comment"># position of this character in output array</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        count<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+=</span> count<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+        
+    <span class="token comment"># Build the output character array</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        output<span class="token punctuation">[</span>count<span class="token punctuation">[</span><span class="token builtin">ord</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        count<span class="token punctuation">[</span><span class="token builtin">ord</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span>
+    <span class="token comment"># Copy the output array to arr, so that arr now</span>
+    <span class="token comment"># contains sorted characters</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ans<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> output<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> ans
+
+
+<span class="token comment"># Driver code</span>
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    arr <span class="token operator">=</span> <span class="token string">"CodeVerse"</span>
+    ans <span class="token operator">=</span> countSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sorted character array is % s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>ans<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h3 data-heading="Stability" id="Stability" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Stability
+            </h3>
+          </div>
+          <div>
+            <p>is this algorithm stable? the answer is no because it reverses the order in the existing array, but we can make it stable by traversing the initial array backwards from n-1 to 0.</p>
+          </div>
+          <div>
+            <h3 data-heading="Time Complexity" id="Time_Complexity" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Time Complexity
+            </h3>
+          </div>
+          <div>
+            <p>since we used 4 separate for loops the time complexity as the name suggest is linear and is equal to <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> </p>
+          </div>
+          <div>
+            <h2 data-heading="Radix Sort" id="Radix_Sort" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Radix Sort
+            </h2>
+          </div>
+          <div>
+            <p><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/radix-sort/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/radix-sort/" target="_blank">GFG</a></p>
+          </div>
+          <div>
+            <p><strong>Radix Sort</strong> is a linear sorting algorithm that sorts elements by processing them digit by digit. It is an efficient sorting algorithm for integers or strings with fixed-size keys.</p>
+          </div>
+          <div>
+            <h3 data-heading="Example" id="Example" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Example
+            </h3>
           </div>
           <div>
             <ol>
-              <li data-line="0">simple operations like assigning values or multiply, subtraction, etc. = <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>.</li>
-              <li data-line="1">for calculating <code>if</code> statements we count the maximum bracket.</li>
+              <li data-line="0">Find the maximum number - In this case, assume it is 456.</li>
+              <li data-line="1">Do multiple passes based on the place value (ones, tens, hundreds). In each pass:</li>
             </ol>
           </div>
           <div>
-            <h3 data-heading="Bubble Sort:" id="Bubble_Sort:" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Bubble Sort:
-            </h3>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Create 10 buckets (0 to 9)
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>Sort numbers into buckets based on the current place value:
+              </li>
+            </ul>
           </div>
           <div>
-            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">def</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	
-	<span class="token comment"># Traverse through all array elements</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-		swapped <span class="token operator">=</span> <span class="token boolean">False</span>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">def</span> <span class="token function">countingSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> exp1<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+    <span class="token comment"># The output array elements that will have sorted arr</span>
+    output <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+    <span class="token comment"># initialize count array as 0</span>
+    count <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+    <span class="token comment"># Store count of occurrences in count[]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        index <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">//</span> exp1
+        count<span class="token punctuation">[</span>index <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
 
-		<span class="token comment"># Last i elements are already in place</span>
-		<span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n<span class="token operator">-</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Change count[i] so that count[i] now contains actual</span>
+    <span class="token comment"># position of this digit in output array</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        count<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+=</span> count<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token comment"># Build the output array</span>
+    i <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> i <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        index <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">//</span> exp1
+        output<span class="token punctuation">[</span>count<span class="token punctuation">[</span>index <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        count<span class="token punctuation">[</span>index <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span>
+        i <span class="token operator">-=</span> <span class="token number">1</span>
+    <span class="token comment"># Copying the output array to arr[],</span>
+    <span class="token comment"># so that arr now contains sorted numbers</span>
+    i <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> output<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
 
-			<span class="token comment"># Traverse the array from 0 to n-i-1</span>
-			<span class="token comment"># Swap if the element found is greater</span>
-			<span class="token comment"># than the next element</span>
-			<span class="token keyword">if</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-				swapped <span class="token operator">=</span> <span class="token boolean">True</span>
-		<span class="token keyword">if</span> <span class="token punctuation">(</span>swapped <span class="token operator">==</span> <span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-			<span class="token keyword">break</span>
+<span class="token comment"># Method to do Radix Sort</span>
+<span class="token keyword">def</span> <span class="token function">radixSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
 
+    <span class="token comment"># Find the maximum number to know number of digits</span>
+    max1 <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
 
-<span class="token comment"># Driver code to test above</span>
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
-	arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">]</span>
+    <span class="token comment"># Do counting sort for every digit. Note that instead</span>
+    <span class="token comment"># of passing digit number, exp is passed. exp is 10^i</span>
+    <span class="token comment"># where i is current digit number</span>
+    exp <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> max1 <span class="token operator">/</span> exp <span class="token operator">&gt;=</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        countingSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> exp<span class="token punctuation">)</span>
+        exp <span class="token operator">*=</span> <span class="token number">10</span>
 
-	bubbleSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sorted array:"</span><span class="token punctuation">)</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%d"</span> <span class="token operator">%</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
-</code><button class="copy-code-button">Copy</button></pre>
-          </div>
-          <div>
-            <p>for bubble sort best case, worst case and average are all equal to <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> cause is does not check if the array is sorted or not and just repeats the comparison operations.</p>
-          </div>
-          <div>
-            <h3 data-heading="Merge Sort:" id="Merge_Sort:" style="display: flex;">
-              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
-                  <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Merge Sort:
-            </h3>
-          </div>
-          <div>
-            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">def</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">:</span>
-
-		<span class="token comment"># Finding the mid of the array</span>
-		mid <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">//</span><span class="token number">2</span>
-
-		<span class="token comment"># Dividing the array elements</span>
-		L <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span>
-
-		<span class="token comment"># Into 2 halves</span>
-		R <span class="token operator">=</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span>
-
-		<span class="token comment"># Sorting the first half</span>
-		mergeSort<span class="token punctuation">(</span>L<span class="token punctuation">)</span>
-
-		<span class="token comment"># Sorting the second half</span>
-		mergeSort<span class="token punctuation">(</span>R<span class="token punctuation">)</span>
-
-		i <span class="token operator">=</span> j <span class="token operator">=</span> k <span class="token operator">=</span> <span class="token number">0</span>
-
-		<span class="token comment"># Copy data to temp arrays L[] and R[]</span>
-		<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span> <span class="token keyword">and</span> j <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			<span class="token keyword">if</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-				i <span class="token operator">+=</span> <span class="token number">1</span>
-			<span class="token keyword">else</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-				j <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-		<span class="token comment"># Checking if any element was left</span>
-		<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-			i <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-		<span class="token keyword">while</span> j <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-			j <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-
-<span class="token comment"># Code to print the list</span>
-<span class="token keyword">def</span> <span class="token function">printList</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-		<span class="token keyword">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-
-<span class="token comment"># Driver Code</span>
+<span class="token comment"># Driver code</span>
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-	arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Given array is"</span><span class="token punctuation">)</span>
-	printList<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	mergeSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nSorted array is "</span><span class="token punctuation">)</span>
-	printList<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+	arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">170</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">802</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">66</span><span class="token punctuation">]</span>
+	radixSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+	<span class="token keyword">for</span> i <span class="token keyword">in</span> arr<span class="token punctuation">:</span>
+	    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
 </code><button class="copy-code-button">Copy</button></pre>
           </div>
           <div>
-            <p><a data-tooltip-position="top" aria-label="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%B3%D9%88%D9%85-%D8%AA%D8%AD%D9%84%DB%8C%D9%84-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%DB%8C-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C/" rel="noopener" class="external-link" href="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%B3%D9%88%D9%85-%D8%AA%D8%AD%D9%84%DB%8C%D9%84-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%DB%8C-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C/" target="_blank">session 3</a></p>
+            <p>The time complexity is O(nw) where n is the number of numbers and w is the maximum number of digits.<br>
+              The space complexity is O(n + w) due to the buckets.</p>
+          </div>
+          <div>
+            <p>we can also generalize radix sort based on multiple data e.g. student name, graduation year, id number,… which is called <strong>bucket sort</strong>.</p>
+          </div>
+          <div>
+            <p><a data-tooltip-position="top" aria-label="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D9%86%D9%88%D8%B2%D8%AF%D9%87%D9%85-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C-%D8%AE%D8%B7%DB%8C/" rel="noopener" class="external-link" href="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D9%86%D9%88%D8%B2%D8%AF%D9%87%D9%85-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C-%D8%AE%D8%B7%DB%8C/" target="_blank">session 19</a></p>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -2357,15 +2434,37 @@
           <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
           <div class="tree-scroll-area">
             <div class="tree-item mod-tree-heading" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="#Execution_time_for_operations:"><span class="tree-item-title">Execution time for operations:</span></a></div>
+              <div class="tree-item-contents"><a class="tree-item-link" href="#Linear_Sorting_Algorithm"><span class="tree-item-title">Linear Sorting Algorithm</span></a></div>
               <div class="tree-item-children">
-                <div class="tree-item mod-tree-heading" data-depth="3">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#Bubble_Sort:"><span class="tree-item-title">Bubble Sort:</span></a></div>
-                  <div class="tree-item-children"></div>
+                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#Counting_Sort"><span class="tree-item-title">Counting Sort</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Stability"><span class="tree-item-title">Stability</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Time_Complexity"><span class="tree-item-title">Time Complexity</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="tree-item mod-tree-heading" data-depth="3">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#Merge_Sort:"><span class="tree-item-title">Merge Sort:</span></a></div>
-                  <div class="tree-item-children"></div>
+                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#Radix_Sort"><span class="tree-item-title">Radix Sort</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Example"><span class="tree-item-title">Example</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

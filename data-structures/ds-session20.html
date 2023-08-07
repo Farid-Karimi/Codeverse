@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>DS-session3</title>
+  <title>DS-session20</title>
   <base href="../">
   <meta id="root-path" root-path="../">
 
@@ -2218,125 +2218,220 @@
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
           <div class="mod-header"></div>
           <div>
-            <h1 data-heading="Execution time for operations:" id="Execution_time_for_operations:">Execution time for operations:</h1>
+            <h1 data-heading="Red-Black Tree" id="Red-Black_Tree">Red-Black Tree</h1>
+          </div>
+          <div>
+            <p><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/introduction-to-red-black-tree/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/introduction-to-red-black-tree/" target="_blank">GFG</a></p>
+          </div>
+          <div>
+            <p>A red-black tree is a self-balancing binary search tree with useful properties for efficient lookups and updates.</p>
+          </div>
+          <div>
+            <h2 data-heading="Properties" id="Properties" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Properties
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Every node is either red or black
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>The root is always black
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>Every leaf (null) is black
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div>If a node is red, then both children are black
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div>the children of a red node are black. Hence possible parent of red node is a black node.
+              </li>
+              <li data-line="5">
+                <div class="list-bullet"></div><strong>All paths from a node to leaves have the same number of black nodes</strong>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p><span alt="Red-Black Tree.excalidraw.svg" src="Red-Black Tree.excalidraw.svg" class="internal-embed media-embed image-embed is-loaded"><img alt="Red-Black Tree.excalidraw.svg" src="photos\red-black-tree.excalidraw.svg"></span></p>
+          </div>
+          <div>
+            <p>These properties ensure:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Balanced tree
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>O(log n) time for operations
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>Most of the BST operations (e.g., search, max, min, insert, delete.. etc.) take O(h) time where h is the height of the BST. If we make sure that the height of the tree remains O(log n) after every insertion and deletion, then we can guarantee an upper bound of <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> for all these operations. The height of a Red-Black tree is always O(log n) where n is the number of nodes in the tree.&nbsp;</p>
+          </div>
+          <div style="overflow-x: auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Sr. No.</th>
+                  <th>Algorithm</th>
+                  <th>Time Complexity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Search</td>
+                  <td>O(log n)</td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Insert</td>
+                  <td>O(log n)</td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>Delete</td>
+                  <td>O(log n)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p>It is impossible to color a tree using both black and red colors without breaking the terms. However, if a tree can be colored without violating the terms, it is guaranteed to have a depth of at most <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>, where <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> represents the number of nodes in the tree.</p>
+          </div>
+          <div>
+            <h2 data-heading="Black Height of a Red-Black Tree" id="Black_Height_of_a_Red-Black_Tree" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Black Height of a Red-Black Tree
+            </h2>
+          </div>
+          <div>
+            <p>Black height is the number of black nodes on a path from the root to a leaf. Leaf nodes are also counted black nodes. From the above properties 3 and 4, we can derive, <strong>a Red-Black Tree of height h has black-height &gt;= h/2</strong>.&nbsp;</p>
+          </div>
+          <div>
+            <p> Number of nodes from a node to its farthest descendant leaf is no more than twice as the number of nodes to the nearest descendant leaf.</p>
+          </div>
+          <div>
+            <p><strong>Every Red Black Tree with n nodes has height &lt;=</strong> 2Log2(n+1)&nbsp;<br>
+              This can be proved using the following facts:</p>
           </div>
           <div>
             <ol>
-              <li data-line="0">simple operations like assigning values or multiply, subtraction, etc. = <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>.</li>
-              <li data-line="1">for calculating <code>if</code> statements we count the maximum bracket.</li>
+              <li data-line="0">For a general Binary Tree, let <strong>k</strong> be the minimum number of nodes on all root to NULL paths, then <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2265"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2013"></mjx-c></mjx-mo></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math></mjx-container></span> (Ex. If k is 3, then n is at least 7). This expression can also be written as <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>.</li>
+              <li data-line="1">From property 4 of Red-Black trees and above claim, we can say in a Red-Black Tree with n nodes, there is a root to leaf path with at-most <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> black nodes.</li>
+              <li data-line="2">From properties 3 and 5 of Red-Black trees, we can claim that the number of black nodes in a Red-Black tree is at least <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c230A"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c230B"></mjx-c></mjx-mo></mjx-math></mjx-container></span> where n is the total number of nodes.</li>
             </ol>
           </div>
           <div>
-            <h3 data-heading="Bubble Sort:" id="Bubble_Sort:" style="display: flex;">
+            <p>From the above points, we can conclude the fact that Red Black Tree with <strong>n</strong> nodes has a height less than or equal to <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>.</p>
+          </div>
+          <div>
+            <h2 data-heading="Rotation" id="Rotation" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Bubble Sort:
+                </svg></div>Rotation
+            </h2>
+          </div>
+          <div>
+            <p>Rotation is an operation performed on balanced trees, particularly binary search trees, to maintain their balance after an insertion or deletion operation. It involves changing the structure of the tree by rearranging the positions of certain nodes while preserving the order of the elements. also we can prove that you can turn any 2 trees to each other by performing a series of finite rotations.</p>
+          </div>
+          <div>
+            <p><span alt="rotation.excalidraw.svg" src="rotation.excalidraw.svg" class="internal-embed media-embed image-embed is-loaded"><img alt="rotation.excalidraw.svg" src="photos\rotation.excalidraw.svg"></span></p>
+          </div>
+          <div>
+            <h3 data-heading="Left Rotation" id="Left_Rotation" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Left Rotation
             </h3>
           </div>
           <div>
-            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">def</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	
-	<span class="token comment"># Traverse through all array elements</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-		swapped <span class="token operator">=</span> <span class="token boolean">False</span>
-
-		<span class="token comment"># Last i elements are already in place</span>
-		<span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n<span class="token operator">-</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-
-			<span class="token comment"># Traverse the array from 0 to n-i-1</span>
-			<span class="token comment"># Swap if the element found is greater</span>
-			<span class="token comment"># than the next element</span>
-			<span class="token keyword">if</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-				swapped <span class="token operator">=</span> <span class="token boolean">True</span>
-		<span class="token keyword">if</span> <span class="token punctuation">(</span>swapped <span class="token operator">==</span> <span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-			<span class="token keyword">break</span>
-
-
-<span class="token comment"># Driver code to test above</span>
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
-	arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">]</span>
-
-	bubbleSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sorted array:"</span><span class="token punctuation">)</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%d"</span> <span class="token operator">%</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>In a left rotation, the node that needs to be rotated is moved down and to the left, while its right child moves up to take its place. This operation helps to balance the tree by reducing the height difference between the left and right subtrees.</p>
           </div>
           <div>
-            <p>for bubble sort best case, worst case and average are all equal to <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> cause is does not check if the array is sorted or not and just repeats the comparison operations.</p>
-          </div>
-          <div>
-            <h3 data-heading="Merge Sort:" id="Merge_Sort:" style="display: flex;">
+            <h3 data-heading="Right Rotation" id="Right_Rotation" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Merge Sort:
+                </svg></div>Right Rotation
             </h3>
           </div>
           <div>
-            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">def</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">:</span>
-
-		<span class="token comment"># Finding the mid of the array</span>
-		mid <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">//</span><span class="token number">2</span>
-
-		<span class="token comment"># Dividing the array elements</span>
-		L <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span>
-
-		<span class="token comment"># Into 2 halves</span>
-		R <span class="token operator">=</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span>
-
-		<span class="token comment"># Sorting the first half</span>
-		mergeSort<span class="token punctuation">(</span>L<span class="token punctuation">)</span>
-
-		<span class="token comment"># Sorting the second half</span>
-		mergeSort<span class="token punctuation">(</span>R<span class="token punctuation">)</span>
-
-		i <span class="token operator">=</span> j <span class="token operator">=</span> k <span class="token operator">=</span> <span class="token number">0</span>
-
-		<span class="token comment"># Copy data to temp arrays L[] and R[]</span>
-		<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span> <span class="token keyword">and</span> j <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			<span class="token keyword">if</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-				i <span class="token operator">+=</span> <span class="token number">1</span>
-			<span class="token keyword">else</span><span class="token punctuation">:</span>
-				arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-				j <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-		<span class="token comment"># Checking if any element was left</span>
-		<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-			i <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-		<span class="token keyword">while</span> j <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">:</span>
-			arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-			j <span class="token operator">+=</span> <span class="token number">1</span>
-			k <span class="token operator">+=</span> <span class="token number">1</span>
-
-
-<span class="token comment"># Code to print the list</span>
-<span class="token keyword">def</span> <span class="token function">printList</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-		<span class="token keyword">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-
-<span class="token comment"># Driver Code</span>
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-	arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Given array is"</span><span class="token punctuation">)</span>
-	printList<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	mergeSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nSorted array is "</span><span class="token punctuation">)</span>
-	printList<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-</code><button class="copy-code-button">Copy</button></pre>
+            <p>In a right rotation, the node to be rotated is moved down and to the right, while its left child moves up to take its place. This operation helps to balance the tree by reducing the height difference between the left and right subtrees.</p>
           </div>
           <div>
-            <p><a data-tooltip-position="top" aria-label="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%B3%D9%88%D9%85-%D8%AA%D8%AD%D9%84%DB%8C%D9%84-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%DB%8C-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C/" rel="noopener" class="external-link" href="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%B3%D9%88%D9%85-%D8%AA%D8%AD%D9%84%DB%8C%D9%84-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%DB%8C-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C/" target="_blank">session 3</a></p>
+            <h2 data-heading="Insertion Algorithm" id="Insertion_Algorithm" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Insertion Algorithm
+            </h2>
+          </div>
+          <div>
+            <p><a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/insertion-in-red-black-tree/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/insertion-in-red-black-tree/" target="_blank">GFG</a></p>
+          </div>
+          <div>
+            <ol>
+              <li data-line="0">Perform a standard binary search tree insertion, treating the new node as a regular BST node.</li>
+              <li data-line="1">Color the newly inserted node red.</li>
+              <li data-line="2">
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>If the parent of the newly inserted node is also red, and its parent's sibling (uncle) is also red, perform recoloring and restructuring operations to maintain the Red-Black Tree properties.
+                <ul class="has-list-bullet">
+                  <li data-line="3">
+                    <div class="list-bullet"></div>Recolor the parent and the uncle to black.
+                  </li>
+                  <li data-line="4">
+                    <div class="list-bullet"></div>Recolor the grandparent to red.
+                  </li>
+                  <li data-line="5">
+                    <div class="list-bullet"></div>Repeat the process for the grandparent (starting from step 3) if its parent is also red.
+                  </li>
+                </ul>
+              </li>
+              <li data-line="6">
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>If the parent of the newly inserted node is red and its sibling is black (or null), perform a rotation and recoloring to maintain the properties.
+                <ul class="has-list-bullet">
+                  <li data-line="7">
+                    <div class="list-bullet"></div>If the newly inserted node is the left child of its parent and the parent is the left child of the grandparent, perform a right rotation on the grandparent.
+                  </li>
+                  <li data-line="8">
+                    <div class="list-bullet"></div>If the newly inserted node is the right child of its parent and the parent is the left child of the grandparent, perform a left-right rotation (left rotation on the parent, followed by a right rotation on the grandparent).
+                  </li>
+                  <li data-line="9">
+                    <div class="list-bullet"></div>If the newly inserted node is the right child of its parent and the parent is the right child of the grandparent, perform a left rotation on the grandparent.
+                  </li>
+                  <li data-line="10">
+                    <div class="list-bullet"></div>If the newly inserted node is the left child of its parent and the parent is the right child of the grandparent, perform a right-left rotation (right rotation on the parent, followed by a left rotation on the grandparent).
+                  </li>
+                  <li data-line="11">
+                    <div class="list-bullet"></div>Recolor the parent to black and the grandparent to red.
+                  </li>
+                </ul>
+              </li>
+              <li data-line="12">If the root of the tree becomes red after the insertion (due to recoloring in step 3), recolor it to black to satisfy the Red-Black Tree property that the root is always black.</li>
+            </ol>
+          </div>
+          <div>
+            <h3 data-heading="Complexity Analysis" id="Complexity_Analysis" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Complexity Analysis
+            </h3>
+          </div>
+          <div>
+            <p>The insertion operation in a Red-Black Tree has a time complexity of O(log n), where n is the number of nodes in the tree. This complexity arises due to the balancing and restructuring operations required to maintain the Red-Black Tree properties.</p>
+          </div>
+          <div>
+            <p><a data-tooltip-position="top" aria-label="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%A8%DB%8C%D8%B3%D8%AA-%DB%8C%DA%A9%D9%85-%D8%AF%D8%B1%D8%AE%D8%AA-%D9%82%D8%B1%D9%85%D8%B2-%D8%B3%DB%8C%D8%A7%D9%87/" rel="noopener" class="external-link" href="https://maktabkhooneh.org/course/%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%D8%A7%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-mk118/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-ch166/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D8%AC%D9%84%D8%B3%D9%87-%D8%A8%DB%8C%D8%B3%D8%AA-%DB%8C%DA%A9%D9%85-%D8%AF%D8%B1%D8%AE%D8%AA-%D9%82%D8%B1%D9%85%D8%B2-%D8%B3%DB%8C%D8%A7%D9%87/" target="_blank">session 20</a></p>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -2357,15 +2452,45 @@
           <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
           <div class="tree-scroll-area">
             <div class="tree-item mod-tree-heading" data-depth="1">
-              <div class="tree-item-contents"><a class="tree-item-link" href="#Execution_time_for_operations:"><span class="tree-item-title">Execution time for operations:</span></a></div>
+              <div class="tree-item-contents"><a class="tree-item-link" href="#Red-Black_Tree"><span class="tree-item-title">Red-Black Tree</span></a></div>
               <div class="tree-item-children">
-                <div class="tree-item mod-tree-heading" data-depth="3">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#Bubble_Sort:"><span class="tree-item-title">Bubble Sort:</span></a></div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Properties"><span class="tree-item-title">Properties</span></a></div>
                   <div class="tree-item-children"></div>
                 </div>
-                <div class="tree-item mod-tree-heading" data-depth="3">
-                  <div class="tree-item-contents"><a class="tree-item-link" href="#Merge_Sort:"><span class="tree-item-title">Merge Sort:</span></a></div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Black_Height_of_a_Red-Black_Tree"><span class="tree-item-title">Black Height of a Red-Black Tree</span></a></div>
                   <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#Rotation"><span class="tree-item-title">Rotation</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Left_Rotation"><span class="tree-item-title">Left Rotation</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Right_Rotation"><span class="tree-item-title">Right Rotation</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-heading mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#Insertion_Algorithm"><span class="tree-item-title">Insertion Algorithm</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Complexity_Analysis"><span class="tree-item-title">Complexity Analysis</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
