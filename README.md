@@ -3,6 +3,6 @@ Welcome to [CodeVerse](https://farid-karimi.github.io/Codeverse/), my personal k
 
 ## Continuous Growth and Learning 🌱
 
-[CodeVerse](https://farid-karimi.github.io/Codeverse/) is a dynamic platform that is constantly evolving. I am committed to regularly adding new content, ensuring that there's always something new to explore. Whether you are a beginner seeking foundational knowledge or an experienced coder looking to expand your skills, CodeVerse has something for everyone.
+[CodeVerse](https://farid-karimi.github.io/Codeverse/) is a dynamic platform that is constantly evolving. I am committed to regularly adding new content, ensuring that there's always something new to explore.
 
 Feel free to browse through the topics and immerse yourself in the world of coding. Let's learn together and build a vibrant community of passionate coders.
